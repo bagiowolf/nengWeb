@@ -1,0 +1,250 @@
+.about {
+  width: 100%;
+  height: 100%;
+}
+.about .header {
+  /* width: 100%; */
+  height: 84px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 114px 0 360px;
+  background-color: #2b68ff;
+}
+.about .HeadDiv,
+.about .left {
+  width: 237px;
+  height: 25px;
+}
+.about .right {
+  width: 868px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #fff;
+}
+.about .active {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #fce38a;
+  color: #fce38a;
+}
+.about .banner {
+  position: relative;
+}
+.about .banner img {
+  width: 100%;
+  height: 340px;
+}
+.about .banner .aboutText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8f8f8f;
+}
+.about .aboutText .gy {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.about .aboutText .sj {
+  font-size: 18px;
+}
+.about .content {
+  text-align: left;
+  padding: 60px 360px 0;
+}
+.about .content .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 34px;
+}
+.about .content p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+}
+.about .content .num {
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 70px;
+}
+.about .content .num .line {
+  width: 34px;
+  height: 63px;
+}
+.about .content .num .box {
+  width: 211px;
+  text-align: center;
+}
+.about .content .num .box .one {
+  letter-spacing: 3px;
+
+  font-size: 46px;
+  font-weight: 600;
+}
+.about .content .num .box .two {
+  letter-spacing: 2px;
+
+  margin-top: 10px;
+  font-size: 14px;
+}
+.about .content .num .box .one span {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+}
+.about .content .img {
+  margin-top: 76px;
+  margin-bottom: 93px;
+  display: flex;
+  justify-content: space-between;
+}
+.about .content .img img {
+  width: 388px;
+  height: 250px;
+}
+.mobile {
+  width: 100%;
+}
+.mobile .header {
+  height: 84px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2b68ff;
+  position: relative;
+}
+.mobile .HeadDiv {
+  width: 237px;
+  height: 25px;
+}
+.mobile .navList {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+}
+
+.mobile .navList {
+  position: absolute;
+  left: 0;
+  top: 80px;
+  z-index: 9;
+}
+.mobile .navList li {
+  background-color: rgba(71, 122, 251, 1);
+  color: #fff;
+
+  padding: 5px 0;
+}
+.mobile .navList .active {
+  color: #fff;
+  background-color: rgb(23, 83, 235);
+}
+.mobile .banner {
+  position: relative;
+}
+.mobile .banner img {
+  width: 100%;
+  height: 340px;
+}
+.mobile .banner .aboutText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8f8f8f;
+}
+.mobile .aboutText .gy {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.mobile .aboutText .sj {
+  font-size: 18px;
+}
+.mobile .content {
+  text-align: left;
+  padding: 60px 20px 0;
+}
+.mobile .content .title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 34px;
+}
+.mobile .content p {
+  font-size: 18px;
+  letter-spacing: 2px;
+  padding-bottom: 20px;
+}
+.mobile .content .num {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+.mobile .content .num .line {
+  border-bottom: 1px solid #000;
+  margin: 20px 0;
+  width: 30%;
+}
+.mobile .content .num .box {
+  width: 211px;
+  text-align: center;
+}
+.mobile .content .num .box .one {
+  letter-spacing: 3px;
+
+  font-size: 46px;
+  font-weight: 600;
+}
+.mobile .content .num .box .two {
+  letter-spacing: 2px;
+
+  margin-top: 10px;
+  font-size: 14px;
+}
+.mobile .content .num .box .one span {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 14px;
+}
+.mobile .content .img {
+  margin-top: 76px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobile .content .img img {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .about {
+    display: none;
+  }
+  .about .header {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .about {
+    display: block;
+  }
+}

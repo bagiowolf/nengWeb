@@ -1,0 +1,236 @@
+.footer .sub {
+  background-color: #2c69ff;
+  padding: 0 159px 0 212px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 250px;
+}
+.footer .form {
+  width: 418px;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer .form .name,
+.footer .form .ls {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .form .name div,
+.footer .form .ls div {
+  width: 200px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.footer .form .save div {
+  width: 418px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #2c69ff;
+}
+
+.footer .sub .box1 {
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2px;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .sub .box1 span {
+  color: #ff5d23;
+}
+.footer .sub .box1 img {
+  margin-bottom: 15px;
+  width: 110px;
+  height: 97px;
+}
+.footer .table {
+  letter-spacing: 1px;
+
+  width: 460px;
+  height: 192px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+.footer .table .top {
+  height: 48px;
+  line-height: 48px;
+  background-color: #fff;
+  color: #2c69ff;
+  border-radius: 5px 5px 0 0;
+}
+.footer .table .tabletr {
+  height: 144px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.footer .bottom {
+  height: 360px;
+  background-color: #3f3f3f;
+  color: #fff;
+  text-align: left;
+  padding: 93px 335px 46px;
+  box-sizing: border-box;
+}
+.footer .bottom .list {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .bottom .title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.footer .bottom ul,
+.footer .bottom li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #838383;
+  font-size: 16px;
+}
+.footer .bottom .line {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #838383;
+}
+.footer .bottom .copyRight {
+  color: #838383;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  display: none;
+}
+
+.mobile .sub {
+  background-color: #2c69ff;
+  /* padding: 0 159px 0 212px; */
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 250px; */
+  flex-direction: column;
+}
+.mobile .form {
+  /* width: 418px; */
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mobile .box {
+  width: 100%;
+}
+.mobile .form .name,
+.mobile .form .ls {
+  display: flex;
+  justify-content: space-between;
+}
+.mobile .form .name div,
+.mobile .form .ls div {
+  width: 160px;
+  height: 48px;
+  line-height: 48px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.mobile .form .save div {
+  height: 48px;
+  line-height: 48px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #2c69ff;
+}
+
+.mobile .sub .box1 {
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.mobile .sub .box1 span {
+  color: #ff5d23;
+}
+.mobile .sub .box1 img {
+  margin-bottom: 15px;
+  width: 110px;
+  height: 97px;
+}
+.mobile .table {
+  letter-spacing: 1px;
+
+  width: 460px;
+  height: 192px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+}
+.mobile .table .top {
+  height: 48px;
+  line-height: 48px;
+  background-color: #fff;
+  color: #2c69ff;
+  border-radius: 5px 5px 0 0;
+}
+.mobile .table .tabletr {
+  height: 144px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.mobile .copyRight {
+  color: #838383;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.mobile .copyRight div {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* 样式适配中等屏幕设备，比如平板 */
+  .mobile {
+    display: block;
+  }
+  .footer {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .footer {
+    display: block;
+  }
+}

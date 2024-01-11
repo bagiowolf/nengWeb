@@ -1,27 +1,22 @@
-// import logo from './logo.svg';
-import React, { Component } from 'react';
-import Head from './head';
-import './App.css';
+import React, { Component, useState } from 'react'
+import Head from './component/Index/App'
+import './App.css'
+import About from './component/About/App'
+import Credit from './component/Credit/App'
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      select: 0,
-      windowWidthValue: window.innerWidth
-    };
-    window.addEventListener('resize', () => { this.setState({ windowWidthValue: window.innerWidth }) })
-  }
-  selectHandle(id) {
-    this.setState({ select: id })
-  }
-  render() {
-    const { select } = this.state;
-    return (
-      <div className="App">
-        {select == 0 && <Head windowWidthValue={this.state.windowWidthValue} selectHandle={(index) => this.selectHandle(index)} />}
-      </div >
-    );
-  }
+export default function App() {
+  const [select, setSelect] = useState(0)
+  const [windowWidthValue, setWindowWidthValue] = useState(window.innerWidth)
+  window.addEventListener('resize', () => {
+    setWindowWidthValue(window.innerWidth)
+  })
+  return (
+    <div className="App">
+      {select === -1 && (
+        <Head windowWidthValue={windowWidthValue} selectHandle={setSelect} />
+      )}
+      {select === 0 && <About onSetState={setSelect} state={select} />}
+      {select === 1 && <Credit onSetState={setSelect} state={select} />}
+    </div>
+  )
 }
-export default App;

@@ -1,0 +1,120 @@
+.HeadDiv {
+    width: 100%;
+}
+
+.HeadDivBg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    /* background-image: url('./img/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+.HeadDivBgicon {
+    display: block;
+    position: absolute;
+}
+
+.HeadDivBgicon1 {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+}
+
+.HeadDivlist {
+    display: block;
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    /* width: 879px; */
+}
+.HeadDivlistItem
+{
+    margin-left: 19px;
+}
+.HeadDivBg1{
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+}
+.HeadDivBg2{
+    /* background-image: url('./img/4.png'); */
+    display: block;
+    position: relative;
+    height: auto;
+}
+.HeadDivBg3{
+    width: 100%;
+    height: auto;
+}
+
+.HeadDivBg4{
+    width: 100%;
+    /* height: auto; */
+    display: block;
+    position: relative;
+    /* background-color: red; */
+}
+.HeadDivBg5{
+    width: 100%;
+    display: flex;
+    /* background-color: black; */
+
+}
+.HeadDivBg8{
+    width: 100%;
+    height: auto;
+}
+
+.HeadDivBg9{
+    display: inline-block;
+}
+.HeadDivBg10{
+    display: block;
+}
+
+.HeadDivBg11{
+    text-align: left;
+}
+.HeadDivBg7{
+    display: inline-block;
+}
+.HeadDivBg6{
+    display: flex;
+}
+.HeadDivBg12{
+   width: 100%;
+   overflow: hidden;
+   font-size: 12px;
+}
+.HeadDivBg13{
+    text-align: left;
+    display: flex;
+}
+.HeadDivBg14{
+    display: inline-block;
+}
+.HeadDivBg15{
+    font-size:12px;
+}
+.HeadDivBg16{
+    display: inline-block;
+}
+.HeadDivBg17{
+    display: inline-block;
+}
+.HeadDivBg18{
+    display: block;
+}
+.HeadDivBg19{
+    display: inline-block;
+}
+.HeadDivBg20{
+    /* width: 100%; */
+    overflow: hidden;
+    font-size: 12px;
+}
+
