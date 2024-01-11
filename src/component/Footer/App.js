@@ -6,6 +6,19 @@ import png3 from './img/png3.png'
 import png5 from './img/png5.png'
 import './App.css'
 
+let arr = [
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约',
+  '实时预约：陆先生139****5158五十分钟前已经成功预约'
+]
+
 export default function Footer() {
   return (
     <div>
@@ -43,15 +56,11 @@ export default function Footer() {
                 每日前十名预约咨询资深律师，一对一电话解答
               </div>
               <div className="tabletr">
-                <div className="tr">
-                  实时预约：陆先生139****5158五十分钟前已经成功预约
-                </div>
-                <div className="tr">
-                  实时预约：黄女士139****5158五十分钟前已经成功预约
-                </div>
-                <div className="tr">
-                  实时预约：李先生139****5158五十分钟前已经成功预约
-                </div>
+                {arr.map((item, index) => (
+                  <div className="tr" key={index}>
+                    {item} ,{index}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -75,7 +84,17 @@ export default function Footer() {
             <div>
               <div className="title">其他链接</div>
               <ul>
-                <li>调整链接</li>
+                <li>
+                  <a href="https://www.court.gov.cn/index.html">
+                    中国最高人民法院
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.moj.gov.cn">中国司法部</a>
+                </li>
+                <li>
+                  <a href="www.jienenglaw.com">江苏竭能律所</a>
+                </li>
               </ul>
             </div>
             <div>
