@@ -13,14 +13,16 @@ class App extends Component {
     window.addEventListener('resize', () => { this.setState({ windowWidthValue: window.innerWidth }) })
   }
   selectHandle(id) {
+    alert(id);
     this.setState({ select: id })
+    // alert(id);
     // alert(id);
   }
   render() {
     const { select } = this.state;
     return (
       <div className="App">
-        <Head windowWidthValue={this.state.windowWidthValue}/>
+        {select == 0 && <Head windowWidthValue={this.state.windowWidthValue} selectHandle={(index) => this.selectHandle(index)} />}
       </div >
     );
   }

@@ -53,7 +53,7 @@ class Head extends Component {
                         marginLeft: 940 * scal + 'px', marginTop: 32 * scal + 'px'
                     }}>
                         {list.map((item, index) => {
-                            return (<label className='HeadDivlistItem' style={{ marginLeft: index == 0 ? "0px" : '18px' }} >{item}</label>)
+                            return (<label className='HeadDivlistItem' onClick={()=>this.props.selectHandle(index)}   style={{ marginLeft: index == 0 ? "0px" : '18px' }} >{item}</label>)
                         })}
                     </div>
                 </div>
