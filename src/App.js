@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React, { Component } from 'react';
+import Head from './head';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      select: 0,
+      windowWidthValue: window.innerWidth
+    };
+    window.addEventListener('resize', () => { this.setState({ windowWidthValue: window.innerWidth }) })
+  }
+  selectHandle(id) {
+    this.setState({ select: id })
+    // alert(id);
+  }
+  render() {
+    const { select } = this.state;
+    return (
+      <div className="App">
+        <Head windowWidthValue={this.state.windowWidthValue}/>
+      </div >
+    );
+  }
 }
-
 export default App;
