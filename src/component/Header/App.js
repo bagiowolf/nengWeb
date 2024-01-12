@@ -46,10 +46,14 @@ export default function App(props) {
           <div className="right">
             <img src={gengduo} alt="" onClick={() => handelClick(true)} />
             <ul className={`navList ${props.isShow ? 'isShow' : ''}`}>
-              <li className="active">关于我们</li>
-
-              {list.map((item) => (
-                <li key={item}>{item}</li>
+              {list.map((item, index) => (
+                <li
+                  key={item}
+                  onClick={() => props.onSetState(index)}
+                  className={`${props.state === index ? 'active' : ''}`}
+                >
+                  {item}
+                </li>
               ))}
             </ul>
           </div>

@@ -18,6 +18,9 @@
   font-size: 14px;
   color: #fff;
 }
+.box1 .header .right span {
+  cursor: pointer;
+}
 .box1 .header .active {
   padding-bottom: 10px;
   border-bottom: 3px solid #fce38a;

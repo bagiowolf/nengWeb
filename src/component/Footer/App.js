@@ -58,7 +58,7 @@ export default function Footer() {
               <div className="tabletr">
                 {arr.map((item, index) => (
                   <div className="tr" key={index}>
-                    {item} ,{index}
+                    {item}
                   </div>
                 ))}
               </div>
