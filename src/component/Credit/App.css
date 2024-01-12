@@ -244,9 +244,7 @@
   font-size: 24px;
   color: #515151;
 }
-.credit {
-  display: none;
-}
+
 .mobile .content .imgBox {
   justify-content: space-around;
 }
@@ -418,4 +416,26 @@
 .mobile .box7 .textArte .step2 {
   font-size: 24px;
   color: #515151;
+}
+.mobile {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+  .credit {
+    display: none;
+  }
+  .credit .header {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
+  }
+  .credit {
+    display: block;
+  }
 }

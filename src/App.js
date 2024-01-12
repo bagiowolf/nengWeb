@@ -3,7 +3,7 @@ import Head from './component/Index/App'
 import './App.css'
 import About from './component/About/App'
 import Credit from './component/Credit/App'
-
+import Team from './component/Team/App'
 export default function App() {
   const [select, setSelect] = useState(0)
   const [windowWidthValue, setWindowWidthValue] = useState(window.innerWidth)
@@ -17,6 +17,7 @@ export default function App() {
       )}
       {select === 0 && <About onSetState={setSelect} state={select} />}
       {select === 1 && <Credit onSetState={setSelect} state={select} />}
+      {select === 2 && <Team onSetState={setSelect} state={select} />}
     </div>
   )
 }
