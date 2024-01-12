@@ -199,6 +199,17 @@
   margin-right: 50px;
   width: 155px;
 }
+.credit .box6 .textArte .song .right {
+  width: 570px;
+}
+.credit .box6 .textArte .song .right .name {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+.credit .box6 .textArte .song .right .msg {
+  font-size: 24px;
+  color: #666;
+}
 .credit .box7 {
   text-align: left;
   position: relative;
@@ -353,6 +364,7 @@
 }
 .mobile .box6 .textArte {
   padding: 0 20px;
+  padding-bottom: 10px;
 }
 .mobile .box6 .title,
 .mobile .box6 .textArte {

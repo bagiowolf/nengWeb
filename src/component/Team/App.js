@@ -9,6 +9,7 @@ import png3 from './img/png3.png'
 import png4 from './img/png4.png'
 import png5 from './img/png5.png'
 import png6 from './img/png6.png'
+import PersonalData from '../PersonalData/App'
 
 let arr = [
   {
@@ -64,178 +65,193 @@ let arr = [
 
 export default function App(props) {
   const [isShow, setIsShow] = useState(false)
-
+  const [state, setState] = useState(true)
   return (
     <div>
-      <div className="team">
-        <Header state={props.state} onSetState={props.onSetState} />
-        <div className="banner">
-          <img src={banner} alt="banner" />
-          <div className="aboutText">
-            <div className="gy">律师团队</div>
-            <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
-            </div>
-          </div>
-        </div>
-        <div className="content">
-          <div className="big">
-            <div className="left">
-              <div className="img">
-                <img src={png1} alt="" />
-              </div>
-              <div className="btn">立即预约</div>
-              <div className="info">查看详情</div>
-            </div>
-            <div className="right">
-              <div className="name">王玉 【执业律师】</div>
-              <div className="line"></div>
-              <div className="msg">
-                <span>
-                  擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
-                  介绍：有多年的律师执业经验及法学理论功底，能够娴熟运用法律规定和法理精神处理复杂、疑难的法律实务问题，由于办事作风沉稳干练，对客户永远保持认真的态度，曾获得当事人和顾问单位的好评，将继续竭尽所能为当事人争取合法利益！
-                  执业理念：坚守“专业专注，勤勉尽责”！
-                </span>
-                <div className="num">
-                  帮助人数:<span className="bool">123456人</span>
-                  咨询人数:<span className="bool">123456人</span>
+      {state && (
+        <div>
+          <div className="team">
+            <Header state={props.state} onSetState={props.onSetState} />
+            <div className="banner">
+              <img src={banner} alt="banner" />
+              <div className="aboutText">
+                <div className="gy">律师团队</div>
+                <div className="sj">
+                  以专业视角，应对各种复杂需求 业务电话：400-651-0001
                 </div>
               </div>
             </div>
-          </div>
-          <div className="sm">
-            {arr.map((item, index) => (
-              <div className="boxList">
+            <div className="content">
+              <div className="big">
                 <div className="left">
                   <div className="img">
-                    <img src={item.img} alt="" />
+                    <img src={png1} alt="" />
                   </div>
-                  <div className="btn">立即预约</div>
-                  <div className="info">查看详情</div>
+                  <div className="btn" onClick={() => setState(false)}>
+                    立即预约
+                  </div>
+                  <div className="info" onClick={() => setState(false)}>
+                    查看详情
+                  </div>
                 </div>
                 <div className="right">
-                  <div className="name">
-                    {item.name} 【{item.type}】
-                  </div>
+                  <div className="name">王玉 【执业律师】</div>
                   <div className="line"></div>
                   <div className="msg">
-                    <span>{item.msg}</span>
+                    <span>
+                      擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
+                      介绍：有多年的律师执业经验及法学理论功底，能够娴熟运用法律规定和法理精神处理复杂、疑难的法律实务问题，由于办事作风沉稳干练，对客户永远保持认真的态度，曾获得当事人和顾问单位的好评，将继续竭尽所能为当事人争取合法利益！
+                      执业理念：坚守“专业专注，勤勉尽责”！
+                    </span>
                     <div className="num">
-                      <div>
-                        帮助人数:<span className="bool">1236人</span>
-                      </div>
-                      <div>
-                        咨询人数:<span className="bool">1456人</span>
-                      </div>
+                      帮助人数:<span className="bool">123456人</span>
+                      咨询人数:<span className="bool">123456人</span>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-          <div className="formBox">
-            <div className="title">向律师提问</div>
-            <div className="from">
-              <div className="item">
-                <div className="left">请输入标题:</div>
-                <div className="right">
-                  <input type="text" />
-                </div>
-              </div>
-              <div className="item">
-                <div className="left">请输入您的法律咨询问题:</div>
-                <div className="right textarea">
-                  <textarea name="" id="" rows={8}></textarea>
-                </div>
-              </div>
-              <div className="item">
-                <div className="left">请输入手机号:</div>
-                <div className="right">
-                  <input type="text" />
-                </div>
-              </div>
-            </div>
-            <div className="save">提交问题</div>
-          </div>
-        </div>
-        <Footer />
-      </div>
-      <div className="mobile">
-        <Header
-          isShow={isShow}
-          onSetIsShow={setIsShow}
-          state={props.state}
-          onSetState={props.onSetState}
-        />
-        <div className="banner">
-          <img src={banner} alt="banner" />
-          <div className="aboutText">
-            <div className="gy">律师团队</div>
-            <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
-            </div>
-          </div>
-        </div>
-        <div className="content">
-          <div className="sm">
-            {arr.map((item, index) => (
-              <div className="boxList">
-                <div className="left">
-                  <div className="img">
-                    <img src={item.img} alt="" />
-                  </div>
-                  <div className="btnBox">
-                    <div className="btn">立即预约</div>
-                    <div className="info">查看详情</div>
-                  </div>
-                </div>
-                <div className="right">
-                  <div className="name">
-                    {item.name} 【{item.type}】
-                  </div>
-                  <div className="line"></div>
-                  <div className="msg">
-                    <span>{item.msg}</span>
-                    <div className="num">
-                      <div>
-                        帮助人数:<span className="bool">1236人</span>
+              <div className="sm">
+                {arr.map((item, index) => (
+                  <div className="boxList">
+                    <div className="left">
+                      <div className="img">
+                        <img src={item.img} alt="" />
                       </div>
-                      <div>
-                        咨询人数:<span className="bool">1456人</span>
+                      <div className="btn" onClick={() => setState(false)}>
+                        立即预约
+                      </div>
+                      <div className="info" onClick={() => setState(false)}>
+                        查看详情
+                      </div>
+                    </div>
+                    <div className="right">
+                      <div className="name">
+                        {item.name} 【{item.type}】
+                      </div>
+                      <div className="line"></div>
+                      <div className="msg">
+                        <span>{item.msg}</span>
+                        <div className="num">
+                          <div>
+                            帮助人数:<span className="bool">1236人</span>
+                          </div>
+                          <div>
+                            咨询人数:<span className="bool">1456人</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
+              <div className="formBox">
+                <div className="title">向律师提问</div>
+                <div className="from">
+                  <div className="item">
+                    <div className="left">请输入标题:</div>
+                    <div className="right">
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="left">请输入您的法律咨询问题:</div>
+                    <div className="right textarea">
+                      <textarea name="" id="" rows={8}></textarea>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="left">请输入手机号:</div>
+                    <div className="right">
+                      <input type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div className="save">提交问题</div>
+              </div>
+            </div>
+            <Footer />
           </div>
-          <div className="formBox">
-            <div className="title">向律师提问</div>
-            <div className="from">
-              <div className="item">
-                <div className="left">请输入标题:</div>
-                <div className="right">
-                  <input type="text" />
-                </div>
-              </div>
-              <div className="item">
-                <div className="left">请输入您的法律咨询问题:</div>
-                <div className="right textarea">
-                  <textarea name="" id="" rows={8}></textarea>
-                </div>
-              </div>
-              <div className="item">
-                <div className="left">请输入手机号:</div>
-                <div className="right">
-                  <input type="text" />
+          <div className="mobile">
+            <Header
+              isShow={isShow}
+              onSetIsShow={setIsShow}
+              state={props.state}
+              onSetState={props.onSetState}
+            />
+            <div className="banner" onClick={() => setIsShow(false)}>
+              <img src={banner} alt="banner" />
+              <div className="aboutText">
+                <div className="gy">律师团队</div>
+                <div className="sj">
+                  以专业视角，应对各种复杂需求 业务电话：400-651-0001
                 </div>
               </div>
             </div>
-            <div className="save">提交问题</div>
+            <div className="content" onClick={() => setIsShow(false)}>
+              <div className="sm">
+                {arr.map((item, index) => (
+                  <div className="boxList">
+                    <div className="left">
+                      <div className="img">
+                        <img src={item.img} alt="" />
+                      </div>
+                      <div className="btnBox">
+                        <div className="btn">立即预约</div>
+                        <div className="info">查看详情</div>
+                      </div>
+                    </div>
+                    <div className="right">
+                      <div className="name">
+                        {item.name} 【{item.type}】
+                      </div>
+                      <div className="line"></div>
+                      <div className="msg">
+                        <span>{item.msg}</span>
+                        <div className="num">
+                          <div>
+                            帮助人数:<span className="bool">1236人</span>
+                          </div>
+                          <div>
+                            咨询人数:<span className="bool">1456人</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="formBox">
+                <div className="title">向律师提问</div>
+                <div className="from">
+                  <div className="item">
+                    <div className="left">请输入标题:</div>
+                    <div className="right">
+                      <input type="text" />
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="left">请输入您的法律咨询问题:</div>
+                    <div className="right textarea">
+                      <textarea name="" id="" rows={8}></textarea>
+                    </div>
+                  </div>
+                  <div className="item">
+                    <div className="left">请输入手机号:</div>
+                    <div className="right">
+                      <input type="text" />
+                    </div>
+                  </div>
+                </div>
+                <div className="save">提交问题</div>
+              </div>
+            </div>
+            <Footer />
           </div>
         </div>
-        <Footer />
-      </div>
+      )}
+      {!state && (
+        <PersonalData state={props.state} onSetState={props.onSetState} />
+      )}
     </div>
   )
 }
