@@ -1,0 +1,215 @@
+.cooperate .banner {
+  position: relative;
+}
+.cooperate .banner img {
+  width: 100%;
+  height: 340px;
+}
+.cooperate .banner .aboutText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8f8f8f;
+}
+.cooperate .aboutText .gy {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.cooperate .aboutText .sj {
+  font-size: 18px;
+}
+.cooperate .content {
+  text-align: left;
+}
+.cooperate .content .box1 .left {
+  padding: 75px 60px;
+  position: relative;
+  padding-right: 6px;
+  width: 580px;
+  box-sizing: border-box;
+}
+.cooperate .content .box1 .left .png3 {
+  position: absolute;
+  z-index: 9;
+}
+.cooperate .content .box1 .left .text {
+  margin: 50px 28px;
+  font-size: 20px;
+  color: #5a5a5a;
+  letter-spacing: 3px;
+}
+.cooperate .content .box1 {
+  display: flex;
+  position: relative;
+  top: -4px;
+}
+.cooperate .content .box1 .right {
+  position: relative;
+  flex: 1;
+}
+.cooperate .content .box1 .right img {
+  width: 100%;
+}
+.cooperate .content .box1 .right .text {
+  position: absolute;
+  color: #fff;
+  left: 242px;
+  top: 215px;
+  font-size: 50px;
+  letter-spacing: 16px;
+}
+.cooperate .content .box1 .gs {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.cooperate .content .box1 .gs div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cooperate .content .box1 .gs img {
+  margin-right: 5px;
+}
+.cooperate .content .box2 {
+  position: relative;
+  top: -8px;
+  display: flex;
+}
+.cooperate .content .box2 .text {
+  position: absolute;
+  left: 70px;
+  top: 160px;
+  font-size: 50px;
+  letter-spacing: 3px;
+}
+.cooperate .content .box2 .text div {
+  margin-bottom: 10px;
+  color: #4a4a4a;
+}
+.cooperate .content .box2 .right {
+  background-color: #f1f8ff;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.cooperate .content .box2 .right .div {
+  width: 33%;
+  font-size: 30px;
+  color: #333;
+  letter-spacing: 3px;
+}
+.cooperate .content .box3,
+.cooperate .content .box4 {
+  text-align: center;
+  padding: 130px 356px;
+}
+.cooperate .content .box3 .title,
+.cooperate .content .box4 .title,
+.cooperate .content .box5 .title {
+  font-size: 50px;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+.cooperate .content .box3 .msg {
+  font-size: 20px;
+  color: #757575;
+}
+.cooperate .content .box4 {
+  padding-top: 0;
+}
+.cooperate .content .box4 .title {
+  margin-bottom: 47px;
+}
+.cooperate .content .box4 .msg .top,
+.cooperate .content .box4 .msg .bottom {
+  display: flex;
+}
+.cooperate .content .box4 .msg .div {
+  display: flex;
+  width: 33%;
+  margin-bottom: 70px;
+  font-size: 26px;
+  color: #333333;
+  padding-left: 30px;
+}
+.cooperate .content .box4 .msg .div img {
+  margin-right: 25px;
+}
+.cooperate .content .box5 {
+  padding: 0 140px;
+}
+.cooperate .content .box5 .boxList {
+  display: flex;
+  justify-content: space-between;
+}
+.cooperate .content .box5 .boxList .box {
+  position: relative;
+}
+.cooperate .content .box5 .boxList .box .text {
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+  color: #fff;
+  padding: 27px 20px;
+}
+@media (max-width: 768px) {
+  .cooperate .content .box1 .left {
+    padding: 20px;
+  }
+  .cooperate .content .box1 .left .png3,
+  .cooperate .content .box1 .right,
+  .cooperate .content .box2 .left {
+    display: none;
+  }
+  .cooperate .content .box2 .right {
+    padding: 12px;
+  }
+  .cooperate .content .box2 .right .div {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  .cooperate .content .box3,
+  .cooperate .content .box4 {
+    padding: 20px;
+  }
+  .cooperate .content .box3 .title,
+  .cooperate .content .box4 .title,
+  .cooperate .content .box5 .title {
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .cooperate .content .box3 .msg {
+    font-size: 16px;
+  }
+  .cooperate .content .box4 .msg .div img {
+    display: none;
+  }
+  .cooperate .content .box4 .msg .div {
+    padding: 0;
+    font-size: 16px;
+  }
+  .cooperate .content .box5 {
+    padding: 20px;
+  }
+  .cooperate .content .box5 .boxList {
+    flex-direction: column;
+  }
+  .cooperate .content .box5 .boxList .box img {
+    width: 100%;
+  }
+  .cooperate .content .box5 .boxList .box {
+    margin-bottom: 10px;
+  }
+  .cooperate .content .box5 .boxList .box .text {
+    font-size: 16px;
+    height: 100px;
+  }
+}

@@ -8,7 +8,8 @@ export default function App(props) {
     '关于我们',
     '信用修复',
     '律师团队',
-    '法律合作',
+    '法律服务',
+    '律师合作',
     '新闻中心',
     '加盟招商',
     '成功案例',
@@ -20,7 +21,7 @@ export default function App(props) {
   console.log(props.state, '123')
   return (
     <div>
-      <div className="box1">
+      <div className="headerer">
         <div className="header">
           <div className="left">
             <img className="HeadDiv" src={logo} alt="logo" />

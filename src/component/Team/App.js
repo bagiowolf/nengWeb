@@ -196,8 +196,12 @@ export default function App(props) {
                         <img src={item.img} alt="" />
                       </div>
                       <div className="btnBox">
-                        <div className="btn">立即预约</div>
-                        <div className="info">查看详情</div>
+                        <div className="btn" onClick={() => setState(false)}>
+                          立即预约
+                        </div>
+                        <div className="info" onClick={() => setState(false)}>
+                          查看详情
+                        </div>
                       </div>
                     </div>
                     <div className="right">

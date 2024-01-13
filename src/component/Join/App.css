@@ -1,0 +1,243 @@
+.join .banner {
+  position: relative;
+}
+.join .banner img {
+  width: 100%;
+  height: 340px;
+}
+.join .banner .aboutText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8f8f8f;
+}
+.join .aboutText .gy {
+  font-size: 30px;
+  padding-bottom: 20px;
+  color: #616161;
+}
+.join .aboutText .sj {
+  font-size: 18px;
+}
+.join .content {
+  text-align: left;
+  padding: 70px 360px;
+}
+.join .content .box1 {
+  text-align: center;
+}
+.join .title {
+  font-size: 50px;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.join .content .box1 .litte {
+  font-size: 26px;
+  color: #4a4a4a;
+  margin-bottom: 25px;
+}
+.join .content .box1 .msg {
+  font-size: 16px;
+  color: #757575;
+  letter-spacing: 2px;
+}
+.join .content .box2 {
+  margin-top: 100px;
+}
+.join .content .box2 .title {
+  margin-bottom: 50px;
+}
+.join .content .box2 .msg .top,
+.join .content .box2 .msg .bottom {
+  display: flex;
+}
+.join .content .box2 .msg .div {
+  display: flex;
+  width: 33%;
+  margin-bottom: 70px;
+  font-size: 26px;
+  color: #333333;
+  padding-left: 30px;
+}
+.join .content .box2 .msg .div img {
+  margin-right: 25px;
+  height: 32px;
+}
+.join .content .box2 .msg .div .nn {
+  font-size: 26px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.join .content .box2 .msg .div > div:last-child {
+  font-size: 18px;
+  color: #757575;
+}
+.join .content .box3 .shu {
+  display: flex;
+  justify-content: space-between;
+}
+.join .content .box3 .shu .box {
+  position: relative;
+  margin-bottom: 20px;
+}
+.h180 {
+  height: 180px !important;
+}
+.join .content .box3 .shu .box .text {
+  position: absolute;
+  bottom: 0;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.join .content .box3 .shu .box .text .big {
+  font-size: 26px;
+  color: #333;
+}
+.join .content .box3 .shu .box .text .msg {
+  font-size: 18px;
+  color: #757575;
+}
+
+.white,
+.white .big,
+.white .msg {
+  color: #fff !important;
+}
+.join .content .box4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+.join .content .box4 > div {
+  width: 45%;
+}
+.join .content .box4 .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.join .content .box4 .left .line {
+  width: 55px;
+  border: 1px solid #2b68ff;
+  margin: 12px 0;
+}
+.join .content .box4 .left .tj {
+  font-size: 40px;
+}
+.join .content .box4 .left .zy {
+  font-size: 18px;
+}
+.join .content .box4 .right {
+  font-size: 24px;
+  color: #656565;
+}
+.join .content .box4 .right div {
+  margin-bottom: 10px;
+}
+.join .box5 {
+  position: relative;
+  padding-top: 1px;
+  height: 644px;
+}
+.join .box5 .png16 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.join .box5 .title {
+  position: relative;
+  z-index: 9;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.join .box5 .lb {
+  position: relative;
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+.join .box5 .lbbox {
+  width: 310px;
+  height: 310px;
+  padding: 50px 20px 0 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: left;
+  margin-right: 20px;
+}
+.join .box5 .lbbox .num {
+  font-size: 50px;
+  color: #2c69ff;
+  font-weight: bold;
+  font-style: italic;
+}
+.join .box5 .lbbox .lib {
+  font-size: 18px;
+  color: #4a4a4a;
+  margin: 20px 0;
+}
+.join .box5 .lbbox .msg {
+  font-size: 16px;
+  color: #757575;
+}
+@media (max-width: 768px) {
+  .join .content {
+    padding: 20px;
+  }
+  .join .title {
+    font-size: 30px;
+  }
+  .join .content .box1 .litte,
+  .join .content .box3 .shu .box .text .big {
+    font-size: 18px;
+  }
+  .join .content .box1 .msg,
+  .join .content .box3 .shu .box .text .msg {
+    font-size: 14px;
+  }
+  .join .content .box2 {
+    margin-top: 50px;
+  }
+  .join .content .box2 .msg .div img {
+    display: none;
+  }
+  .join .content .box2 .msg .div > div:last-child {
+    font-size: 12px;
+  }
+  .join .content .box2 .msg .div .nn {
+    font-size: 18px;
+  }
+  .join .content .box3 .shu {
+    flex-direction: column;
+  }
+  .join .content .box3 .shu .box img {
+    width: 100%;
+  }
+  .h180 {
+    height: 160px !important;
+  }
+  .join .content .box3 .shu .box .text {
+    height: 180px;
+  }
+  .join .content .box4 {
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .join .content .box4 > div {
+    width: auto;
+  }
+  .join .content .box4 .left {
+    align-items: flex-start;
+  }
+  .join .content .box4 .left .zy,
+  .join .content .box4 .right {
+    font-size: 16px;
+  }
+  .join .box5 {
+    display: none;
+  }
+}

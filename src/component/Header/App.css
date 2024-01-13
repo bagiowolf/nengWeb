@@ -1,4 +1,4 @@
-.box1 .header {
+.headerer .header {
   height: 84px;
   display: flex;
   justify-content: space-between;
@@ -6,22 +6,22 @@
   padding: 0 114px 0 360px;
   background-color: #2b68ff;
 }
-.box1 .header .HeadDiv,
-.box1 .header .left {
+.headerer .header .HeadDiv,
+.headerer .header .left {
   width: 237px;
   height: 25px;
 }
-.box1 .header .right {
+.headerer .header .right {
   width: 868px;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   color: #fff;
 }
-.box1 .header .right span {
+.headerer .header .right span {
   cursor: pointer;
 }
-.box1 .header .active {
+.headerer .header .active {
   padding-bottom: 10px;
   border-bottom: 3px solid #fce38a;
   color: #fce38a;
@@ -71,7 +71,7 @@
   .mobile {
     display: block;
   }
-  .box1 {
+  .headerer {
     display: none;
   }
 }
@@ -79,7 +79,7 @@
   .mobile {
     display: none;
   }
-  .box1 {
+  .headerer {
     display: block;
   }
 }

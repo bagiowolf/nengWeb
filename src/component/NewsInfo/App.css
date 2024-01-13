@@ -1,0 +1,58 @@
+.newsInfo .banner {
+  position: relative;
+}
+.newsInfo .banner img {
+  width: 100%;
+  height: 340px;
+}
+.newsInfo .banner .aboutText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8f8f8f;
+}
+.newsInfo .aboutText .gy {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.newsInfo .aboutText .sj {
+  font-size: 18px;
+}
+.newsInfo .content {
+  padding: 70px 360px;
+  text-align: left;
+}
+.newsInfo .content .title {
+  font-size: 40px;
+  color: #333333;
+  margin-bottom: 30px;
+}
+.newsInfo .content .time {
+  font-size: 28px;
+  color: #626262;
+  margin-bottom: 30px;
+}
+.newsInfo .content .msg,
+.newsInfo .content .creat {
+  font-size: 32px;
+  color: #626262;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .newsInfo .content {
+    padding: 20px;
+    letter-spacing: 2px;
+  }
+  .newsInfo .content .title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .newsInfo .content .time,
+  .newsInfo .content .msg,
+  .newsInfo .content .creat {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
