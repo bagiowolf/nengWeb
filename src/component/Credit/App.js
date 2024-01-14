@@ -74,12 +74,18 @@ let song = [
 ]
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
 
   return (
     <div>
       <div className="credit">
-        <Header state={props.state} onSetState={props.onSetState} />
+        <Header
+          state={props.state}
+          onSetState={props.onSetState}
+          windowWidthValue={props.windowWidthValue}
+        />
         <div className="banner">
           <img src={banner} alt="banner" />
           <div className="aboutText">
@@ -89,46 +95,115 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <div className="content">
+        <div
+          className="content"
+          style={{ padding: `0 ${240 * scal}px`, marginTop: 60 * scal + 'px' }}
+        >
           <div className="box2">
-            <div className="title">您是否正在面临一些问题?</div>
+            <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+              您是否正在面临一些问题?
+            </div>
             <div className="imgBox">
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <img src={png1} alt="" />
               </div>
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <div>谈好的生意,</div>
                 <div>却莫名其妙的黄了</div>
               </div>
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <img src={png2} alt="" />
               </div>
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <div>参加项目投标,</div>
                 <div>还没竞标就被刷掉了......</div>
               </div>
-              <div className="block ">
+              <div
+                className="block "
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <div className="p0">向银行贷款,</div>
                 <div className="p0">也被无情拒绝</div>
               </div>
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <img src={png3} alt="" />
               </div>
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <div>突然被告知,</div>
                 <div>自己的银行卡,</div>
                 <div>涉嫌找被冻结......</div>
               </div>
-              <div className="block">
+              <div
+                className="block"
+                style={{
+                  width: 354 * scal + 'px',
+                  height: 235 * scal + 'px',
+                  fontSize: 27 * scal + 'px'
+                }}
+              >
                 <img src={png4} alt="" />
               </div>
             </div>
           </div>
         </div>
         <div className="box3">
-          <div className="title">修复信用的重要性</div>
-          <div className="textArte">
-            <div className="left">
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            修复信用的重要性
+          </div>
+          <div
+            className="textArte"
+            style={{ padding: `${30 * scal}px ${240 * scal}px` }}
+          >
+            <div
+              className="left"
+              style={{ fontSize: 24 * scal + 'px', width: 1097 * scal + 'px' }}
+            >
               <p>
                 信息时代的今天，企业或个人的信息几乎公开透明，随时可以被查阅调取。其中，企业或个人的“信用”更是成为社会的通行证，一旦出现瑕疵，将受到巨大的损失或影响：
               </p>
@@ -148,46 +223,104 @@ export default function App(props) {
           </div>
         </div>
         <div className="box4">
-          <div className="title">修复信用的法律依据</div>
-          <div className="textArte">
-            <img src={png7} alt="" className="png7" />
-            <img src={png6} alt="" className="png6" />
-            <div className="text1">
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            修复信用的法律依据
+          </div>
+          <div
+            className="textArte"
+            style={{ padding: `${30 * scal}px ${240 * scal}px ${70 * scal}px` }}
+          >
+            <img
+              src={png7}
+              alt=""
+              className="png7"
+              style={{ width: 1307 * scal + 'px' }}
+            />
+            <img
+              src={png6}
+              alt=""
+              className="png6"
+              style={{ right: 240 * scal + 'px', width: 710 * scal + 'px' }}
+            />
+            <div
+              className="text1"
+              style={{ fontSize: 24 * scal + 'px', width: 660 * scal + 'px' }}
+            >
               中华人民共和国行政处罚法、企业信息公示暂行条例（国务院令第654号令）、国家企业信用信息公示系统使用运行管理办法（试行）、国家市场监督管理局行政处罚程序暂行规定、市场监督管理行政处罚信息公示规定（总局45号令2021.9.1实施）、市场监督管理严重违法失信名单管理办法（总局44号令2021.9.1实施）、市场监督管理信用修复管理办法及解读、地方性社会信用条例（如河北省社会信用条例、天津市社会信用条例、山东省社会信用条例......）
             </div>
           </div>
         </div>
-        <div className="box5">
-          <div className="title">可修复平台</div>
+        <div
+          className="box5"
+          style={{ padding: `${60 * scal}px ${190 * scal}px` }}
+        >
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            可修复平台
+          </div>
           <img src={png8} alt="" className="png8" />
-          <div className="textArte">
+          <div
+            className="textArte"
+            style={{ padding: `${50 * scal}px ${30 * scal}px` }}
+          >
             <div>
-              <div className="title1">官方平台</div>
+              <div className="title1" style={{ fontSize: 24 * scal + 'px' }}>
+                官方平台
+              </div>
               <div className="gf">
                 {arr.gf.map((item, index) => (
                   <div className="gf1" key={index}>
                     <div className="left">
-                      <img src={png9} alt="" />
+                      <img
+                        src={png9}
+                        alt=""
+                        style={{ width: 50 * scal + 'px' }}
+                      />
                     </div>
                     <div className="right">
-                      <div className="name">{item.name}</div>
-                      <div className="url">{item.url}</div>
+                      <div
+                        className="name"
+                        style={{ fontSize: 30 * scal + 'px' }}
+                      >
+                        {item.name}
+                      </div>
+                      <div
+                        className="url"
+                        style={{ fontSize: 14 * scal + 'px' }}
+                      >
+                        {item.url}
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
             <div>
-              <div className="title1">第三方平台</div>
+              <div className="title1" style={{ fontSize: 24 * scal + 'px' }}>
+                第三方平台
+              </div>
               <div className="gf">
                 {arr.pt.map((item, index) => (
                   <div className="gf1" key={index}>
                     <div className="left">
-                      <img src={png10} alt="" />
+                      <img
+                        src={png10}
+                        alt=""
+                        style={{ width: 45 * scal + 'px' }}
+                      />
                     </div>
                     <div className="right">
-                      <div className="name">{item.name}</div>
-                      <div className="url">{item.url}</div>
+                      <div
+                        className="name"
+                        style={{ fontSize: 30 * scal + 'px' }}
+                      >
+                        {item.name}
+                      </div>
+                      <div
+                        className="url"
+                        style={{ fontSize: 14 * scal + 'px' }}
+                      >
+                        {item.url}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -195,82 +328,149 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <div className="box6">
-          <img src={png11} alt="" className="png11" />
-          <img src={png12} alt="" className="png12" />
-          <div className="titleLeft">可修复内容</div>
+        <div
+          className="box6"
+          style={{ padding: `${95 * scal}px ${190 * scal}px ${50 * scal}px` }}
+        >
+          <img
+            src={png11}
+            alt=""
+            className="png11"
+            style={{ width: 1600 * scal + 'px', height: 1111 * scal + 'px' }}
+          />
+          <img
+            src={png12}
+            alt=""
+            className="png12"
+            style={{ width: 894 * scal + 'px', bottom: 100 * scal + 'px' }}
+          />
+          <div className="titleLeft" style={{ fontSize: 50 * scal + 'px' }}>
+            可修复内容
+          </div>
           <div className="textArte">
             {song.map((item, index) => (
-              <div className="song" key={index}>
-                <div className="left">
-                  <img src={item.url} alt="" />
+              <div
+                className="song"
+                key={index}
+                style={{ marginBottom: index !== 3 ? 100 * scal + 'px' : '' }}
+              >
+                <div className="left" style={{ width: 155 * scal + 'px' }}>
+                  <img
+                    src={item.url}
+                    alt=""
+                    style={{ width: 153 * scal + 'px' }}
+                  />
                 </div>
-                <div className="right">
-                  <div className="name">{item.name}</div>
-                  <div className="msg">{item.msg}</div>
+                <div className="right" style={{ width: 570 * scal + 'px' }}>
+                  <div className="name" style={{ fontSize: 32 * scal + 'px' }}>
+                    {item.name}
+                  </div>
+                  <div className="msg" style={{ fontSize: 24 * scal + 'px' }}>
+                    {item.msg}
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="box7">
-          <div className="title">修复流程</div>
+        <div className="box7" style={{ height: 650 * scal + 'px' }}>
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            修复流程
+          </div>
           <img src={png13} alt="" className="png13" />
-          <div className="textArte">
+          <div
+            className="textArte"
+            style={{ paddingBottom: 110 * scal + 'px' }}
+          >
             <div className="flowPath">
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
-              <img src={blueLine} alt="" />
-              <img src={yuan} alt="" />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
+              <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
+              <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
             </div>
-            <div className="flowText">
+            <div
+              className="flowText"
+              style={{ padding: `${50 * scal}px ${338 * scal}px` }}
+            >
               <div className="one">
-                <div className="step">01</div>
-                <div className="step2">咨询沟通</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  01
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  咨询沟通
+                </div>
               </div>
               <div className="one">
-                <div className="step">02</div>
-                <div className="step2">企业信用</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  02
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  企业信用
+                </div>
               </div>
               <div className="one">
-                <div className="step">03</div>
-                <div className="step2">修复范围</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  03
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  修复范围
+                </div>
               </div>
               <div className="one">
-                <div className="step">04</div>
-                <div className="step2">修复方案</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  04
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  修复方案
+                </div>
               </div>
               <div className="one">
-                <div className="step">05</div>
-                <div className="step2">修复意向</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  05
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  修复意向
+                </div>
               </div>
               <div className="one">
-                <div className="step">06</div>
-                <div className="step2">委托资料</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  06
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  委托资料
+                </div>
               </div>
               <div className="one">
-                <div className="step">07</div>
-                <div className="step2">流程服务</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  07
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  流程服务
+                </div>
               </div>
               <div className="one">
-                <div className="step">08</div>
-                <div className="step2">修复信用</div>
+                <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
+                  08
+                </div>
+                <div className="step2" style={{ fontSize: 24 * scal + 'px' }}>
+                  修复信用
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <Footer />
+        <Footer windowWidthValue={props.windowWidthValue} />
       </div>
       <div className="mobile">
         <Header
@@ -290,7 +490,9 @@ export default function App(props) {
         </div>
         <div className="content" onClick={() => setIsShow(false)}>
           <div className="box2">
-            <div className="title">您是否正在面临一些问题?</div>
+            <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+              您是否正在面临一些问题?
+            </div>
             <div className="imgBox">
               <div className="block">
                 <img src={png1} alt="" />
@@ -325,7 +527,9 @@ export default function App(props) {
           </div>
         </div>
         <div className="box3" onClick={() => setIsShow(false)}>
-          <div className="title">修复信用的重要性</div>
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            修复信用的重要性
+          </div>
           <div className="textArte">
             <div className="left">
               <p>
@@ -347,7 +551,9 @@ export default function App(props) {
           </div>
         </div>
         <div className="box4" onClick={() => setIsShow(false)}>
-          <div className="title">修复信用的法律依据</div>
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            修复信用的法律依据
+          </div>
           <div className="textArte">
             <div className="text1">
               中华人民共和国行政处罚法、企业信息公示暂行条例（国务院令第654号令）、国家企业信用信息公示系统使用运行管理办法（试行）、国家市场监督管理局行政处罚程序暂行规定、市场监督管理行政处罚信息公示规定（总局45号令2021.9.1实施）、市场监督管理严重违法失信名单管理办法（总局44号令2021.9.1实施）、市场监督管理信用修复管理办法及解读、地方性社会信用条例（如河北省社会信用条例、天津市社会信用条例、山东省社会信用条例......）
@@ -355,7 +561,9 @@ export default function App(props) {
           </div>
         </div>
         <div className="box5" onClick={() => setIsShow(false)}>
-          <div className="title">可修复平台</div>
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            可修复平台
+          </div>
           <div className="textArte">
             <div>
               <div className="title1">官方平台</div>
@@ -393,7 +601,9 @@ export default function App(props) {
         </div>
         <div className="box6">
           <img src={png11} alt="" className="png11" />
-          <div className="title">可修复内容</div>
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            可修复内容
+          </div>
           <div className="textArte">
             {song.map((item, index) => (
               <div className="song" key={index}>
@@ -409,7 +619,9 @@ export default function App(props) {
           </div>
         </div>
         <div className="box7">
-          <div className="title">修复流程</div>
+          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            修复流程
+          </div>
           <div className="textArte">
             <div className="flowText">
               <div className="one">

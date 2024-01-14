@@ -58,6 +58,8 @@ const chineseProvinces = [
 ]
 
 export default function Footer(props) {
+  let scal = props.windowWidthValue / 1919
+
   let state = props.isShow ?? true
 
   const [name, setName] = useState('')
@@ -78,9 +80,18 @@ export default function Footer(props) {
   return (
     <div>
       <div className="footer">
-        <div className={`sub ${state ? '' : 'dn'}`}>
+        <div
+          className={`sub ${state ? '' : 'dn'}`}
+          style={{
+            padding: `0 ${160 * scal}px 0 ${212 * scal}px`
+          }}
+        >
           <div className="box box1">
-            <img src={png4} alt="png4" />
+            <img
+              src={png4}
+              alt="png4"
+              style={{ width: 110 * scal + 'px', height: 100 * scal + 'px' }}
+            />
             <div>
               <div>
                 已经为<span>2000</span>余位当事人成功解决问题,
@@ -91,9 +102,9 @@ export default function Footer(props) {
             </div>
           </div>
           <div className="box">
-            <div className="form">
+            <div className="form" style={{ width: 418 * scal + 'px' }}>
               <div className="name">
-                <div>
+                <div style={{ width: 200 * scal + 'px' }}>
                   <input
                     type="text"
                     placeholder="您的名字"
@@ -101,7 +112,7 @@ export default function Footer(props) {
                     onChange={(e) => setName(e.target.value)}
                   />
                 </div>
-                <div>
+                <div style={{ width: 200 * scal + 'px' }}>
                   <input
                     type="text"
                     placeholder="您的手机"
@@ -111,7 +122,7 @@ export default function Footer(props) {
                 </div>
               </div>
               <div className="ls">
-                <div>
+                <div style={{ width: 200 * scal + 'px' }}>
                   <select
                     value={lawyer_name}
                     onChange={(e) => setLawyer_name(e.target.value)}
@@ -123,7 +134,7 @@ export default function Footer(props) {
                     ))}
                   </select>
                 </div>
-                <div>
+                <div style={{ width: 200 * scal + 'px' }}>
                   <select
                     value={delegation_type}
                     onChange={(e) => setDelegation_type(e.target.value)}
@@ -137,12 +148,12 @@ export default function Footer(props) {
                 </div>
               </div>
               <div className="save" onClick={save}>
-                <div>提交委托</div>
+                <div style={{ width: 418 * scal + 'px' }}>提交委托</div>
               </div>
             </div>
           </div>
           <div className="box">
-            <div className="table">
+            <div className="table" style={{ width: 460 * scal + 'px' }}>
               <div className="top">
                 每日前十名预约咨询资深律师，一对一电话解答
               </div>
@@ -156,7 +167,10 @@ export default function Footer(props) {
             </div>
           </div>
         </div>
-        <div className="bottom">
+        <div
+          className="bottom"
+          style={{ padding: `${93 * scal}px ${335 * scal}px ${46 * scal}px` }}
+        >
           <div className="list">
             <div>
               <div className="title">关于我们</div>

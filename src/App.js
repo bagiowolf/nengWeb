@@ -26,15 +26,69 @@ export default function App() {
           onSetState={setSelect}
         />
       )}
-      {select === 0 && <About onSetState={setSelect} state={select} />}
-      {select === 1 && <Credit onSetState={setSelect} state={select} />}
-      {select === 2 && <Team onSetState={setSelect} state={select} />}
-      {select === 3 && <LegalService onSetState={setSelect} state={select} />}
-      {select === 4 && <Cooperate onSetState={setSelect} state={select} />}
-      {select === 5 && <NewsCenter onSetState={setSelect} state={select} />}
-      {select === 6 && <Join onSetState={setSelect} state={select} />}
-      {select === 7 && <Case onSetState={setSelect} state={select} />}
-      {select === 8 && <ContactUs onSetState={setSelect} state={select} />}
+      {select === 0 && (
+        <About
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 1 && (
+        <Credit
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 2 && (
+        <Team
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 3 && (
+        <LegalService
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 4 && (
+        <Cooperate
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 5 && (
+        <NewsCenter
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 6 && (
+        <Join
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 7 && (
+        <Case
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
+      {select === 8 && (
+        <ContactUs
+          onSetState={setSelect}
+          state={select}
+          windowWidthValue={windowWidthValue}
+        />
+      )}
     </div>
   )
 }

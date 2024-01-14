@@ -31,7 +31,7 @@
   background-color: #fff;
   top: -100px;
   padding: 50px 80px;
-  padding-bottom: 0;
+  padding-bottom: 0 !important;
   text-align: left;
 }
 .NewsCenter .content .big {
@@ -159,19 +159,28 @@
 }
 @media (max-width: 768px) {
   .NewsCenter .content {
-    width: auto;
-    padding: 20px;
-    top: 0;
+    width: auto !important;
+    padding: 20px !important;
+    top: 0 !important;
   }
   .NewsCenter .content .big,
   .NewsCenter .content .pager .qr,
   .NewsCenter .content .pager .dao,
   .NewsCenter .content .pager .total {
-    display: none;
+    display: none !important;
   }
 
   .NewsCenter .content .pager .num .box {
-    padding: 10px;
-    font-size: 12px;
+    padding: 10px !important;
+    font-size: 12px !important;
+  }
+  .NewsCenter .content .title {
+    font-size: 24px !important;
+    margin-bottom: 12px !important;
+
+    height: 30px !important;
+  }
+  .NewsCenter .content .msg {
+    font-size: 18px !important;
   }
 }

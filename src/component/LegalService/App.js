@@ -10,6 +10,8 @@ import { get } from '../../utils/api/api'
 import returnDom from '../../utils/returnDom'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   const [active, setActive] = useState(0)
   const [state, setState] = useState(true)
@@ -22,7 +24,6 @@ export default function App(props) {
     console.log(active, 'active')
   }
   useEffect(() => {
-    console.log(123)
     get('/get_legal_services_all').then((res) => {
       let data = res.data?.[0] ?? []
       if (data.length % 3 === 2) {
@@ -43,6 +44,7 @@ export default function App(props) {
               onSetState={props.onSetState}
               isShow={isShow}
               onSetIsShow={setIsShow}
+              windowWidthValue={props.windowWidthValue}
             />
             <div className="banner" onClick={() => setIsShow(false)}>
               <img src={banner} alt="banner" />
@@ -53,7 +55,11 @@ export default function App(props) {
                 </div>
               </div>
             </div>
-            <div className="content" onClick={() => setIsShow(false)}>
+            <div
+              className="content"
+              onClick={() => setIsShow(false)}
+              style={{ padding: `${60 * scal}px ${360 * scal}px` }}
+            >
               <div className="boxList">
                 {arr.map((item, index) => (
                   <div
@@ -62,17 +68,46 @@ export default function App(props) {
                     } ${item.id === undefined ? 'dn' : ''}`}
                     onClick={() => setActive(item)}
                     key={index}
+                    style={{
+                      width: 380 * scal + 'px',
+                      height: 337 * scal + 'px',
+                      marginBottom: 40 * scal + 'px'
+                    }}
                   >
                     <img src={png1} alt="" />
-                    <div className="title">{item.title}</div>
-                    <div className="msg">
-                      <div className="div">
+                    <div
+                      className="title"
+                      style={{
+                        fontSize: 28 * scal + 'px',
+                        padding: `${24 * scal}px 0 ${20 * scal}px 0`,
+                        height: 66 * scal + 'px'
+                      }}
+                    >
+                      {item.title}
+                    </div>
+                    <div
+                      className="msg"
+                      style={{
+                        fontSize: 20 * scal + 'px',
+                        padding: 20 * scal + 'px',
+                        paddingTop: 10 * scal + 'px',
+                        lineHeight: 34 * scal + 'px'
+                      }}
+                    >
+                      <div
+                        className="div"
+                        style={{ height: 100 * scal + 'px' }}
+                      >
                         {returnDom(item.service_content)}
                       </div>
                       <div>受理数量：{item.accepted_num}个</div>
                       咨询人数：{item.consultation_num}次
                     </div>
-                    <div className="btn" onClick={() => setActiveInfo(item)}>
+                    <div
+                      className="btn"
+                      onClick={() => setActiveInfo(item)}
+                      style={{ width: 120 * scal + 'px' }}
+                    >
                       立即咨询
                     </div>
                   </div>
@@ -80,7 +115,7 @@ export default function App(props) {
               </div>
               <Form sourcePage="法律服务" />
             </div>
-            <Footer />
+            <Footer windowWidthValue={props.windowWidthValue} />
           </div>
         </div>
       )}
@@ -89,6 +124,7 @@ export default function App(props) {
           state={props.state}
           onSetState={props.onSetState}
           info={active}
+          windowWidthValue={props.windowWidthValue}
         />
       )}
     </div>

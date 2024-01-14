@@ -65,6 +65,8 @@ let arr = [
 ]
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   const [state, setState] = useState(true)
   const [activeInfo, setActiveInfo] = useState({})
@@ -78,7 +80,11 @@ export default function App(props) {
       {state && (
         <div>
           <div className="team">
-            <Header state={props.state} onSetState={props.onSetState} />
+            <Header
+              state={props.state}
+              onSetState={props.onSetState}
+              windowWidthValue={props.windowWidthValue}
+            />
             <div className="banner">
               <img src={banner} alt="banner" />
               <div className="aboutText">
@@ -88,23 +94,52 @@ export default function App(props) {
                 </div>
               </div>
             </div>
-            <div className="content">
-              <div className="big">
-                <div className="left">
-                  <div className="img">
+            <div
+              className="content"
+              style={{
+                padding: `${30 * scal}px ${360 * scal}px ${60 * scal}px`
+              }}
+            >
+              <div className="big" style={{ marginBottom: 30 * scal + 'px' }}>
+                <div
+                  className="left"
+                  style={{
+                    width: 290 * scal + 'px',
+                    height: 310 * scal + 'px'
+                  }}
+                >
+                  <div
+                    className="img"
+                    style={{
+                      width: 125 * scal + 'px',
+                      height: 125 * scal + 'px'
+                    }}
+                  >
                     <img src={png1} alt="" />
                   </div>
-                  <div className="btn" onClick={() => setActiveFun(arr[0])}>
+                  <div
+                    className="btn"
+                    onClick={() => setActiveFun(arr[0])}
+                    style={{ width: 120 * scal + 'px' }}
+                  >
                     立即预约
                   </div>
                   <div className="info" onClick={() => setActiveFun(arr[0])}>
                     查看详情
                   </div>
                 </div>
-                <div className="right">
-                  <div className="name">王玉 【执业律师】</div>
+                <div
+                  className="right"
+                  style={{
+                    width: 907 * scal + 'px',
+                    padding: `${20 * scal}px ${50 * scal}px`
+                  }}
+                >
+                  <div className="name" style={{ fontSize: 24 * scal + 'px' }}>
+                    王玉 【执业律师】
+                  </div>
                   <div className="line"></div>
-                  <div className="msg">
+                  <div className="msg" style={{ fontSize: 18 * scal + 'px' }}>
                     <span>
                       擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
                       介绍：有多年的律师执业经验及法学理论功底，能够娴熟运用法律规定和法理精神处理复杂、疑难的法律实务问题，由于办事作风沉稳干练，对客户永远保持认真的态度，曾获得当事人和顾问单位的好评，将继续竭尽所能为当事人争取合法利益！
@@ -120,23 +155,60 @@ export default function App(props) {
               <div className="sm">
                 {arr.map((item, index) => (
                   <div className="boxList" key={index}>
-                    <div className="left">
-                      <div className="img">
+                    <div
+                      className="left"
+                      style={{
+                        width: 290 * scal + 'px',
+                        height: 310 * scal + 'px'
+                      }}
+                    >
+                      <div
+                        className="img"
+                        style={{
+                          width: 125 * scal + 'px',
+                          height: 125 * scal + 'px'
+                        }}
+                      >
                         <img src={item.img} alt="" />
                       </div>
-                      <div className="btn" onClick={() => setActiveFun(item)}>
+                      <div
+                        className="btn"
+                        onClick={() => setActiveFun(item)}
+                        style={{ width: 120 * scal + 'px' }}
+                      >
                         立即预约
                       </div>
                       <div className="info" onClick={() => setActiveFun(item)}>
                         查看详情
                       </div>
                     </div>
-                    <div className="right">
-                      <div className="name">
+                    <div
+                      className="right"
+                      style={{
+                        width: 285 * scal + 'px',
+                        padding: `${20 * scal}px ${50 * scal}px`
+                      }}
+                    >
+                      <div
+                        className="name"
+                        style={{ fontSize: 24 * scal + 'px' }}
+                      >
                         {item.name} 【{item.type}】
                       </div>
-                      <div className="line"></div>
-                      <div className="msg">
+                      <div
+                        className="line"
+                        style={{
+                          width: 60 * scal + 'px',
+                          margin: `${25 * scal}px 0`
+                        }}
+                      ></div>
+                      <div
+                        className="msg"
+                        style={{
+                          fontSize: 18 * scal + 'px',
+                          lineHeight: 28 * scal + 'px'
+                        }}
+                      >
                         <span>{item.msg}</span>
                         <div className="num">
                           <div>
@@ -153,7 +225,7 @@ export default function App(props) {
               </div>
               <Form sourcePage="律师团队" />
             </div>
-            <Footer />
+            <Footer windowWidthValue={props.windowWidthValue} />
           </div>
           <div className="mobile">
             <Header
@@ -213,7 +285,7 @@ export default function App(props) {
               </div>
               <Form sourcePage="律师团队" />
             </div>
-            <Footer />
+            <Footer windowWidthValue={props.windowWidthValue} />
           </div>
         </div>
       )}
@@ -222,6 +294,7 @@ export default function App(props) {
           state={props.state}
           onSetState={props.onSetState}
           activeInfo={activeInfo}
+          windowWidthValue={props.windowWidthValue}
         />
       )}
     </div>

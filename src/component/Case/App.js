@@ -14,6 +14,8 @@ import returnDom from '../../utils/returnDom'
 import formatTime from '../../utils/formatTime/time'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   const [state, setState] = useState(true)
   const [arr, setArr] = useState([])
@@ -69,6 +71,7 @@ export default function App(props) {
             onSetState={props.onSetState}
             isShow={isShow}
             onSetIsShow={setIsShow}
+            windowWidthValue={props.windowWidthValue}
           />
           <div className="banner" onClick={() => setIsShow(false)}>
             <img src={banner} alt="banner" />
@@ -80,15 +83,39 @@ export default function App(props) {
             </div>
           </div>
 
-          <div className="content" onClick={() => setIsShow(false)}>
-            <div className="title">
+          <div
+            className="content"
+            onClick={() => setIsShow(false)}
+            style={{ padding: `${60 * scal}px ${360 * scal}px` }}
+          >
+            <div className="title" style={{ fontSize: 38 * scal + 'px' }}>
               已帮助<span>30,000+</span>当事人成功解决问题
             </div>
-            <div className="type">
+            <div
+              className="type"
+              style={{
+                fontSize: 18 * scal + 'px',
+                marginBottom: 15 * scal + 'px',
+                paddingLeft: 10 * scal + 'px'
+              }}
+            >
               案例分类:
-              <select onChange={(e) => setData(e.target.value)} value={type}>
+              <select
+                onChange={(e) => setData(e.target.value)}
+                value={type}
+                style={{
+                  fontSize: 18 * scal + 'px',
+                  marginLeft: 15 * scal + 'px'
+                }}
+              >
                 {typeList.map((item) => (
-                  <option value={item.id} key={item.id}>
+                  <option
+                    value={item.id}
+                    key={item.id}
+                    style={{
+                      fontSize: 16 * scal + 'px'
+                    }}
+                  >
                     {item.type}
                   </option>
                 ))}
@@ -100,28 +127,78 @@ export default function App(props) {
                   className={`box ${item.id === undefined ? 'dn' : ''}`}
                   key={item.id ? item.id : Date.now()}
                   onClick={() => setActive(item)}
+                  style={{
+                    width: 380 * scal + 'px',
+                    height: 435 * scal + 'px',
+                    marginBottom: 30 * scal + 'px'
+                  }}
                 >
-                  <img src={item.case_image_path} alt="" />
-                  <div className="title">{item.title}</div>
-                  <div className="msg">{returnDom(item.content)}</div>
-                  <div className="bottm">
-                    <div className="category">{item.category}</div>
+                  <img
+                    src={item.case_image_path}
+                    alt=""
+                    style={{ height: 214 * scal + 'px' }}
+                  />
+                  <div
+                    className="title"
+                    style={{
+                      fontSize: 22 * scal + 'px',
+                      padding: 15 * scal + 'px'
+                    }}
+                  >
+                    {item.title}
+                  </div>
+                  <div
+                    className="msg"
+                    style={{
+                      padding: 15 * scal + 'px',
+                      fontSize: 18 * scal + 'px',
+                      height: 114 * scal + 'px',
+                      paddingTop: 0
+                    }}
+                  >
+                    {returnDom(item.content)}
+                  </div>
+                  <div className="bottm" style={{ padding: 15 * scal + 'px' }}>
+                    <div
+                      className="category"
+                      style={{
+                        padding: `0 ${5 * scal}px`,
+                        height: 32 * scal + 'px',
+                        lineHeight: 32 * scal + 'px'
+                      }}
+                    >
+                      {item.category}
+                    </div>
                     <img src={png1} alt="" />
                   </div>
                 </div>
               ))}
             </div>
-            <div className="lookMore">查看更多</div>
+            <div
+              className="lookMore"
+              style={{
+                width: 215 * scal + 'px',
+                height: 48 * scal + 'px',
+                lineHeight: 48 * scal + 'px',
+                fontSize: 20 * scal + 'px',
+                marginTop: 20 * scal + 'px',
+                marginBottom: 87 * scal + 'px'
+              }}
+            >
+              查看更多
+            </div>
             <Form sourcePage="成功案例" />
           </div>
           <div className="xz">
             <img src={png3} alt="" />
-            <div className="title">他们也选择了竭律</div>
+            <div className="title" style={{ fontSize: 38 * scal + 'px' }}>
+              他们也选择了竭律
+            </div>
             <div className="box">
               <img src={png4} alt="" />
             </div>
           </div>
-          <Footer />
+          <Footer windowWidthValue={props.windowWidthValue} />
         </div>
       )}
       {!state && (
@@ -129,6 +206,7 @@ export default function App(props) {
           state={props.state}
           onSetState={props.onSetState}
           info={activeInfo}
+          windowWidthValue={props.windowWidthValue}
         />
       )}
     </div>

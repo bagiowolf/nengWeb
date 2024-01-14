@@ -21,6 +21,8 @@ let arr = [
 ]
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   const [message_type, setMessage_type] = useState('法律咨询')
   const [content, setContent] = useState('')
@@ -43,6 +45,7 @@ export default function App(props) {
           onSetState={props.onSetState}
           isShow={isShow}
           onSetIsShow={setIsShow}
+          windowWidthValue={props.windowWidthValue}
         />
         <div className="banner" onClick={() => setIsShow(false)}>
           <img src={banner} alt="banner" />
@@ -54,20 +57,39 @@ export default function App(props) {
           </div>
         </div>
 
-        <div className="content" onClick={() => setIsShow(false)}>
-          <div className="formBox">
-            <div className="left">
+        <div
+          className="content"
+          onClick={() => setIsShow(false)}
+          style={{ padding: `${60 * scal}px ${360 * scal}px` }}
+        >
+          <div className="formBox" style={{ width: 1200 * scal + 'px' }}>
+            <div
+              className="left"
+              style={{ padding: `${25 * scal}px ${30 * scal}px` }}
+            >
               <div className="top">
                 <img src={png1} alt="" />
-                <span>请简单描述您的法律问题，以便我们了解情况</span>
+                <span
+                  style={{
+                    fontSize: 22 * scal + 'px',
+                    marginLeft: 10 * scal + 'px'
+                  }}
+                >
+                  请简单描述您的法律问题，以便我们了解情况
+                </span>
               </div>
-              <div className="form">
+              <div className="form" style={{ marginTop: 20 * scal + 'px' }}>
                 <div className="item">
                   <div className="left">问题类型:</div>
                   <div className="right">
                     <select
                       value={message_type}
                       onChange={(e) => setMessage_type(e.target.value)}
+                      style={{
+                        width: 454 * scal + 'px',
+                        height: 38 * scal + 'px',
+                        marginLeft: 10 * scal + 'px'
+                      }}
                     >
                       {arr.map((item) => (
                         <option value={item} key={item}>
@@ -86,6 +108,11 @@ export default function App(props) {
                       rows={3}
                       value={content}
                       onChange={(e) => setContent(e.target.value)}
+                      style={{
+                        width: 454 * scal + 'px',
+                        height: 116 * scal + 'px',
+                        marginLeft: 10 * scal + 'px'
+                      }}
                     ></textarea>
                   </div>
                 </div>
@@ -96,25 +123,74 @@ export default function App(props) {
                       type="text"
                       value={messenger_phone}
                       onChange={(e) => setMessenger_phone(e.target.value)}
+                      style={{
+                        width: 454 * scal + 'px',
+                        height: 38 * scal + 'px',
+                        marginLeft: 10 * scal + 'px'
+                      }}
                     />
                   </div>
                 </div>
-                <div className="save" onClick={save}>
+                <div
+                  className="save"
+                  onClick={save}
+                  style={{
+                    width: 217 * scal + 'px',
+                    height: 48 * scal + 'px',
+                    lineHeight: 48 * scal + 'px',
+                    fontSize: 16 * scal + 'px'
+                  }}
+                >
                   提交问题
                 </div>
               </div>
             </div>
-            <div className="right">
-              <div className="one">手机扫码，直接求助律师</div>
+            <div
+              className="right"
+              style={{
+                width: 600 * scal + 'px',
+                padding: `${45 * scal}px ${30 * scal}px`
+              }}
+            >
+              <div
+                className="one"
+                style={{
+                  fontSize: 30 * scal + 'px'
+                }}
+              >
+                手机扫码，直接求助律师
+              </div>
               <div className="two">
-                超过<span>100+</span>律师,<span>24小时</span>在线,评价
+                超过
+                <span
+                  style={{
+                    fontSize: 24 * scal + 'px'
+                  }}
+                >
+                  100+
+                </span>
+                律师,
+                <span
+                  style={{
+                    fontSize: 24 * scal + 'px'
+                  }}
+                >
+                  24小时
+                </span>
+                在线,评价
                 <span>25分钟</span>回复速度
               </div>
               <div className="three">
                 <div className="left">
                   <img src={png2} alt="" />
                 </div>
-                <div className="right">
+                <div
+                  className="right"
+                  style={{
+                    marginLeft: 30 * scal + 'px',
+                    fontSize: 16 * scal + 'px'
+                  }}
+                >
                   <div>1.添加我司官方微信公众号</div>
                   <div>2.简诉您的请求问题</div>
                   <div>3.与在线律师一对一解答</div>
@@ -127,7 +203,7 @@ export default function App(props) {
           <img src={png3} alt="" />
         </div>
 
-        <Footer isShow={false} />
+        <Footer isShow={false} windowWidthValue={props.windowWidthValue} />
       </div>
     </div>
   )

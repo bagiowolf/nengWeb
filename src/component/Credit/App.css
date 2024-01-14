@@ -93,7 +93,7 @@
   height: 230px;
   position: absolute;
   top: 50%;
-  transform: translateY(-60%);
+  transform: translateY(-50%);
   font-size: 24px;
   overflow: hidden;
   color: #666666;
@@ -115,6 +115,7 @@
 .credit .box5 .png8 {
   position: absolute;
   width: 100%;
+  height: 100%;
   left: 0;
   top: 0;
   z-index: 0;
@@ -163,7 +164,7 @@
 .credit .box6 {
   text-align: left;
   position: relative;
-  top: -16px;
+  /* top: -16px; */
   padding: 95px 190px;
 }
 .credit .box6 .titleLeft {
@@ -185,11 +186,11 @@
 .credit .box6 .textArte {
   position: relative;
   z-index: 9;
-  height: 780px;
+  /* height: 780px; */
   margin-top: 80px;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-around; */
 }
 .credit .box6 .textArte .song {
   display: flex;
@@ -214,8 +215,9 @@
   text-align: left;
   position: relative;
   z-index: 9;
-  top: -16px;
+  /* top: -16px; */
   padding-top: 130px;
+  box-sizing: border-box;
 }
 .credit .box7 .png13 {
   position: absolute;
@@ -270,7 +272,7 @@
   margin-right: 10px;
 }
 .mobile .content .title {
-  font-size: 26px;
+  font-size: 26px !important;
   font-weight: 600;
   margin-bottom: 34px;
 }
@@ -280,7 +282,7 @@
 .mobile .box6 .title,
 .mobile .box7 .title {
   text-align: left;
-  font-size: 26px;
+  font-size: 26px !important;
   font-weight: 600;
   margin-bottom: 34px;
   padding: 20px 0 0 20px;

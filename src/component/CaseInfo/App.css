@@ -53,15 +53,18 @@
 }
 @media (max-width: 768px) {
   .caseInfo .content {
-    padding: 20px;
+    padding: 20px !important;
   }
   .caseInfo .content .title {
-    font-size: 30px;
+    font-size: 30px !important;
   }
   .caseInfo .content .msg {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .caseInfo .content .png3 {
-    width: 100%;
+    width: 100% !important;
+  }
+  .caseInfo .content .num div img {
+    width: auto !important;
   }
 }

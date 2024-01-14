@@ -65,7 +65,8 @@
   width: 850px;
   text-align: left;
   padding: 20px 50px;
-  padding-right: 0;
+  padding-right: 0 !important;
+  box-sizing: border-box;
 }
 .team .content .big .right .name {
   font-size: 24px;
@@ -82,11 +83,18 @@
   letter-spacing: 3px;
   line-height: 28px;
 }
+.team .content .big .right .msg > span {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* 指定显示的行数 */
+  -webkit-box-orient: vertical;
+}
 .team .content .big .right .msg .num {
   margin-top: 20px;
 }
 .team .content .big .right .msg .bool {
   color: #000;
+  margin-right: 10px;
 }
 .team .content .sm {
   display: flex;
@@ -95,7 +103,7 @@
 }
 .team .content .sm .boxList {
   display: flex;
-  width: 50%;
+  /* width: 50%; */
   margin-bottom: 30px;
 }
 
@@ -138,7 +146,9 @@
   width: 235px;
   text-align: left;
   padding: 20px 50px;
-  padding-right: 0;
+  padding-right: 0 !important;
+
+  box-sizing: border-box;
 }
 .team .content .boxList .right .name {
   font-size: 24px;

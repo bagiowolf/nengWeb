@@ -83,7 +83,7 @@
   margin-bottom: 20px;
 }
 .h180 {
-  height: 180px !important;
+  height: 180px;
 }
 .join .content .box3 .shu .box .text {
   position: absolute;
@@ -189,58 +189,64 @@
 }
 @media (max-width: 768px) {
   .join .content {
-    padding: 20px;
+    padding: 20px !important;
   }
   .join .title {
-    font-size: 30px;
+    font-size: 30px !important;
+    margin-bottom: 30px !important;
   }
   .join .content .box1 .litte,
   .join .content .box3 .shu .box .text .big {
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .join .content .box1 .msg,
   .join .content .box3 .shu .box .text .msg {
-    font-size: 14px;
+    font-size: 14px !important;
   }
   .join .content .box2 {
-    margin-top: 50px;
+    margin-top: 50px !important;
   }
   .join .content .box2 .msg .div img {
-    display: none;
+    display: none !important;
   }
   .join .content .box2 .msg .div > div:last-child {
-    font-size: 12px;
+    font-size: 12px !important;
   }
   .join .content .box2 .msg .div .nn {
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .join .content .box3 .shu {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .join .content .box3 .shu .box img {
-    width: 100%;
+    width: 100% !important;
+    height: auto !important;
   }
   .h180 {
     height: 160px !important;
   }
   .join .content .box3 .shu .box .text {
-    height: 180px;
+    height: 160px !important;
+    padding: 10px !important;
   }
   .join .content .box4 {
-    margin-top: 50px;
-    flex-direction: column;
+    margin-top: 50px !important;
+    flex-direction: column !important;
   }
   .join .content .box4 > div {
-    width: auto;
+    width: auto !important;
   }
   .join .content .box4 .left {
-    align-items: flex-start;
+    align-items: flex-start !important;
   }
   .join .content .box4 .left .zy,
   .join .content .box4 .right {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .join .box5 {
-    display: none;
+    display: none !important;
+  }
+  .join .content .box4 .left .tj {
+    font-size: 20px !important;
   }
 }

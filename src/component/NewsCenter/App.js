@@ -10,6 +10,8 @@ import setTime from '../../utils/formatTime/time'
 import returnDom from '../../utils/returnDom'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   const [state, setState] = useState(true)
   const [arr, setArr] = useState([])
@@ -74,6 +76,7 @@ export default function App(props) {
             onSetState={props.onSetState}
             isShow={isShow}
             onSetIsShow={setIsShow}
+            windowWidthValue={props.windowWidthValue}
           />
           <div className="banner" onClick={() => setIsShow(false)}>
             <img src={banner} alt="banner" />
@@ -85,12 +88,39 @@ export default function App(props) {
             </div>
           </div>
 
-          <div className="content" onClick={() => setIsShow(false)}>
+          <div
+            className="content"
+            onClick={() => setIsShow(false)}
+            style={{
+              width: 1360 * scal + 'px',
+              top: -50 * scal + 'px',
+              padding: `${50 * scal}px ${80 * scal}px`
+            }}
+          >
             <div className="big">
-              <div className="left" onClick={() => setInfo(first)}>
+              <div
+                className="left"
+                onClick={() => setInfo(first)}
+                style={{
+                  width: 780 * scal + 'px',
+                  height: 337 * scal + 'px',
+                  marginRight: 50 * scal + 'px'
+                }}
+              >
                 <img src={first.image_path} alt="" />
-                <div className="text">
-                  <div className="bigText">{first.title}</div>
+                <div
+                  className="text"
+                  style={{ bottom: 50 * scal + 'px', left: 60 * scal + 'px' }}
+                >
+                  <div
+                    className="bigText"
+                    style={{
+                      fontSize: 24 * scal + 'px',
+                      marginBottom: 10 * scal + 'px'
+                    }}
+                  >
+                    {first.title}
+                  </div>
                   <div>/阅读全文</div>
                 </div>
               </div>
@@ -104,7 +134,15 @@ export default function App(props) {
                     <div className="time" onClick={() => setInfo(item)}>
                       {item.published_at}
                     </div>
-                    <div className="title" onClick={() => setInfo(item)}>
+                    <div
+                      className="title"
+                      onClick={() => setInfo(item)}
+                      style={{
+                        fontSize: 24 * scal + 'px',
+                        marginBottom: 12 * scal + 'px',
+                        height: 56 * scal + 'px'
+                      }}
+                    >
                       {item.title}
                     </div>
                   </div>
@@ -117,10 +155,25 @@ export default function App(props) {
                   className="news"
                   key={item.id}
                   onClick={() => setInfo(item)}
+                  style={{
+                    marginBottom: 12 * scal + 'px',
+                    paddingBottom: 28 * scal + 'px'
+                  }}
                 >
                   <div className="time">{item.published_at}</div>
-                  <div className="title">{item.title}</div>
-                  <div className="msg">{returnDom(item.content)}</div>
+                  <div
+                    className="title"
+                    style={{
+                      fontSize: 24 * scal + 'px',
+                      marginBottom: 12 * scal + 'px',
+                      height: 56 * scal + 'px'
+                    }}
+                  >
+                    {item.title}
+                  </div>
+                  <div className="msg" style={{ fontSize: 18 * scal + 'px' }}>
+                    {returnDom(item.content)}
+                  </div>
                 </div>
               ))}
             </div>
@@ -162,7 +215,7 @@ export default function App(props) {
               </div>
             </div>
           </div>
-          <Footer />
+          <Footer windowWidthValue={props.windowWidthValue} />
         </div>
       )}
       {!state && (
@@ -170,6 +223,7 @@ export default function App(props) {
           state={props.state}
           onSetState={props.onSetState}
           info={activeInfo}
+          windowWidthValue={props.windowWidthValue}
         />
       )}
     </div>

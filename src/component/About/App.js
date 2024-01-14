@@ -18,11 +18,16 @@ const textList = [
 
 export default function MyApp(props) {
   const [isShow, setIsShow] = useState(false)
+  let scal = props.windowWidthValue / 1919
 
   return (
     <div>
       <div className="about">
-        <Header state={props.state} onSetState={props.onSetState}></Header>
+        <Header
+          state={props.state}
+          onSetState={props.onSetState}
+          windowWidthValue={props.windowWidthValue}
+        />
         <div className="banner">
           <img src={banner} alt="banner" />
           <div className="aboutText">
@@ -32,7 +37,10 @@ export default function MyApp(props) {
             </div>
           </div>
         </div>
-        <div className="content">
+        <div
+          className="content"
+          style={{ padding: `${60 * scal}px ${360 * scal}px 0` }}
+        >
           <div className="msg">
             <div className="title">关于竭律</div>
             {textList.map((item, index) => (
@@ -40,36 +48,54 @@ export default function MyApp(props) {
             ))}
           </div>
           <div className="num">
-            <div className="box">
-              <div className="one">30,000</div>
+            <div className="box" style={{ width: 210 * scal + 'px' }}>
+              <div className="one" style={{ fontSize: 56 * scal + 'px' }}>
+                30,000
+              </div>
               <div className="two">当事人</div>
             </div>
             <img src={line} alt="line" className="line" />
             <div className="box">
-              <div className="one">
+              <div className="one" style={{ fontSize: 56 * scal + 'px' }}>
                 2<span>亿</span>3540<span>余万</span>
               </div>
               <div className="two">挽回经济利益</div>
             </div>
             <img src={line} alt="line" className="line" />
             <div className="box">
-              <div className="one">126</div>
+              <div className="one" style={{ fontSize: 56 * scal + 'px' }}>
+                126
+              </div>
               <div className="two">实战律师</div>
             </div>
             <img src={line} alt="line" className="line" />
             <div className="box">
-              <div className="one">全国</div>
+              <div className="one" style={{ fontSize: 56 * scal + 'px' }}>
+                全国
+              </div>
               <div className="two">案件范围</div>
             </div>
           </div>
 
           <div className="img">
-            <img src={png1} alt="png1" />
-            <img src={png2} alt="png2" />
-            <img src={png3} alt="png3" />
+            <img
+              src={png1}
+              alt="png1"
+              style={{ width: 388 * scal + 'px', height: 250 * scal + 'px' }}
+            />
+            <img
+              src={png2}
+              alt="png2"
+              style={{ width: 388 * scal + 'px', height: 250 * scal + 'px' }}
+            />
+            <img
+              src={png3}
+              alt="png3"
+              style={{ width: 388 * scal + 'px', height: 250 * scal + 'px' }}
+            />
           </div>
         </div>
-        <Footer />
+        <Footer windowWidthValue={props.windowWidthValue} />
       </div>
       <div className="mobile">
         <Header

@@ -4,6 +4,8 @@ import gengduo from './img/gengduo.png'
 import './App.css'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const list = [
     '关于我们',
     '信用修复',
@@ -18,15 +20,25 @@ export default function App(props) {
   const handelClick = (type) => {
     props.onSetIsShow(type)
   }
-  console.log(props.state, '123')
   return (
     <div>
-      <div className="headerer">
-        <div className="header">
-          <div className="left">
-            <img className="HeadDiv" src={logo} alt="logo" />
+      <div className="headerer" style={{}}>
+        <div
+          className="header"
+          style={{ padding: `0 ${114 * scal}px 0 ${360 * scal}px` }}
+        >
+          <div className="left" style={{ width: 237 * scal + 'px' }}>
+            <img
+              className="HeadDiv"
+              src={logo}
+              alt="logo"
+              style={{ width: 237 * scal + 'px' }}
+            />
           </div>
-          <div className="right">
+          <div
+            className="right"
+            style={{ width: 868 * scal + 'px', fontSize: 14 * scal + 'px' }}
+          >
             {list.map((item, index) => (
               <span
                 key={item}

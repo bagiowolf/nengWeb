@@ -117,36 +117,52 @@
 }
 @media (max-width: 768px) {
   .ContactUs .content {
-    padding: 20px;
+    padding: 20px !important;
   }
   .ContactUs .content .formBox {
-    width: auto;
-    flex-direction: column;
+    width: auto !important;
+    flex-direction: column !important;
   }
   .ContactUs .content .formBox .left .top span {
-    font-size: 18px;
+    font-size: 18px !important;
   }
   .ContactUs .content .formBox .form .item .left {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .ContactUs .content .formBox .form .item input,
   .ContactUs .content .formBox .form .item textarea {
-    width: 100%;
+    width: 100% !important;
   }
   .ContactUs .content .formBox > .right {
-    width: auto;
+    width: auto !important;
   }
   .ContactUs .content .formBox > .right .three .right {
-    font-size: 12px;
-    margin-left: 20px;
+    font-size: 12px !important;
+    margin-left: 20px !important;
   }
   .ContactUs .content .formBox > .right .three .right div {
-    margin-top: 17px;
+    margin-top: 17px !important;
   }
   .ContactUs .content .formBox .form .item .right {
-    flex: 1;
+    flex: 1 !important;
   }
   .ContactUs .content .formBox .form .item select {
-    width: 102%;
+    width: 102% !important;
+    height: 38px !important;
+  }
+  .ContactUs .content .formBox > .left {
+    padding: 20px !important;
+  }
+  .ContactUs .content .formBox .form .item input {
+    height: 38px !important;
+  }
+  .ContactUs .content .formBox .form .item textarea {
+    height: 116px !important;
+  }
+  .ContactUs .content .formBox .form .save {
+    width: 217px !important;
+    height: 48px !important;
+    line-height: 48px !important;
+    font-size: 16px !important;
   }
 }

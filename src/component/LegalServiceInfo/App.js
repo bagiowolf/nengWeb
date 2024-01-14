@@ -11,6 +11,8 @@ import png2 from './img/png2.png'
 import returnDom from '../../utils/returnDom'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   return (
     <div className="legalServiceInfo">
@@ -19,6 +21,7 @@ export default function App(props) {
         onSetState={props.onSetState}
         isShow={isShow}
         onSetIsShow={setIsShow}
+        windowWidthValue={props.windowWidthValue}
       />
       <div className="banner" onClick={() => setIsShow(false)}>
         <img src={banner} alt="banner" />
@@ -29,21 +32,52 @@ export default function App(props) {
           </div>
         </div>
       </div>
-      <div className="content" onClick={() => setIsShow(false)}>
+      <div
+        className="content"
+        onClick={() => setIsShow(false)}
+        style={{ padding: `${100 * scal}px ${360 * scal}px` }}
+      >
         <div className="type">
-          <div className="title">{props.info.title}</div>
+          <div
+            className="title"
+            style={{
+              fontSize: 50 * scal + 'px',
+              marginBottom: 80 * scal + 'px'
+            }}
+          >
+            {props.info.title}
+          </div>
           <div className="typeBox">
-            <div className="left">
+            <div className="left" style={{ width: 570 * scal + 'px' }}>
               <div className="img">
-                <img src={props.info.display_image_path} alt="" />
+                <img
+                  src={props.info.display_image_path}
+                  alt=""
+                  style={{
+                    width: 570 * scal + 'px',
+                    height: 380 * scal + 'px'
+                  }}
+                />
               </div>
             </div>
-            <div className="right">
+            <div className="right" style={{ width: 600 * scal + 'px' }}>
               <div className="top">
-                <img src={png2} alt="" />
-                <div className="title">{props.info.title}</div>
+                <img
+                  src={png2}
+                  alt=""
+                  style={{ width: 32 * scal + 'px', height: 32 * scal + 'px' }}
+                />
+                <div className="title" style={{ fontSize: 24 + scal + 'px' }}>
+                  {props.info.title}
+                </div>
               </div>
-              <div className="bottom">
+              <div
+                className="bottom"
+                style={{
+                  padding: 15 * scal + 'px',
+                  fontSize: 20 * scal + 'px'
+                }}
+              >
                 {returnDom(props.info.service_content)}
               </div>
             </div>
@@ -51,7 +85,7 @@ export default function App(props) {
         </div>
         <Form sourcePage={`法律服务-${props.info.title}`} />
       </div>
-      <Footer />
+      <Footer windowWidthValue={props.windowWidthValue} />
     </div>
   )
 }

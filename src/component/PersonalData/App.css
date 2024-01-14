@@ -93,117 +93,48 @@
   margin-top: 40px;
 }
 
-.PersonalData .content .formBox {
-  padding: 26px 80px;
-  margin-top: 70px;
-  text-align: left;
-  box-shadow: 12px 12px 27px 0 rgba(0, 0, 0, 0.3);
-}
-.PersonalData .content .formBox .title {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-.PersonalData .content .formBox .from {
-  display: flex;
-  flex-direction: column;
-}
-.PersonalData .content .formBox .from .item {
-  width: 790px;
-  display: flex;
-  margin-bottom: 20px;
-}
-.PersonalData .content .formBox .from .item .left {
-  width: 330px;
-  text-align: right;
-  color: #666;
-  font-size: 16px;
-  margin-right: 16px;
-}
-.PersonalData .content .formBox .from .item .right {
-  height: 38px;
-  width: 540px;
-}
-.PersonalData .content .formBox .from .item .right input {
-  width: 100%;
-  border-radius: 5px;
-  height: 100%;
-}
-.PersonalData .content .formBox .from .item .right textarea {
-  border-radius: 5px;
-  width: 100%;
-}
-.PersonalData .content .formBox .from .item .textarea {
-  height: auto;
-}
-.PersonalData .content .formBox .save {
-  width: 217px;
-  height: 48px;
-  line-height: 48px;
-  background-color: #7caaff;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 25px;
-  cursor: pointer;
-}
-
-/* .PersonalData {
-  display: none;
-} */
 @media (max-width: 768px) {
   .PersonalData .content {
-    padding: 20px;
+    padding: 20px !important;
   }
   .PersonalData .info .left .line {
-    border-width: 1px;
+    border-width: 1px !important;
+  }
+  .PersonalData .info .left .name {
+    font-size: 12px !important;
   }
   .PersonalData .info .left .num {
-    font-size: 12px;
+    font-size: 11px !important;
   }
   .PersonalData .info .right {
-    margin-left: 20px;
-    width: auto;
+    margin-left: 20px !important;
+    width: auto !important;
   }
   .PersonalData .info .left {
-    width: 110px;
+    width: 110px !important;
+    padding: 10px;
+    height: 215px;
   }
   .PersonalData .info .left .zx {
-    width: 80px;
-    height: 28px;
-    line-height: 28px;
-    font-size: 14px;
+    width: 80px !important;
+    height: 28px !important;
+    line-height: 28px !important;
+    font-size: 14px !important;
   }
   .PersonalData .info .right .title {
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+    font-size: 16px !important;
+    letter-spacing: 1px !important;
+    margin-bottom: 15px !important;
   }
   .PersonalData .info .right .msg {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 12px !important;
+    line-height: 16px !important;
   }
   .PersonalData .info .right .pj {
-    margin-top: 20px;
+    margin-top: 20px !important;
   }
   .PersonalData .info .left .img {
-    width: 100px;
-    height: 100px;
-  }
-  .PersonalData .content .formBox {
-    padding: 20px;
-    box-shadow: 5px 6px 19px 0 rgba(0, 0, 0, 0.1);
-  }
-  .PersonalData .content .formBox .from .item {
-    width: auto;
-  }
-  .PersonalData .content .formBox .from .item .right {
-    height: 26px;
-  }
-  .PersonalData .content .formBox .from .item .textarea {
-    height: auto;
+    width: 100px !important;
+    height: 100px !important;
   }
 }

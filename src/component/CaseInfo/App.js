@@ -9,6 +9,8 @@ import png3 from './img/png3.png'
 import returnDom from '../../utils/returnDom'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
+
   const [isShow, setIsShow] = useState(false)
   const { info } = props
   return (
@@ -19,6 +21,7 @@ export default function App(props) {
           onSetState={props.onSetState}
           isShow={isShow}
           onSetIsShow={setIsShow}
+          windowWidthValue={props.windowWidthValue}
         />
         <div className="banner" onClick={() => setIsShow(false)}>
           <img src={banner} alt="banner" />
@@ -30,23 +33,45 @@ export default function App(props) {
           </div>
         </div>
 
-        <div className="content" onClick={() => setIsShow(false)}>
-          <div className="title">{info.title}</div>
-          <div className="num">
-            <div className="time">
-              <img src={png1} alt="" />
+        <div
+          className="content"
+          onClick={() => setIsShow(false)}
+          style={{ padding: `${60 * scal}px ${360 * scal}px` }}
+        >
+          <div className="title" style={{ fontSize: 40 * scal + 'px' }}>
+            {info.title}
+          </div>
+          <div className="num" style={{ margin: `${20 * scal}px 0` }}>
+            <div className="time" style={{ marginRight: 20 * scal + 'px' }}>
+              <img
+                src={png1}
+                alt=""
+                style={{
+                  marginRight: 5 * scal + 'px',
+                  width: 23 * scal + 'px'
+                }}
+              />
               <span>{info.published_at}</span>
             </div>
             <div className="sz">
-              <img src={png2} alt="" />
+              <img
+                src={png2}
+                alt=""
+                style={{
+                  marginRight: 5 * scal + 'px',
+                  width: 35 * scal + 'px'
+                }}
+              />
               <span>{info.view_count}</span>
             </div>
           </div>
-          <div className="msg">{returnDom(info.content)}</div>
+          <div className="msg" style={{ fontSize: 32 * scal + 'px' }}>
+            {returnDom(info.content)}
+          </div>
           {/* <img src={info.case_image_path} alt="" className="png3" /> */}
         </div>
 
-        <Footer />
+        <Footer windowWidthValue={props.windowWidthValue} />
       </div>
     </div>
   )

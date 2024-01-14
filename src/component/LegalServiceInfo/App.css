@@ -64,102 +64,32 @@
   padding: 15px;
   font-size: 20px;
 }
-.legalServiceInfo .content .formBox {
-  padding: 26px 30px;
-  margin-top: 70px;
-  text-align: left;
-  box-shadow: 12px 12px 27px 0 rgba(0, 0, 0, 0.3);
-}
-.legalServiceInfo .content .formBox .title {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 16px;
-}
-.legalServiceInfo .content .formBox .from {
-  display: flex;
-  flex-direction: column;
-}
-.legalServiceInfo .content .formBox .from .item {
-  width: 820px;
-  display: flex;
-  margin-bottom: 20px;
-}
-.legalServiceInfo .content .formBox .from .item .left {
-  width: 330px;
-  text-align: right;
-  color: #666;
-  font-size: 16px;
-  margin-right: 16px;
-}
-.legalServiceInfo .content .formBox .from .item .right {
-  height: 38px;
-  width: 540px;
-}
-.legalServiceInfo .content .formBox .from .item .right input {
-  border-radius: 5px;
-  width: 100%;
-  height: 100%;
-}
-.legalServiceInfo .content .formBox .from .item .right textarea {
-  width: 100%;
-  border-radius: 5px;
-}
-.legalServiceInfo .content .formBox .from .item .textarea {
-  height: auto;
-}
-.legalServiceInfo .content .formBox .save {
-  width: 217px;
-  height: 48px;
-  line-height: 48px;
-  background-color: #7caaff;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 25px;
-  cursor: pointer;
-}
 @media (max-width: 768px) {
   .legalServiceInfo .content {
-    padding: 20px;
+    padding: 20px !important;
   }
   .legalServiceInfo .content .type > .title {
-    font-size: 26px;
-    margin-bottom: 20px;
+    font-size: 26px !important;
+    margin-bottom: 20px !important;
   }
   .legalServiceInfo .content .typeBox {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .legalServiceInfo .content .typeBox .left {
-    width: auto;
+    width: auto !important;
   }
   .legalServiceInfo .content .typeBox .left img {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
   }
   .legalServiceInfo .content .typeBox .right {
-    width: auto;
+    width: auto !important;
   }
   .legalServiceInfo .content .typeBox .right .top {
-    padding: 10px;
+    padding: 10px !important;
   }
   .legalServiceInfo .content .typeBox .right .bottom {
-    padding: 10px;
-    font-size: 14px;
-  }
-  .legalServiceInfo .content .formBox {
-    padding: 20px;
-    box-shadow: 5px 6px 19px 0 rgba(0, 0, 0, 0.1);
-  }
-  .legalServiceInfo .content .formBox .from .item {
-    width: auto;
-  }
-  .legalServiceInfo .content .formBox .from .item .right {
-    height: 26px;
-  }
-  .legalServiceInfo .content .formBox .from .item .textarea {
-    height: auto;
+    padding: 10px !important;
+    font-size: 14px !important;
   }
 }
