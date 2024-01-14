@@ -159,6 +159,9 @@
   z-index: 9;
   display: flex;
   justify-content: center;
+  width: 1250px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .join .box5 .lbbox {
   width: 310px;

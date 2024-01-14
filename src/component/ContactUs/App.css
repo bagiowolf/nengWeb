@@ -1,0 +1,152 @@
+.ContactUs .banner {
+  position: relative;
+}
+.ContactUs .banner img {
+  width: 100%;
+  height: 340px;
+}
+.ContactUs .banner .aboutText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #8f8f8f;
+}
+.ContactUs .aboutText .gy {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+.ContactUs .aboutText .sj {
+  font-size: 18px;
+}
+.ContactUs .content {
+  padding: 60px 360px;
+  text-align: left;
+  position: relative;
+}
+.ContactUs .content .formBox {
+  width: 1200px;
+  box-shadow: 12px 12px 27px 0px rgba(0, 0, 0, 0.27);
+  display: flex;
+}
+
+.ContactUs .content .formBox > .left {
+  padding: 25px 30px;
+  box-sizing: border-box;
+}
+.ContactUs .content .formBox .left .top span {
+  font-size: 22px;
+  margin-left: 10px;
+}
+.ContactUs .content .formBox .form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.ContactUs .content .formBox .form .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.ContactUs .content .formBox .form .item input {
+  width: 454px;
+  height: 38px;
+  margin-left: 10px;
+  border: 1px solid #d9d9d9;
+}
+.ContactUs .content .formBox .form .item select {
+  width: 454px;
+  border: 1px solid #d9d9d9;
+  height: 38px;
+  margin-left: 10px;
+}
+.ContactUs .content .formBox .form .item textarea {
+  width: 454px;
+  height: 116px;
+  margin-left: 10px;
+  border: 1px solid #d9d9d9;
+}
+.ContactUs .content .formBox .form .item .left {
+  font-size: 16px;
+  color: #999;
+}
+.ContactUs .content .formBox .form .save {
+  width: 217px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #7caaff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.ContactUs .content .formBox > .right {
+  width: 600px;
+  background-color: #2b68ff;
+  color: #fff;
+  padding: 45px 30px;
+  box-sizing: border-box;
+}
+.ContactUs .content .formBox > .right .one {
+  font-size: 30px;
+}
+.ContactUs .content .formBox > .right .two {
+  font-size: 16px;
+  margin: 26px 0 64px 0;
+}
+.ContactUs .content .formBox > .right .two span {
+  font-size: 24px;
+}
+.ContactUs .content .formBox > .right .three {
+  display: flex;
+}
+
+.ContactUs .content .formBox > .right .three .right {
+  margin-left: 30px;
+  font-size: 16px;
+}
+.ContactUs .content .formBox > .right .three .right div {
+  margin-top: 20px;
+}
+.ContactUs .box22 img {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .ContactUs .content {
+    padding: 20px;
+  }
+  .ContactUs .content .formBox {
+    width: auto;
+    flex-direction: column;
+  }
+  .ContactUs .content .formBox .left .top span {
+    font-size: 18px;
+  }
+  .ContactUs .content .formBox .form .item .left {
+    font-size: 16px;
+  }
+  .ContactUs .content .formBox .form .item input,
+  .ContactUs .content .formBox .form .item textarea {
+    width: 100%;
+  }
+  .ContactUs .content .formBox > .right {
+    width: auto;
+  }
+  .ContactUs .content .formBox > .right .three .right {
+    font-size: 12px;
+    margin-left: 20px;
+  }
+  .ContactUs .content .formBox > .right .three .right div {
+    margin-top: 17px;
+  }
+  .ContactUs .content .formBox .form .item .right {
+    flex: 1;
+  }
+  .ContactUs .content .formBox .form .item select {
+    width: 102%;
+  }
+}

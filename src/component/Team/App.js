@@ -10,6 +10,7 @@ import png4 from './img/png4.png'
 import png5 from './img/png5.png'
 import png6 from './img/png6.png'
 import PersonalData from '../PersonalData/App'
+import Form from '../Form/App'
 
 let arr = [
   {
@@ -66,6 +67,12 @@ let arr = [
 export default function App(props) {
   const [isShow, setIsShow] = useState(false)
   const [state, setState] = useState(true)
+  const [activeInfo, setActiveInfo] = useState({})
+
+  const setActiveFun = (info) => {
+    setState(false)
+    setActiveInfo(info)
+  }
   return (
     <div>
       {state && (
@@ -87,10 +94,10 @@ export default function App(props) {
                   <div className="img">
                     <img src={png1} alt="" />
                   </div>
-                  <div className="btn" onClick={() => setState(false)}>
+                  <div className="btn" onClick={() => setActiveFun(arr[0])}>
                     立即预约
                   </div>
-                  <div className="info" onClick={() => setState(false)}>
+                  <div className="info" onClick={() => setActiveFun(arr[0])}>
                     查看详情
                   </div>
                 </div>
@@ -112,15 +119,15 @@ export default function App(props) {
               </div>
               <div className="sm">
                 {arr.map((item, index) => (
-                  <div className="boxList">
+                  <div className="boxList" key={index}>
                     <div className="left">
                       <div className="img">
                         <img src={item.img} alt="" />
                       </div>
-                      <div className="btn" onClick={() => setState(false)}>
+                      <div className="btn" onClick={() => setActiveFun(item)}>
                         立即预约
                       </div>
-                      <div className="info" onClick={() => setState(false)}>
+                      <div className="info" onClick={() => setActiveFun(item)}>
                         查看详情
                       </div>
                     </div>
@@ -144,30 +151,7 @@ export default function App(props) {
                   </div>
                 ))}
               </div>
-              <div className="formBox">
-                <div className="title">向律师提问</div>
-                <div className="from">
-                  <div className="item">
-                    <div className="left">请输入标题:</div>
-                    <div className="right">
-                      <input type="text" />
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="left">请输入您的法律咨询问题:</div>
-                    <div className="right textarea">
-                      <textarea name="" id="" rows={8}></textarea>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="left">请输入手机号:</div>
-                    <div className="right">
-                      <input type="text" />
-                    </div>
-                  </div>
-                </div>
-                <div className="save">提交问题</div>
-              </div>
+              <Form sourcePage="律师团队" />
             </div>
             <Footer />
           </div>
@@ -190,16 +174,19 @@ export default function App(props) {
             <div className="content" onClick={() => setIsShow(false)}>
               <div className="sm">
                 {arr.map((item, index) => (
-                  <div className="boxList">
+                  <div className="boxList" key={index}>
                     <div className="left">
                       <div className="img">
                         <img src={item.img} alt="" />
                       </div>
                       <div className="btnBox">
-                        <div className="btn" onClick={() => setState(false)}>
+                        <div className="btn" onClick={() => setActiveFun(item)}>
                           立即预约
                         </div>
-                        <div className="info" onClick={() => setState(false)}>
+                        <div
+                          className="info"
+                          onClick={() => setActiveFun(item)}
+                        >
                           查看详情
                         </div>
                       </div>
@@ -224,37 +211,18 @@ export default function App(props) {
                   </div>
                 ))}
               </div>
-              <div className="formBox">
-                <div className="title">向律师提问</div>
-                <div className="from">
-                  <div className="item">
-                    <div className="left">请输入标题:</div>
-                    <div className="right">
-                      <input type="text" />
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="left">请输入您的法律咨询问题:</div>
-                    <div className="right textarea">
-                      <textarea name="" id="" rows={8}></textarea>
-                    </div>
-                  </div>
-                  <div className="item">
-                    <div className="left">请输入手机号:</div>
-                    <div className="right">
-                      <input type="text" />
-                    </div>
-                  </div>
-                </div>
-                <div className="save">提交问题</div>
-              </div>
+              <Form sourcePage="律师团队" />
             </div>
             <Footer />
           </div>
         </div>
       )}
       {!state && (
-        <PersonalData state={props.state} onSetState={props.onSetState} />
+        <PersonalData
+          state={props.state}
+          onSetState={props.onSetState}
+          activeInfo={activeInfo}
+        />
       )}
     </div>
   )

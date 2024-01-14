@@ -37,6 +37,14 @@
 .legalServiceInfo .content .typeBox .left {
   width: 570px;
 }
+.legalServiceInfo .content .typeBox .left .img {
+  width: 570px;
+  height: 380px;
+}
+.legalServiceInfo .content .typeBox .left .img img {
+  width: 100%;
+  height: 100%;
+}
 .legalServiceInfo .content .typeBox .right {
   width: 600px;
   border: 0.5px solid rgba(0, 0, 0, 0.688);

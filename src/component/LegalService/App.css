@@ -27,6 +27,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.legalService .content .boxList .dn {
+  opacity: 0;
+}
 .legalService .content .boxList .box11 {
   width: 380px;
   height: 337px;
@@ -60,7 +63,9 @@
   text-align: left;
   line-height: 34px;
 }
+
 .legalService .content .boxList .box11 .div {
+  height: 100px;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 3; /* 指定显示的行数 */
@@ -78,6 +83,8 @@
   transform: translateX(-50%);
   color: #1f4ac4;
   border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 .legalService .content .boxList .active .title {
   background-color: #2b68ff;
@@ -151,7 +158,7 @@
     padding: 20px;
   }
   .legalService .content .boxList .box11 {
-    width: auto;
+    /* width: auto; */
     height: auto;
     padding-bottom: 20px;
   }
@@ -167,5 +174,8 @@
   }
   .legalService .content .formBox .from .item .textarea {
     height: auto;
+  }
+  .legalServiceInfo .content .typeBox .left .img {
+    width: auto !important;
   }
 }

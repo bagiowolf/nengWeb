@@ -40,6 +40,13 @@
 .NewsCenter .content .big .left {
   margin-right: 50px;
   position: relative;
+  width: 781px;
+  height: 337px;
+}
+.NewsCenter .content .big .left img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
 }
 .NewsCenter .content .big .left .text {
   position: absolute;
@@ -52,11 +59,15 @@
   margin-bottom: 10px;
 }
 .NewsCenter .content .big .right {
+  flex: 1;
 }
 .NewsCenter .content .time {
   font-size: 14px;
   color: #2b68ff;
   margin-bottom: 12px;
+}
+.NewsCenter .content .newsList {
+  margin-top: 10px;
 }
 .NewsCenter .content .title {
   font-size: 24px;
@@ -66,6 +77,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 指定显示的行数 */
   -webkit-box-orient: vertical;
+  height: 56px;
 }
 .NewsCenter .content .big .right .lineBox {
   border-bottom: 1px solid #999;
@@ -120,12 +132,24 @@
 .NewsCenter .content .pager .dao .box1 {
   color: #000;
   border: 1px solid #dadada;
-  padding: 10px 20px;
+  width: 50px;
+  height: 40px;
 }
+.NewsCenter .content .pager .dao .box1 input {
+  border: none;
+  width: 20px;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+}
+
 .NewsCenter .content .pager .qr {
   padding: 10px 20px;
   color: #fff;
   background-color: #2b68ff;
+  cursor: pointer;
 }
 .mr10 {
   margin-right: 10px;

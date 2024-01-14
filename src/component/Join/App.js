@@ -19,6 +19,12 @@ import png13 from './img/png13.png'
 import png14 from './img/png14.png'
 import png15 from './img/png15.png'
 import png16 from './img/png16.png'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import { Pagination } from 'swiper/modules'
 
 export default function App(props) {
   const [isShow, setIsShow] = useState(false)
@@ -226,25 +232,87 @@ export default function App(props) {
           <div className="title">竭能法务加盟流程</div>
           <img src={png16} alt="" className="png16" />
           <div className="lb">
-            <div className="lbbox">
-              <div className="num">04</div>
-              <div className="lib">签订加盟</div>
-              <div className="msg">双方确认考察结果无争议，正式签订合同。</div>
-            </div>
-            <div className="lbbox">
-              <div className="num">05</div>
-              <div className="lib">缴纳费用</div>
-              <div className="msg">
-                投资者按所选择的投资类型向总部交纳相关的费用。
-              </div>
-            </div>
-            <div className="lbbox">
-              <div className="num">06</div>
-              <div className="lib">总部培训</div>
-              <div className="msg">
-                总部安排投资者进行相关培训，培训合格后颁发授权书。
-              </div>
-            </div>
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={3}
+              onSlideChange={() => console.log('slide change')}
+              modules={[Pagination]}
+              pagination={{ clickable: true }}
+              onSwiper={(swiper) => console.log(swiper)}
+            >
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">01</div>
+                  <div className="lib">加盟咨询</div>
+                  <div className="msg">
+                    投资者以电话、传真、网上留言等方式向总部专业的招商顾问咨询相关合作事项，索取有关资料。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">02</div>
+                  <div className="lib">项目考察</div>
+                  <div className="msg">
+                    投资者到总部所在地进行项目考察，并与总部工作人员进行业务交流。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">03</div>
+                  <div className="lib">资质审核</div>
+                  <div className="msg">
+                    总部对投资者进行审核，确认投资者的合作资格。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">04</div>
+                  <div className="lib">签订加盟</div>
+                  <div className="msg">
+                    双方确认考察结果无争议，正式签订合同。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">05</div>
+                  <div className="lib">缴纳费用</div>
+                  <div className="msg">
+                    投资者按所选择的投资类型向总部交纳相关的费用。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">06</div>
+                  <div className="lib">总部培训</div>
+                  <div className="msg">
+                    总部安排投资者进行相关培训，培训合格后颁发授权书。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">07</div>
+                  <div className="lib">店面装修</div>
+                  <div className="msg">
+                    总部为加盟者提供装修指导，与设计指导。
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="lbbox">
+                  <div className="num">08</div>
+                  <div className="lib">开业</div>
+                  <div className="msg">
+                    总部持续关注加盟者的经营情况，并给予经营指导与帮助。
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
           </div>
         </div>
         <Footer />

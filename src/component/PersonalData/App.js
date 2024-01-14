@@ -4,10 +4,12 @@ import Footer from '../Footer/App'
 import React, { useState } from 'react'
 import banner from '../../assets/banner.png'
 import png1 from './img/png1.png'
+import Form from '../Form/App'
 
 export default function App(props) {
   const [isShow, setIsShow] = useState(false)
-
+  const activeInfo = props.activeInfo
+  console.log(activeInfo)
   return (
     <div>
       <div className="PersonalData">
@@ -30,9 +32,9 @@ export default function App(props) {
           <div className="info">
             <div className="left">
               <div className="img">
-                <img src={png1} alt="" />
+                <img src={activeInfo.img} alt="" />
               </div>
-              <div className="name">律师名称</div>
+              <div className="name">{activeInfo.name}</div>
               <div className="line"></div>
               <div className="num">
                 <div>
@@ -46,7 +48,9 @@ export default function App(props) {
             </div>
             <div className="right">
               <div className="zw">
-                <div className="title">律师名称【职位】个人资料</div>
+                <div className="title">
+                  {activeInfo.name}【{activeInfo.type}】个人资料
+                </div>
                 <div className="msg">
                   吴斌律师，广东广强律师事务所，刑事律师。国内知名大学，法律专业，研习法律、实践十余年，专注于诈骗犯罪研究与辩护、经济犯罪研究与辩护，及重大刑事案件辩护。
                   <br />
@@ -95,30 +99,10 @@ export default function App(props) {
               </div>
             </div>
           </div>
-          <div className="formBox">
-            <div className="title">向吴斌主任提问</div>
-            <div className="from">
-              <div className="item">
-                <div className="left">请输入标题:</div>
-                <div className="right">
-                  <input type="text" />
-                </div>
-              </div>
-              <div className="item">
-                <div className="left">请输入您的法律咨询问题:</div>
-                <div className="right textarea">
-                  <textarea name="" id="" rows={8}></textarea>
-                </div>
-              </div>
-              <div className="item">
-                <div className="left">请输入手机号:</div>
-                <div className="right">
-                  <input type="text" />
-                </div>
-              </div>
-            </div>
-            <div className="save">提交问题</div>
-          </div>
+          <Form
+            name={activeInfo.name}
+            sourcePage={`律师团队-${activeInfo.name}`}
+          />
         </div>
         <Footer />
       </div>
