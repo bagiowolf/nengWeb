@@ -10,6 +10,21 @@ export default function App(props) {
   const [question, setQuestion] = useState('')
   const [asker_phone, setAsker_phone] = useState('')
   const save = () => {
+    // 定义手机号正则表达式
+    const phoneRegex = /^1[3456789]\d{9}$/
+
+    if (!phoneRegex.test(asker_phone)) {
+      alert('手机号格式错误,请重新输入')
+      return
+    }
+    if (!title) {
+      alert('请输入标题')
+      return
+    }
+    if (!question) {
+      alert('请输入您的法律咨询问题')
+      return
+    }
     if (!title || !question || !asker_phone) return
     post('create_inquiries', {
       title,

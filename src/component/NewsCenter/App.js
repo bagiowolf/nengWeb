@@ -18,7 +18,7 @@ export default function App(props) {
   const [first, setFirst] = useState({})
   const [three, setThree] = useState([])
 
-  const [currentIndex, setCurrentIndex] = useState(1)
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [total, setTotal] = useState(10)
 
   const [activeInfo, setActiveInfo] = useState({})
@@ -41,7 +41,7 @@ export default function App(props) {
       data.forEach((item) => {
         item.published_at = setTime(item.published_at)
       })
-      setFirst(data[0])
+      setFirst(data[0] || {})
       setThree(data.splice(0, 3))
       setArr(data)
     })
@@ -186,7 +186,7 @@ export default function App(props) {
                 {new Array(pageNum).fill(1).map((item, index) => (
                   <div
                     className={`box ${
-                      index + 1 === currentIndex ? 'active' : ''
+                      index + 1 === currentIndex + 1 ? 'active' : ''
                     }`}
                     key={index}
                     onClick={() => setPage(index + 1)}

@@ -67,6 +67,18 @@ export default function Footer(props) {
   const [lawyer_name, setLawyer_name] = useState('北京市')
   const [delegation_type, setDelegation_type] = useState('民事纠纷')
   const save = () => {
+    // 定义手机号正则表达式
+    const phoneRegex = /^1[3456789]\d{9}$/
+
+    if (!phoneRegex.test(phone)) {
+      alert('手机号格式错误,请重新输入')
+      return
+    }
+    if (!name) {
+      alert('请输入姓名')
+      return
+    }
+
     if (!name || !phone || !lawyer_name || !delegation_type) return
     post('create_business_delegations', {
       name,

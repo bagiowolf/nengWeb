@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'http://49.232.133.22:8080' // 设置基本URL
+  baseURL: 'https://api.jielv.com.cn' // 设置基本URL
   // timeout: 50000 // 设置请求超时时间
 })
 
