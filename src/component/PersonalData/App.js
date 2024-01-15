@@ -60,10 +60,10 @@ export default function App(props) {
               ></div>
               <div className="num" style={{ fontSize: 14 * scal + 'px' }}>
                 <div>
-                  帮助人数:<span>123456人</span>
+                  咨询人数:<span>{activeInfo.consultation_num}人</span>
                 </div>
                 <div>
-                  咨询人数:<span>123456人</span>
+                  帮助人数:<span>{activeInfo.accepted_num}人</span>
                 </div>
               </div>
               <div
