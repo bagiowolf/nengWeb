@@ -21,7 +21,8 @@ export default function App(props) {
     '关于我们',
     '信用修复',
     '律师团队',
-    '法律合作',
+    '法律服务',
+    '律师合作',
     '新闻中心',
     '加盟招商',
     '成功案例',
@@ -141,36 +142,39 @@ export default function App(props) {
         <div
           className="HeadDivBg5"
           style={{
-            width: 1640 * scal + 'px',
             height: 470 * scal + 'px',
             marginTop: 40 * scal + 'px',
             marginLeft: 100 * scal + 'px'
           }}
         >
-          <div
-            className="HeadDivBg6"
-            style={{ width: 686 + 'px', height: 470 * scal + 'px' }}
-          >
+          <div className="HeadDivBg6" style={{ height: 470 * scal + 'px' }}>
             <div
               className="HeadDivBg7"
               style={{ width: 542 * scal + 'px', height: 470 * scal + 'px' }}
             >
-              <img src={png13} className="HeadDivBg8" alt=""></img>
+              <img
+                src={png13}
+                className="HeadDivBg8"
+                alt=""
+                style={{ width: 536 * scal + 'px', height: 311 * scal + 'px' }}
+              ></img>
               <div className="HeadDivBg11">
-                <img
-                  className="HeadDivBg9"
-                  alt=""
-                  src={png14}
-                  style={{
-                    width: 54 * scal + 'px',
-                    height: 54 * scal + 'px'
-                  }}
-                ></img>
-                <div className="HeadDivBg9">
-                  <label className="HeadDivBg10">{deslitt[0].des1}</label>
-                  <label>{deslitt[0].des2}</label>
+                <div className="imgtop">
+                  <img
+                    className="HeadDivBg9"
+                    alt=""
+                    src={png14}
+                    style={{
+                      width: 54 * scal + 'px',
+                      height: 54 * scal + 'px'
+                    }}
+                  ></img>
+                  <div className="HeadDivBg9">
+                    <label className="HeadDivBg10">{deslitt[0].des1}</label>
+                    <label className="hez">{deslitt[0].des2}</label>
+                  </div>
                 </div>
-                <div>{deslitt[0].des3}</div>
+                <div className="anli">{deslitt[0].des3}</div>
                 <div
                   className="HeadDivBg12"
                   style={{ height: 48 * scal + 'px' }}
@@ -187,22 +191,29 @@ export default function App(props) {
                 marginLeft: 20 * scal + 'px'
               }}
             >
-              <img src={png13} className="HeadDivBg8" alt=""></img>
+              <img
+                src={png13}
+                className="HeadDivBg8"
+                alt=""
+                style={{ width: 536 * scal + 'px', height: 311 * scal + 'px' }}
+              ></img>
               <div className="HeadDivBg11">
-                <img
-                  className="HeadDivBg9"
-                  alt=""
-                  src={png14}
-                  style={{
-                    width: 54 * scal + 'px',
-                    height: 54 * scal + 'px'
-                  }}
-                ></img>
-                <div className="HeadDivBg9">
-                  <label className="HeadDivBg10">{deslitt[0].des1}</label>
-                  <label>{deslitt[0].des2}</label>
+                <div className="imgtop">
+                  <img
+                    className="HeadDivBg9"
+                    alt=""
+                    src={png14}
+                    style={{
+                      width: 54 * scal + 'px',
+                      height: 54 * scal + 'px'
+                    }}
+                  ></img>
+                  <div className="HeadDivBg9">
+                    <label className="HeadDivBg10">{deslitt[0].des1}</label>
+                    <label className="hez">{deslitt[0].des2}</label>
+                  </div>
                 </div>
-                <div>{deslitt[0].des3}</div>
+                <div className="anli">{deslitt[0].des3}</div>
                 <div
                   className="HeadDivBg12"
                   style={{ height: 48 * scal + 'px' }}
@@ -215,7 +226,7 @@ export default function App(props) {
           <div style={{ marginLeft: 20 * scal + 'px' }}>
             <div
               className="HeadDivBg13"
-              style={{ width: 576 * scal + 'px', height: 240 * scal + 'px' }}
+              style={{ width: 532 * scal + 'px', height: 240 * scal + 'px' }}
             >
               <div
                 className="HeadDivBg14"
@@ -236,9 +247,7 @@ export default function App(props) {
                 <div
                   className="HeadDivBg15"
                   style={{
-                    width: 284 * scal + 'px',
-                    height: 240 * scal + 'px',
-                    marginTop: -62 * scal + 'px'
+                    width: 284 * scal + 'px'
                   }}
                 >
                   <img
@@ -260,7 +269,7 @@ export default function App(props) {
                 className="HeadDivBg19"
                 style={{ marginLeft: 20 * scal + 'px' }}
               >
-                <div>{deslitt[0].des3}</div>
+                <div className="color33">{deslitt[0].des3}</div>
                 <div
                   className="HeadDivBg20"
                   style={{ height: 142 * scal + 'px' }}
@@ -271,7 +280,7 @@ export default function App(props) {
             </div>
             <div
               className="HeadDivBg13"
-              style={{ width: 576 * scal + 'px', height: 240 * scal + 'px' }}
+              style={{ width: 532 * scal + 'px', height: 240 * scal + 'px' }}
             >
               <div
                 className="HeadDivBg14"
@@ -292,9 +301,7 @@ export default function App(props) {
                 <div
                   className="HeadDivBg15"
                   style={{
-                    width: 284 * scal + 'px',
-                    height: 240 * scal + 'px',
-                    marginTop: -62 * scal + 'px'
+                    width: 284 * scal + 'px'
                   }}
                 >
                   <img
@@ -316,7 +323,7 @@ export default function App(props) {
                 className="HeadDivBg19"
                 style={{ marginLeft: 20 * scal + 'px' }}
               >
-                <div>{deslitt[0].des3}</div>
+                <div className="color33">{deslitt[0].des3}</div>
                 <div
                   className="HeadDivBg20"
                   style={{ height: 142 * scal + 'px' }}

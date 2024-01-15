@@ -33,6 +33,7 @@ export default function App(props) {
               src={logo}
               alt="logo"
               style={{ width: 237 * scal + 'px' }}
+              onClick={() => props.onSetState(-1)}
             />
           </div>
           <div
