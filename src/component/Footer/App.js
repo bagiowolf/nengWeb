@@ -139,10 +139,10 @@ export default function Footer(props) {
                     value={delegation_type}
                     onChange={(e) => setDelegation_type(e.target.value)}
                   >
-                    <option value="民事纠纷">民事纠纷</option>
-                    <option value="刑事案件">刑事案件</option>
-                    <option value="企业顾问">企业顾问</option>
+                    <option value="法律问题">法律问题</option>
                     <option value="信用修复">信用修复</option>
+                    <option value="案源合作">案源合作</option>
+                    <option value="招商加盟">招商加盟</option>
                     <option value="其他问题">其他问题</option>
                   </select>
                 </div>
