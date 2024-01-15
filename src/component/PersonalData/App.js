@@ -149,6 +149,7 @@ export default function App(props) {
           <Form
             name={activeInfo.name}
             sourcePage={`律师团队-${activeInfo.name}`}
+            windowWidthValue={props.windowWidthValue}
           />
         </div>
         <Footer windowWidthValue={props.windowWidthValue} />

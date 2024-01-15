@@ -223,7 +223,10 @@ export default function App(props) {
                   </div>
                 ))}
               </div>
-              <Form sourcePage="律师团队" />
+              <Form
+                sourcePage="律师团队"
+                windowWidthValue={props.windowWidthValue}
+              />
             </div>
             <Footer windowWidthValue={props.windowWidthValue} />
           </div>

@@ -113,7 +113,7 @@
   .PersonalData .info .left {
     width: 110px !important;
     padding: 10px;
-    height: 215px;
+    height: 215px !important;
   }
   .PersonalData .info .left .zx {
     width: 80px !important;

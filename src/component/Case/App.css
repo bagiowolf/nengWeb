@@ -114,6 +114,7 @@
   transform: translateX(-50%);
   margin-top: 20px;
   margin-bottom: 87px;
+  cursor: pointer;
 }
 
 .case .xz {

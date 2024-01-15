@@ -83,7 +83,10 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <Form sourcePage={`法律服务-${props.info.title}`} />
+        <Form
+          sourcePage={`法律服务-${props.info.title}`}
+          windowWidthValue={props.windowWidthValue}
+        />
       </div>
       <Footer windowWidthValue={props.windowWidthValue} />
     </div>

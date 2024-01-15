@@ -4,6 +4,7 @@ import { post } from '../../utils/api/api'
 import dayjs from 'dayjs'
 
 export default function App(props) {
+  let scal = props.windowWidthValue / 1919
   let name = props.name ?? '律师'
   const [title, setTitle] = useState('')
   const [question, setQuestion] = useState('')
@@ -21,12 +22,35 @@ export default function App(props) {
 
   return (
     <div>
-      <div className="formBo">
-        <div className="title">向{name}提问</div>
+      <div
+        className="formBo"
+        style={{
+          padding: `${26 * scal}px ${30 * scal}px`,
+          marginTop: 70 * scal + 'px'
+        }}
+      >
+        <div className="title" style={{ marginBottom: 16 * scal + 'px' }}>
+          向{name}提问
+        </div>
         <div className="from">
-          <div className="item">
-            <div className="left">请输入标题:</div>
-            <div className="right">
+          <div className="item" style={{ width: 790 * scal + 'px' }}>
+            <div
+              className="left"
+              style={{
+                width: 330 * scal + 'px',
+                fontSize: 16 * scal + 'px',
+                marginRight: 16 * scal + 'px'
+              }}
+            >
+              请输入标题:
+            </div>
+            <div
+              className="right"
+              style={{
+                width: 540 * scal + 'px',
+                height: 38 * scal + 'px'
+              }}
+            >
               <input
                 type="text"
                 value={title}
@@ -34,9 +58,23 @@ export default function App(props) {
               />
             </div>
           </div>
-          <div className="item">
-            <div className="left">请输入您的法律咨询问题:</div>
-            <div className="right textarea">
+          <div className="item" style={{ width: 790 * scal + 'px' }}>
+            <div
+              className="left"
+              style={{
+                width: 330 * scal + 'px',
+                fontSize: 16 * scal + 'px',
+                marginRight: 16 * scal + 'px'
+              }}
+            >
+              请输入您的法律咨询问题:
+            </div>
+            <div
+              className="right textarea"
+              style={{
+                width: 540 * scal + 'px'
+              }}
+            >
               <textarea
                 name=""
                 id=""
@@ -46,9 +84,24 @@ export default function App(props) {
               ></textarea>
             </div>
           </div>
-          <div className="item">
-            <div className="left">请输入手机号:</div>
-            <div className="right">
+          <div className="item" style={{ width: 790 * scal + 'px' }}>
+            <div
+              className="left"
+              style={{
+                width: 330 * scal + 'px',
+                fontSize: 16 * scal + 'px',
+                marginRight: 16 * scal + 'px'
+              }}
+            >
+              请输入手机号:
+            </div>
+            <div
+              className="right"
+              style={{
+                width: 540 * scal + 'px',
+                height: 38 * scal + 'px'
+              }}
+            >
               <input
                 type="text"
                 value={asker_phone}
@@ -57,7 +110,15 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <div className="save" onClick={save}>
+        <div
+          className="save"
+          onClick={save}
+          style={{
+            width: 217 * scal + 'px',
+            height: 48 * scal + 'px',
+            lineHeight: 48 * scal + 'px'
+          }}
+        >
           提交问题
         </div>
       </div>

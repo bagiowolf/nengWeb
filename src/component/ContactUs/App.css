@@ -165,4 +165,10 @@
     line-height: 48px !important;
     font-size: 16px !important;
   }
+  .ContactUs .content .formBox > .right .two span {
+    font-size: 22px !important;
+  }
+  .ContactUs .content .formBox > .right .one {
+    font-size: 28px !important;
+  }
 }

@@ -4,7 +4,6 @@ import Header from '../Header/App'
 import Footer from '../Footer/App'
 import banner from '../../assets/banner.png'
 import png1 from './img/png1.png'
-import png2 from './img/png2.png'
 import png3 from './img/png3.png'
 import png4 from './img/png4.png'
 import CaseInfo from '../CaseInfo/App'
@@ -24,10 +23,21 @@ export default function App(props) {
 
   const [typeList, setTypeList] = useState([{ id: 1, type: '全部' }])
   const [type, setType] = useState(1)
-  const getArr = () => {
+
+  const [isShowBtn, setIsShowBtn] = useState(true)
+
+  const [isShowNum, setIsShowNum] = useState(9)
+
+  const getArr = (num) => {
+    let nu = num ?? 9
     get('/get_case_studies_all').then((res) => {
       let data = res.data?.[0] ?? []
-      data = data.slice(0, 18)
+      console.log(data, 123)
+      setIsShowBtn(data.length > nu ? true : false)
+
+      data = data.slice(0, nu)
+      console.log(nu)
+      console.log(data, 3455)
       if (data.length % 3 === 2) {
         data.push({})
       }
@@ -57,10 +67,15 @@ export default function App(props) {
   const setData = (value) => {
     setType(value)
     setArr(arr.filter((item) => item.category == value))
-    console.log(value, 'vallll')
     if (value === '1') {
       getArr()
     }
+  }
+
+  const loadMore = () => {
+    let a = isShowNum + 9
+    setIsShowNum(a)
+    getArr(a)
   }
   return (
     <div>
@@ -174,27 +189,48 @@ export default function App(props) {
                 </div>
               ))}
             </div>
+            {isShowBtn && (
+              <div
+                className="lookMore"
+                style={{
+                  width: 215 * scal + 'px',
+                  height: 48 * scal + 'px',
+                  lineHeight: 48 * scal + 'px',
+                  fontSize: 20 * scal + 'px',
+                  marginTop: 20 * scal + 'px',
+                  marginBottom: 87 * scal + 'px'
+                }}
+                onClick={loadMore}
+              >
+                查看更多
+              </div>
+            )}
+
+            <Form
+              sourcePage="成功案例"
+              windowWidthValue={props.windowWidthValue}
+            />
+          </div>
+          <div className="xz" style={{ height: 650 * scal + 'px' }}>
+            <img src={png3} alt="" />
             <div
-              className="lookMore"
+              className="title"
               style={{
-                width: 215 * scal + 'px',
-                height: 48 * scal + 'px',
-                lineHeight: 48 * scal + 'px',
-                fontSize: 20 * scal + 'px',
-                marginTop: 20 * scal + 'px',
-                marginBottom: 87 * scal + 'px'
+                fontSize: 38 * scal + 'px',
+                marginTop: 80 * scal + 'px',
+                marginBottom: 30 * scal + 'px'
               }}
             >
-              查看更多
-            </div>
-            <Form sourcePage="成功案例" />
-          </div>
-          <div className="xz">
-            <img src={png3} alt="" />
-            <div className="title" style={{ fontSize: 38 * scal + 'px' }}>
               他们也选择了竭律
             </div>
-            <div className="box">
+            <div
+              className="box"
+              style={{
+                width: 1684 * scal + 'px',
+                height: 471 * scal + 'px',
+                padding: `${60 * scal}px ${97 * scal}px`
+              }}
+            >
               <img src={png4} alt="" />
             </div>
           </div>

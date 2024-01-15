@@ -38,7 +38,7 @@
   margin-bottom: 40px;
   /* padding: 26px 24px; */
 }
-.legalService .content .boxList .box11 img {
+.legalService .content .boxList .box11 > img {
   position: absolute;
   left: 0;
   top: 0;
