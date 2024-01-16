@@ -198,7 +198,8 @@
   }
   .cooperate .content .box4 .msg .div {
     padding: 0 !important;
-    font-size: 16px !important;
+    font-size: 14px !important;
+    justify-content: center;
   }
   .cooperate .content .box5 {
     padding: 20px !important;

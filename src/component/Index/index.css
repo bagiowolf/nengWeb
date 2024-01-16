@@ -60,6 +60,10 @@
   font-size: 12px;
   z-index: 9;
 }
+.lunboBtn,
+.wentiList .wenti .to {
+  cursor: pointer;
+}
 .HeadDivlistItem {
   margin-left: 19px;
 }
@@ -154,12 +158,13 @@
   box-sizing: border-box;
 }
 .HeadDiv .form .ls div select {
-  width: 40%;
+  width: 70%;
   height: 100%;
   background-color: transparent;
   color: #2b68ff;
   text-align: center;
   border: none;
+  transform: translateX(13px);
 }
 .HeadDiv .form .ls div select option {
   color: #000;
@@ -372,7 +377,9 @@ div.HeadDivBg9 {
   left: 50%;
   transform: translateX(-50%);
 }
-.aaa {
+.aaa,
+.lunboBox {
+  position: relative;
   display: none;
 }
 
@@ -380,7 +387,8 @@ div.HeadDivBg9 {
   .hhhh {
     display: none;
   }
-  .aaa {
+  .aaa,
+  .lunboBox {
     display: block;
   }
   .xinwen {
@@ -417,5 +425,23 @@ div.HeadDivBg9 {
   }
   .none {
     display: none;
+  }
+  .lkjasdf {
+    text-align: center;
+  }
+
+  .lunboText {
+    width: 58%;
+    font-size: 14px !important;
+    right: 20px !important;
+  }
+  .box1 .lunboBtn {
+    width: 80px !important;
+    height: 25px !important;
+    line-height: 25px !important;
+    bottom: 20px !important;
+    left: 71% !important;
+    transform: none !important;
+    font-size: 14px;
   }
 }

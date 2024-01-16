@@ -245,7 +245,9 @@ export default function App(props) {
                   <div>为客户最大化主张权益</div>
                   <div>____期待为您服务</div>
                 </div>
-                <div className="lunboBtn">了解更多</div>
+                <div className="lunboBtn" onClick={() => setType(0)}>
+                  了解更多
+                </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -261,12 +263,15 @@ export default function App(props) {
                   <div>为客户最大化主张权益</div>
                   <div>____期待为您服务</div>
                 </div>
-                <div className="lunboBtn">了解更多</div>
+                <div className="lunboBtn" onClick={() => setType(0)}>
+                  了解更多
+                </div>
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
       </div>
+
       <div className="aaa">
         <Header
           state={props.state}
@@ -275,6 +280,46 @@ export default function App(props) {
           onSetIsShow={setIsShow}
           windowWidthValue={props.windowWidthValue}
         ></Header>
+      </div>
+      <div className="lunboBox">
+        <Swiper
+          spaceBetween={50}
+          slidesPerView={1}
+          onSlideChange={() => console.log('slide change')}
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+        >
+          <SwiperSlide>
+            <div className="box1">
+              <img className="HeadDivBg" src={png1} alt=""></img>
+              <div className="lunboText" style={{ fontSize: 30 * scal + 'px' }}>
+                <div>
+                  按专业设置团队，全面深度剖析原委，挖掘有利信息，快速反应，
+                </div>
+                <div>为客户最大化主张权益</div>
+                <div>____期待为您服务</div>
+              </div>
+              <div className="lunboBtn" onClick={() => setType(0)}>
+                了解更多
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="box1">
+              <img className="HeadDivBg" src={png1} alt=""></img>
+              <div className="lunboText" style={{ fontSize: 30 * scal + 'px' }}>
+                <div>
+                  按专业设置团队，全面深度剖析原委，挖掘有利信息，快速反应，
+                </div>
+                <div>为客户最大化主张权益</div>
+                <div>____期待为您服务</div>
+              </div>
+              <div className="lunboBtn" onClick={() => setType(0)}>
+                了解更多
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
       <div onClick={() => setIsShow(false)}>
         <img className="HeadDivBg1 none" src={png4} alt=""></img>

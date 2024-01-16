@@ -235,7 +235,7 @@ export default function App(props) {
                       height: 32 * scal + 'px'
                     }}
                   />
-                  无效案源可退可换
+                  无效案源可换
                 </div>
                 <div
                   className="div"
@@ -253,7 +253,7 @@ export default function App(props) {
                       height: 32 * scal + 'px'
                     }}
                   />
-                  不参与后期案源分成
+                  不参与分成
                 </div>
               </div>
               <div className="bottom">
@@ -309,7 +309,7 @@ export default function App(props) {
                       height: 32 * scal + 'px'
                     }}
                   />
-                  案源稳定且收费低
+                  稳定且收费低
                 </div>
               </div>
             </div>
