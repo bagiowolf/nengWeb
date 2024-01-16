@@ -249,4 +249,7 @@
   .join .content .box4 .left .tj {
     font-size: 20px !important;
   }
+  .join .banner .aboutText {
+    width: 100%;
+  }
 }

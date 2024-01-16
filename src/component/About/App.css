@@ -96,7 +96,7 @@
   width: 237px;
   height: 25px;
 }
-.mobile .navList {
+/* .mobile .navList {
   display: none;
   margin: 0;
   padding: 0;
@@ -119,7 +119,7 @@
 .mobile .navList .active {
   color: #fff;
   background-color: rgb(23, 83, 235);
-}
+} */
 .mobile .banner {
   position: relative;
 }

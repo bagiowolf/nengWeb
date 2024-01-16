@@ -18,11 +18,12 @@ export default function App(props) {
     '联系我们&留言'
   ]
   const handelClick = (type) => {
+    console.log(type)
     props.onSetIsShow(type)
   }
   return (
     <div>
-      <div className="headerer" style={{}}>
+      <div className="headerer">
         <div
           className="header"
           style={{ padding: `0 ${114 * scal}px 0 ${360 * scal}px` }}
@@ -55,7 +56,12 @@ export default function App(props) {
       <div className="mobile">
         <div className="header">
           <div className="left">
-            <img className="HeadDiv" src={logo} alt="logo" />
+            <img
+              className="HeadDiv"
+              src={logo}
+              alt="logo"
+              onClick={() => props.onSetState(-1)}
+            />
           </div>
           <div className="right">
             <img src={gengduo} alt="" onClick={() => handelClick(true)} />

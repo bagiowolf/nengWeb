@@ -47,6 +47,7 @@
   padding: 0;
   list-style: none;
   width: 100%;
+  z-index: 15;
 }
 .mobile .isShow {
   display: block;
@@ -55,7 +56,7 @@
   position: absolute;
   left: 0;
   top: 80px;
-  z-index: 9;
+  z-index: 15;
 }
 .mobile .navList li {
   background-color: rgba(71, 122, 251, 1);
