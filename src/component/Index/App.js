@@ -825,7 +825,7 @@ export default function App(props) {
         </div>
 
         <div
-          onClick={() => setIsShow(false)}
+          onClick={() => setType(5)}
           className="laojie"
           style={{
             width: 225 * scal + 'px',
