@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import png1 from './img/banner-1.jpg'
 import banner2 from './img/banner-2.jpg'
-import png2 from './img/1.png'
+import png2 from '../../assets/logo.svg'
 import png3 from './img/2.png'
 import png4 from './img/3.png'
 import png5 from './img/4.png'
@@ -381,8 +381,7 @@ export default function App(props) {
                       src={png2}
                       alt=""
                       style={{
-                        width: 288 * scal + 'px',
-                        height: 30 * scal + 'px'
+                        width: 288 * scal + 'px'
                       }}
                     />
                     <div style={{ fontSize: 72 * scal + 'px' }}>
@@ -628,16 +627,17 @@ export default function App(props) {
                 <div
                   className="form"
                   style={{
-                    width: 418 * scal + 'px',
+                    width: 545 * scal + 'px',
                     height: 192 * scal + 'px'
                   }}
                 >
                   <div className="name">
                     <div
                       style={{
-                        width: 200 * scal + 'px',
+                        width: 260 * scal + 'px',
                         height: 48 * scal + 'px',
-                        lineHeight: 48 * scal + 'px'
+                        lineHeight: 48 * scal + 'px',
+                        fontSize: 16 * scal + 'px'
                       }}
                     >
                       <input
@@ -645,13 +645,15 @@ export default function App(props) {
                         placeholder="您的名字"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        style={{ fontSize: 16 * scal + 'px' }}
                       />
                     </div>
                     <div
                       style={{
-                        width: 200 * scal + 'px',
+                        width: 260 * scal + 'px',
                         height: 48 * scal + 'px',
-                        lineHeight: 48 * scal + 'px'
+                        lineHeight: 48 * scal + 'px',
+                        fontSize: 16 * scal + 'px'
                       }}
                     >
                       <input
@@ -659,20 +661,23 @@ export default function App(props) {
                         placeholder="您的手机"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
+                        style={{ fontSize: 16 * scal + 'px' }}
                       />
                     </div>
                   </div>
                   <div className="ls">
                     <div
                       style={{
-                        width: 200 * scal + 'px',
+                        width: 260 * scal + 'px',
                         height: 48 * scal + 'px',
-                        lineHeight: 48 * scal + 'px'
+                        lineHeight: 48 * scal + 'px',
+                        fontSize: 16 * scal + 'px'
                       }}
                     >
                       <select
                         value={lawyer_name}
                         onChange={(e) => setLawyer_name(e.target.value)}
+                        style={{ fontSize: 16 * scal + 'px' }}
                       >
                         {chineseProvinces.map((item) => (
                           <option value={item} key={item}>
@@ -683,14 +688,16 @@ export default function App(props) {
                     </div>
                     <div
                       style={{
-                        width: 200 * scal + 'px',
+                        width: 260 * scal + 'px',
                         height: 48 * scal + 'px',
-                        lineHeight: 48 * scal + 'px'
+                        lineHeight: 48 * scal + 'px',
+                        fontSize: 16 * scal + 'px'
                       }}
                     >
                       <select
                         value={delegation_type}
                         onChange={(e) => setDelegation_type(e.target.value)}
+                        style={{ fontSize: 16 * scal + 'px' }}
                       >
                         <option value="法律问题">法律问题</option>
                         <option value="信用修复">信用修复</option>
@@ -701,7 +708,16 @@ export default function App(props) {
                     </div>
                   </div>
                   <div className="save" onClick={save}>
-                    <div style={{ width: 418 * scal + 'px' }}>提交委托</div>
+                    <div
+                      style={{
+                        width: 545 * scal + 'px',
+                        height: 48 * scal + 'px',
+                        lineHeight: 48 * scal + 'px',
+                        fontSize: 16 * scal + 'px'
+                      }}
+                    >
+                      提交委托
+                    </div>
                   </div>
                 </div>
               </div>
@@ -718,7 +734,7 @@ export default function App(props) {
                   </div>
                   <div
                     className="tabletr"
-                    style={{ fontSize: 16 * scal + 'px' }}
+                    style={{ fontSize: 15 * scal + 'px' }}
                   >
                     <InfiniteScroll data={arr}></InfiniteScroll>
                   </div>
@@ -731,7 +747,14 @@ export default function App(props) {
             className="HeadDivBg1"
             style={{ top: -52 * scal + 'px' }}
           >
-            <img src={png18} alt="" style={{ width: 300 * scal + 'px' }} />
+            <img
+              src={png18}
+              alt=""
+              style={{
+                width: 300 * scal + 'px',
+                marginBottom: 10 * scal + 'px'
+              }}
+            />
             <div className="wentiList" style={{ padding: `0 ${140 * scal}px` }}>
               {wentiList.map((item, index) => (
                 <div
@@ -804,6 +827,7 @@ export default function App(props) {
                 zIndex: 9,
                 marginTop: 80 * scal + 'px'
               }}
+              className="text"
             />
             <img
               src={zybg}
@@ -848,6 +872,7 @@ export default function App(props) {
                     flexDirection: 'column',
                     alignItems: 'center'
                   }}
+                  className="ss"
                 >
                   <img
                     src={icon5}
@@ -871,6 +896,7 @@ export default function App(props) {
                       width: 460 * scal + 'px',
                       color: '#5a5a5a'
                     }}
+                    className="msggg"
                   >
                     修复个人信用，解冻银行卡;修复企业行政处罚、失信执行、司法涉诉、历史不良信息等信用记录，可消除平台为：信用中国，中国裁判文书网，国家企业信用信息公示系统及第三方平台如：企查查，天眼查，水滴信用等。
                   </div>
@@ -881,6 +907,7 @@ export default function App(props) {
                     flexDirection: 'column',
                     alignItems: 'center'
                   }}
+                  className="ss"
                 >
                   <img
                     src={icon6}
@@ -904,6 +931,7 @@ export default function App(props) {
                       width: 460 * scal + 'px',
                       color: '#5a5a5a'
                     }}
+                    className="msggg"
                   >
                     提供公司实务、刑事辩护、民事纠纷、劳动仲裁、交通事故、婚姻家事、工伤认定、法律顾问等法律咨询及专业服务。
                   </div>
@@ -914,6 +942,7 @@ export default function App(props) {
                     flexDirection: 'column',
                     alignItems: 'center'
                   }}
+                  className="ss"
                 >
                   <img
                     src={icon7}
@@ -937,6 +966,7 @@ export default function App(props) {
                       width: 460 * scal + 'px',
                       color: '#5a5a5a'
                     }}
+                    className="msggg"
                   >
                     利用各种获客渠道及专业服务团队的全天候服务，为法律人获得最新的一手案源信息并参与促成合作，让法律人能够为更多客户伸张正义，避免损失。
                   </div>
@@ -947,6 +977,7 @@ export default function App(props) {
                     flexDirection: 'column',
                     alignItems: 'center'
                   }}
+                  className="ss"
                 >
                   <img
                     src={icon8}
@@ -970,6 +1001,7 @@ export default function App(props) {
                       width: 460 * scal + 'px',
                       color: '#5a5a5a'
                     }}
+                    className="msggg"
                   >
                     赋能合伙人，提供全方位的团队服务及技术支持，通过软硬件综合打造，借助大IP，大平台的引流优势，从零到一的帮扶创业者实现人生价值。
                   </div>
@@ -1130,6 +1162,7 @@ export default function App(props) {
                 bottom: 115 * scal + 'px',
                 zIndex: 11
               }}
+              className="ysimg"
             />
             <div style={{ display: 'flex' }}>
               <div style={{ position: 'relative', left: 362 * scal + 'px' }}>
@@ -1690,7 +1723,7 @@ export default function App(props) {
                       className="anli"
                       style={{
                         fontSize: 18 * scal + 'px',
-                        marginBottom: 10 * scal + 'px'
+                        marginBottom: 0 * scal + 'px'
                       }}
                     >
                       {caseArr[0]?.title}
@@ -1698,7 +1731,7 @@ export default function App(props) {
                     <div
                       className="HeadDivBg12"
                       style={{
-                        height: 48 * scal + 'px',
+                        height: 56 * scal + 'px',
                         fontSize: 15 * scal + 'px',
                         color: '#999'
                       }}
@@ -1768,7 +1801,7 @@ export default function App(props) {
                         className="anli"
                         style={{
                           fontSize: 18 * scal + 'px',
-                          marginBottom: 10 * scal + 'px'
+                          marginBottom: 0 * scal + 'px'
                         }}
                       >
                         {caseArr[1]?.title}
@@ -1776,7 +1809,7 @@ export default function App(props) {
                       <div
                         className="HeadDivBg12"
                         style={{
-                          height: 48 * scal + 'px',
+                          height: 56 * scal + 'px',
                           fontSize: 15 * scal + 'px',
                           color: '#999'
                         }}
@@ -2042,7 +2075,7 @@ export default function App(props) {
                           className="title"
                           style={{
                             fontSize: 20 * scal + 'px',
-                            marginBottom: 13 * scal + 'px'
+                            marginBottom: 9 * scal + 'px'
                           }}
                         >
                           {item?.title}
@@ -2065,7 +2098,7 @@ export default function App(props) {
             </div>
 
             <div
-              onClick={() => setType(5)}
+              onClick={() => setType(6)}
               className="laojie"
               style={{
                 width: 225 * scal + 'px',

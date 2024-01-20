@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../../assets/logo.png'
-import gengduo from './img/gengduo.png'
+import logo from '../../assets/logo.svg'
+import gengduo from './img/gengduo.svg'
 import './App.css'
 
 export default function App(props) {
@@ -44,7 +44,8 @@ export default function App(props) {
               src={logo}
               alt="logo"
               style={{
-                width: 286 * scal + 'px'
+                width: 286 * scal + 'px',
+                marginBottom: 5 * scal + 'px'
               }}
               onClick={() => props.onSetState(0)}
             />
@@ -103,7 +104,12 @@ export default function App(props) {
             />
           </div>
           <div className="right">
-            <img src={gengduo} alt="" onClick={() => handelClick(true)} />
+            <img
+              src={gengduo}
+              alt=""
+              onClick={() => handelClick(true)}
+              style={{ width: '17px' }}
+            />
             <ul className={`navList ${props.isShow ? 'isShow' : ''}`}>
               {list.map((item, index) => (
                 <li

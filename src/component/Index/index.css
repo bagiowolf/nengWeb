@@ -423,15 +423,67 @@ div.HeadDivBg9 {
 
 @media (max-width: 768px) {
   .num,
-  .ly,
-  .ys,
   .my,
-  .gy .right {
+  .gy .right,
+  .ys .ysimg {
     display: none !important;
   }
   .gy {
     box-sizing: border-box;
     padding: 20px !important;
+  }
+  .ly > .text {
+    width: 70px !important;
+  }
+  .ly > div {
+    width: 100% !important;
+    height: auto !important;
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+  .ly .ss {
+    width: 50%;
+  }
+  .ly .ss img {
+    width: 30px !important;
+    height: auto !important;
+  }
+  .ly .ss div {
+    font-size: 16px !important;
+  }
+  .ly .ss .msggg {
+    font-size: 10px !important;
+    width: auto !important;
+    margin-bottom: 15px;
+  }
+
+  .ys {
+    height: auto !important;
+    padding-bottom: 20px;
+  }
+  .ys .HeadDivBg1 {
+    width: 70px !important;
+  }
+  .ys > div > div > div > img {
+    display: none;
+  }
+  .ys > div > div > div > div {
+    width: 120px !important;
+  }
+  .ys > div > div > div > div > div:first-child {
+    font-size: 10px !important;
+    background-color: transparent !important;
+    margin-left: 10px;
+  }
+  .ys > div > div > div > div > div:last-child {
+    font-size: 10px !important;
+  }
+  .ys > div > div > div > div > div img {
+    width: 20px !important;
+  }
+  .ys > div > div {
+    left: auto !important;
+    margin-left: 50px;
   }
   .gy .left {
     width: 100% !important;
@@ -451,7 +503,7 @@ div.HeadDivBg9 {
     top: 0 !important;
   }
   .ls > img {
-    width: 60px !important;
+    width: 70px !important;
   }
 
   .xinwen {
@@ -464,7 +516,7 @@ div.HeadDivBg9 {
     display: none;
   }
   .HeadDivBg1 > img {
-    width: 100px !important;
+    width: 150px !important;
     margin-top: 20px;
   }
   .wentiList {
@@ -473,7 +525,7 @@ div.HeadDivBg9 {
   }
   .wenti {
     width: 100% !important;
-    height: 200px !important;
+    height: 260px !important;
     padding: 20px !important;
   }
   .wentiList .wenti .to {
@@ -481,6 +533,7 @@ div.HeadDivBg9 {
     height: 26px !important;
     line-height: 26px !important;
     border: none !important;
+    bottom: 25px !important;
   }
   .wentiList .wenti .to img {
     width: auto !important;

@@ -10,7 +10,7 @@ import yx from './img/footer/邮箱.png'
 import wb from './img/footer/wb.png'
 import wx from './img/footer/wx.png'
 
-import logo from './img/1.png'
+import logo from '../../assets/logo.svg'
 import './App.css'
 import { post } from '../../utils/api/api'
 import dayjs from 'dayjs'
@@ -335,7 +335,7 @@ export default function Footer(props) {
                   <a href="https://www.moj.gov.cn">中国司法部</a>
                 </div>
                 <div style={{ marginTop: 20 * scal + 'px' }}>
-                  <a href="https://www.jienenglaw.com">江苏竭能律所</a>
+                  <a href="http://www.jienenglaw.com.cn/">江苏竭能律所</a>
                 </div>
               </div>
             </div>
@@ -402,7 +402,7 @@ export default function Footer(props) {
             style={{ borderBottom: '1px solid rgb(27, 32, 37)' }}
           ></div>
           <div className="copyRight" style={{ fontSize: 12 * scal + 'px' }}>
-            江苏竭能信息咨询服务有限公司 版权所有© www.jieneng.com.cn
+            江苏竭能信息咨询服务有限公司 版权所有© www.jielv.com.cmn
             苏ICP备17015514号-3|
             <img src={png2} alt="png2" />
             苏公网安备32041202001595号
@@ -476,7 +476,7 @@ export default function Footer(props) {
         </div>
         <div className="copyRight">
           <div>江苏竭能信息咨询服务有限公司</div>
-          <div>版权所有©www.jieneng.com.cn苏ICP备17015514号-3</div>
+          <div>版权所有©www.jielv.com.cmn苏ICP备17015514号-3</div>
           <div>
             <img src={png2} alt="png2" />
             苏公网安备32041202001595号

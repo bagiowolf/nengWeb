@@ -84,14 +84,7 @@
 .mobile {
   width: 100%;
 }
-.mobile .header {
-  height: 84px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: #2b68ff;
-  position: relative;
-}
+
 .mobile .HeadDiv {
   /* width: 237px;
   height: 25px; */

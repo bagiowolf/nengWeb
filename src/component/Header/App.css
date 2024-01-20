@@ -48,7 +48,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #2b68ff;
+  background-color: #000;
   position: relative;
   z-index: 11;
 }
@@ -74,14 +74,14 @@
   z-index: 15;
 }
 .mobile .navList li {
-  background-color: rgba(71, 122, 251, 1);
+  background-color: #000;
   color: #fff;
 
   padding: 5px 0;
 }
 .mobile .navList .active {
   color: #fff;
-  background-color: rgb(23, 83, 235);
+  background-color: #353333;
 }
 @media (max-width: 768px) {
   .mobile {
