@@ -93,8 +93,8 @@
   position: relative;
 }
 .mobile .HeadDiv {
-  width: 237px;
-  height: 25px;
+  /* width: 237px;
+  height: 25px; */
 }
 /* .mobile .navList {
   display: none;

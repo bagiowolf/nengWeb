@@ -4,7 +4,16 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 114px 0 360px;
-  background-color: #2b68ff;
+  background-color: #000;
+  color: #fff;
+}
+.headerer {
+  position: relative;
+  z-index: 9;
+}
+
+.headerer .bgc {
+  background-color: transparent;
 }
 .headerer .header .HeadDiv,
 .headerer .header .left {
@@ -13,6 +22,8 @@
 }
 .headerer .header .right {
   width: 868px;
+  height: 100%;
+  align-items: center;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
@@ -20,9 +31,12 @@
 }
 .headerer .header .right span {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .headerer .header .active {
-  padding-bottom: 10px;
+  /* padding-bottom: 10px; */
   border-bottom: 3px solid #fce38a;
   color: #fce38a;
 }
@@ -36,6 +50,7 @@
   align-items: center;
   background-color: #2b68ff;
   position: relative;
+  z-index: 11;
 }
 .mobile .HeadDiv {
   width: 237px;

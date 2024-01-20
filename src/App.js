@@ -12,77 +12,78 @@ import Case from './component/Case/App'
 import ContactUs from './component/ContactUs/App'
 
 export default function App() {
-  const [select, setSelect] = useState(-1)
+  const [select, setSelect] = useState(0)
   const [windowWidthValue, setWindowWidthValue] = useState(window.innerWidth)
   window.addEventListener('resize', () => {
     setWindowWidthValue(window.innerWidth)
   })
   return (
     <div className="App">
-      {select === -1 && (
+      {select === 0 && (
         <Head
           windowWidthValue={windowWidthValue}
           selectHandle={setSelect}
           onSetState={setSelect}
+          state={select}
         />
       )}
-      {select === 0 && (
+      {select === 1 && (
         <About
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 1 && (
+      {select === 2 && (
         <Credit
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 2 && (
+      {select === 3 && (
         <Team
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 3 && (
+      {select === 4 && (
         <LegalService
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 4 && (
+      {select === 5 && (
         <Cooperate
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 5 && (
+      {select === 6 && (
         <NewsCenter
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 6 && (
+      {select === 7 && (
         <Join
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 7 && (
+      {select === 8 && (
         <Case
           onSetState={setSelect}
           state={select}
           windowWidthValue={windowWidthValue}
         />
       )}
-      {select === 8 && (
+      {select === 9 && (
         <ContactUs
           onSetState={setSelect}
           state={select}

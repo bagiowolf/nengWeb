@@ -5,8 +5,9 @@ import './App.css'
 
 export default function App(props) {
   let scal = props.windowWidthValue / 1919
-
+  let isBgc = props.bgc ?? true
   const list = [
+    '首页',
     '关于我们',
     '信用修复',
     '律师团队',
@@ -18,28 +19,30 @@ export default function App(props) {
     '联系我们&留言'
   ]
   const handelClick = (type) => {
-    console.log(type)
     props.onSetIsShow(type)
   }
   return (
     <div>
-      <div className="headerer">
+      <div className={`headerer`}>
         <div
-          className="header"
-          style={{ padding: `0 ${114 * scal}px 0 ${360 * scal}px` }}
+          className={`header  ${isBgc ? '' : 'bgc'}`}
+          style={{
+            padding: `0 ${114 * scal}px 0 ${360 * scal}px`,
+            height: 122 * scal + 'px'
+          }}
         >
           <div className="left" style={{ width: 237 * scal + 'px' }}>
             <img
               className="HeadDiv"
               src={logo}
               alt="logo"
-              style={{ width: 237 * scal + 'px' }}
-              onClick={() => props.onSetState(-1)}
+              style={{ width: 286 * scal + 'px', height: 57 * scal + 'px' }}
+              onClick={() => props.onSetState(0)}
             />
           </div>
           <div
             className="right"
-            style={{ width: 868 * scal + 'px', fontSize: 14 * scal + 'px' }}
+            style={{ width: 868 * scal + 'px', fontSize: 16 * scal + 'px' }}
           >
             {list.map((item, index) => (
               <span
@@ -60,7 +63,7 @@ export default function App(props) {
               className="HeadDiv"
               src={logo}
               alt="logo"
-              onClick={() => props.onSetState(-1)}
+              onClick={() => props.onSetState(0)}
             />
           </div>
           <div className="right">

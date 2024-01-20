@@ -4,6 +4,13 @@ import png1 from './img/png1.png'
 import png2 from './img/png2.png'
 import png3 from './img/png3.png'
 import png5 from './img/png5.png'
+import rx from './img/footer/电话.png'
+import dz from './img/footer/地址.png'
+import yx from './img/footer/邮箱.png'
+import wb from './img/footer/wb.png'
+import wx from './img/footer/wx.png'
+
+import logo from './img/1.png'
 import './App.css'
 import { post } from '../../utils/api/api'
 import dayjs from 'dayjs'
@@ -56,7 +63,18 @@ const chineseProvinces = [
   '香港特别行政区',
   '澳门特别行政区'
 ]
-
+const list = [
+  '首页丨',
+  '关于我们丨',
+  '信用修复丨',
+  '律师团队丨',
+  '法律服务丨',
+  '律师合作丨',
+  '新闻中心丨',
+  '加盟招商丨',
+  '成功案例丨',
+  '联系我们&留言'
+]
 export default function Footer(props) {
   let scal = props.windowWidthValue / 1919
 
@@ -64,7 +82,7 @@ export default function Footer(props) {
 
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
-  const [lawyer_name, setLawyer_name] = useState('北京市')
+  const [lawyer_name, setLawyer_name] = useState('江苏省')
   const [delegation_type, setDelegation_type] = useState('民事纠纷')
   const save = () => {
     // 定义手机号正则表达式
@@ -181,9 +199,167 @@ export default function Footer(props) {
         </div>
         <div
           className="bottom"
-          style={{ padding: `${93 * scal}px ${335 * scal}px ${46 * scal}px` }}
+          style={{ padding: `${40 * scal}px ${360 * scal}px ${27 * scal}px` }}
         >
-          <div className="list">
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              paddingBottom: 40 * scal + 'px',
+              borderBottom: '1px solid #1b2025',
+              marginBottom: 40 * scal + 'px'
+            }}
+          >
+            <img src={logo} alt="" style={{ width: 229 * scal + 'px' }} />
+            <div style={{ display: 'flex' }}>
+              {list.map((item, index) => (
+                <div
+                  key={index}
+                  style={{ display: 'flex', cursor: 'pointer' }}
+                  onClick={() => props.onSetState(index)}
+                >
+                  <span
+                    style={{
+                      fontSize: 14 * scal + 'px',
+                      color: '#a6a7b3'
+                    }}
+                  >
+                    {item}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div
+            style={{
+              marginTop: 66 * scal + 'px',
+              display: 'flex',
+              justifyContent: 'space-between'
+            }}
+          >
+            <div className="left">
+              <div
+                style={{
+                  fontSize: 14 * scal + 'px',
+                  display: 'flex',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={rx}
+                  alt=""
+                  style={{
+                    width: 12 * scal + 'px',
+                    marginRight: 8 * scal + 'px'
+                  }}
+                />
+                热线:
+                <span
+                  style={{
+                    marginLeft: 14 * scal + 'px',
+                    fontSize: 24 * scal + 'px',
+                    color: '#2b68ff'
+                  }}
+                >
+                  0519-81800001
+                </span>
+              </div>
+              <div
+                style={{
+                  fontSize: 14 * scal + 'px',
+                  display: 'flex',
+                  marginTop: 30 * scal + 'px',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={yx}
+                  alt=""
+                  style={{
+                    width: 12 * scal + 'px',
+                    marginRight: 8 * scal + 'px'
+                  }}
+                />
+                邮箱:
+                <span
+                  style={{
+                    marginLeft: 14 * scal + 'px'
+                  }}
+                >
+                  kf@jienenglaw.com.cn
+                </span>
+              </div>
+              <div
+                style={{
+                  fontSize: 14 * scal + 'px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginTop: 30 * scal + 'px'
+                }}
+              >
+                <img
+                  src={dz}
+                  alt=""
+                  style={{
+                    width: 12 * scal + 'px',
+                    marginRight: 8 * scal + 'px'
+                  }}
+                />
+                地址:
+                <span
+                  style={{
+                    marginLeft: 14 * scal + 'px'
+                  }}
+                >
+                  江苏省常州市武进区人民路吾悦大厦1号楼1205室
+                </span>
+              </div>
+            </div>
+            <div className="content1">
+              <div style={{ fontSize: 16 * scal + 'px' }}>相关链接</div>
+              <div
+                style={{
+                  fontSize: 14 * scal + 'px',
+                  color: '#b9bbd0',
+                  marginTop: 20 * scal + 'px'
+                }}
+              >
+                <div>
+                  <a href="https://www.court.gov.cn/index.html">
+                    中国最高人民法院
+                  </a>
+                </div>
+                <div style={{ marginTop: 20 * scal + 'px' }}>
+                  <a href="https://www.moj.gov.cn">中国司法部</a>
+                </div>
+                <div style={{ marginTop: 20 * scal + 'px' }}>
+                  <a href="www.jienenglaw.com">江苏竭能律所</a>
+                </div>
+              </div>
+            </div>
+            <div
+              className="right"
+              style={{
+                display: 'flex',
+                textAlign: 'center',
+                fontSize: 14 * scal + 'px',
+                color: '#515a66'
+              }}
+            >
+              <div>
+                <img src={wx} alt="" style={{ width: 130 * scal + 'px' }} />
+                <div>官方微信</div>
+              </div>
+              <div style={{ marginLeft: 50 * scal + 'px' }}>
+                <img src={wb} alt="" style={{ width: 130 * scal + 'px' }} />
+                <div>官方微博</div>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="list">
             <div>
               <div className="title">关于我们</div>
               <ul>
@@ -219,10 +395,13 @@ export default function Footer(props) {
               <img src={png1} alt="" style={{ marginRight: '12px' }} />
               <img src={png1} alt="" />
             </div>
-          </div>
+          </div> */}
 
-          <div className="line"></div>
-          <div className="copyRight">
+          <div
+            className="line"
+            style={{ borderBottom: '1px solid rgb(27, 32, 37)' }}
+          ></div>
+          <div className="copyRight" style={{ fontSize: 12 * scal + 'px' }}>
             江苏竭能信息咨询服务有限公司 版权所有© www.jieneng.com.cn
             苏ICP备17015514号-3|
             <img src={png2} alt="png2" />

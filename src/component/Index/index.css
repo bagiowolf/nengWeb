@@ -1,5 +1,6 @@
 .HeadDiv {
   width: 100%;
+  position: relative;
 }
 
 .lunbo {
@@ -189,7 +190,7 @@
   position: relative;
   z-index: 9;
 }
-.wentiList .wenti img {
+.wentiList .wenti > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -201,6 +202,13 @@
 }
 .wentiList .wenti .to {
   color: #2b68ff;
+  display: flex;
+  align-items: center;
+  border: 1px solid #2b68ff;
+  text-align: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
 }
 .HeadDivBg1 {
   width: 100%;
@@ -370,27 +378,55 @@ div.HeadDivBg9 {
 .laojie {
   border: 1px solid #fff;
   color: #fff;
-  border-radius: 50px;
+  /* border-radius: 50px; */
   text-align: center;
   position: relative;
   z-index: 9;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
-.aaa,
+
 .lunboBox {
   position: relative;
-  display: none;
+  top: -50px;
+  z-index: 1;
+  /* display: none; */
 }
 
 @media (max-width: 768px) {
-  .hhhh {
-    display: none;
+  .num,
+  .ly,
+  .ys,
+  .my,
+  .gy .right {
+    display: none !important;
+  }
+  .gy {
+    box-sizing: border-box;
+    padding: 20px !important;
+  }
+  .gy .left {
+    width: 100% !important;
+  }
+  .gy .left .title {
+    font-size: 18px !important;
+  }
+  .gy .left .title1 {
+    font-size: 12px !important;
+  }
+  .gy .left .msg {
+    font-size: 12px !important;
   }
   .aaa,
   .lunboBox {
     display: block;
+    top: 0 !important;
   }
+  .ls > img {
+    width: 60px !important;
+  }
+
   .xinwen {
     display: none;
   }
@@ -400,8 +436,8 @@ div.HeadDivBg9 {
   .HeadDiv .form {
     display: none;
   }
-  .HeadDivBg1 img {
-    width: 100px;
+  .HeadDivBg1 > img {
+    width: 100px !important;
     margin-top: 20px;
   }
   .wentiList {
@@ -412,7 +448,16 @@ div.HeadDivBg9 {
     width: 100% !important;
     height: 200px !important;
     padding: 20px !important;
-    padding-top: 50px !important;
+  }
+  .wentiList .wenti .to {
+    width: auto !important;
+    height: 26px !important;
+    line-height: 26px !important;
+    border: none !important;
+  }
+  .wentiList .wenti .to img {
+    width: auto !important;
+    height: auto !important;
   }
   .wenti .title {
     font-size: 18px !important;
