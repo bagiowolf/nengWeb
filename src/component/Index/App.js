@@ -1618,7 +1618,7 @@ export default function App(props) {
                       className="HeadDivBg10"
                       style={{ fontSize: 14 * scal + 'px', color: '#333' }}
                     >
-                      {deslitt[0].des1}
+                      中国电信
                     </label>
                     <label
                       className="hez"
@@ -1692,7 +1692,7 @@ export default function App(props) {
                         className="HeadDivBg10"
                         style={{ fontSize: 14 * scal + 'px', color: '#333' }}
                       >
-                        {deslitt[1].des1}
+                        中国电信
                       </label>
                       <label
                         className="hez"
@@ -1765,8 +1765,8 @@ export default function App(props) {
                       }}
                     ></img>
                     <div className="HeadDivBg17">
-                      <label className="HeadDivBg18">{deslitt[0].des1}</label>
-                      <label>{deslitt[0].des2}</label>
+                      <label className="HeadDivBg18">中国电信</label>
+                      <label>3次合作</label>
                     </div>
                   </div>
                 </div>
@@ -1836,8 +1836,8 @@ export default function App(props) {
                       }}
                     ></img>
                     <div className="HeadDivBg17">
-                      <label className="HeadDivBg18">{deslitt[0].des1}</label>
-                      <label>{deslitt[0].des2}</label>
+                      <label className="HeadDivBg18">中国电信</label>
+                      <label>3次合作</label>
                     </div>
                   </div>
                 </div>
@@ -1930,7 +1930,8 @@ export default function App(props) {
         onClick={() => setIsShow(false)}
         className="xinwen"
         style={{
-          padding: `${50 * scal}px ${360 * scal}px`
+          padding: `${50 * scal}px ${360 * scal}px`,
+          boxSizing: 'border-box'
         }}
       >
         <div className="bgimg">
@@ -1940,10 +1941,13 @@ export default function App(props) {
           <img src={png15} alt="" />
         </div>
         <div className="imgBox123">
-          <div className="left" style={{ width: 580 * scal + 'px' }}>
+          <div
+            className="left"
+            style={{ width: 580 * scal + 'px', height: 521 * scal + 'px' }}
+          >
             <div
               className="top"
-              style={{ width: 580 * scal + 'px', height: 364 * scal + 'px' }}
+              style={{ width: 580 * scal + 'px', height: 320 * scal + 'px' }}
             >
               <img
                 src={first?.image_path}
@@ -1951,11 +1955,25 @@ export default function App(props) {
                 alt=""
               />
             </div>
-            <div className="bottom" style={{ padding: 20 * scal + 'px' }}>
+            <div
+              className="bottom"
+              style={{
+                padding: 20 * scal + 'px',
+                height: 200 * scal + 'px',
+                boxSizing: 'border-box'
+              }}
+            >
               <div className="title" style={{ fontSize: 20 * scal + 'px' }}>
                 {first?.title}
               </div>
-              <div className="msg" style={{ fontSize: 16 * scal + 'px' }}>
+              <div
+                className="msg"
+                style={{
+                  fontSize: 16 * scal + 'px',
+                  height: 90 * scal + 'px',
+                  overflow: 'hidden'
+                }}
+              >
                 {returnDom(first?.content)}
               </div>
             </div>
@@ -1968,9 +1986,13 @@ export default function App(props) {
               padding: 20 * scal + 'px'
             }}
           >
-            <div className="boxList">
+            <div className="boxList1">
               {newsArr.map((item) => (
-                <div className="box" key={item.id}>
+                <div
+                  className="box"
+                  key={item.id}
+                  style={{ display: 'flex', marginBottom: 20 * scal + 'px' }}
+                >
                   <div
                     className="left"
                     style={{
@@ -1994,11 +2016,21 @@ export default function App(props) {
                   >
                     <div
                       className="title"
-                      style={{ fontSize: 20 * scal + 'px' }}
+                      style={{
+                        fontSize: 20 * scal + 'px',
+                        marginBottom: 13 * scal + 'px'
+                      }}
                     >
                       {item?.title}
                     </div>
-                    <div className="msg" style={{ fontSize: 16 * scal + 'px' }}>
+                    <div
+                      className="msg"
+                      style={{
+                        fontSize: 16 * scal + 'px',
+                        height: 41 * scal + 'px',
+                        overflow: 'hidden'
+                      }}
+                    >
                       {returnDom(item?.content)}
                     </div>
                   </div>
