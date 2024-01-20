@@ -402,7 +402,7 @@ export default function Footer(props) {
             style={{ borderBottom: '1px solid rgb(27, 32, 37)' }}
           ></div>
           <div className="copyRight" style={{ fontSize: 12 * scal + 'px' }}>
-            江苏竭能信息咨询服务有限公司 版权所有© www.jielv.com.cmn
+            江苏竭能信息咨询服务有限公司 版权所有© www.jielv.com.cn
             苏ICP备17015514号-3|
             <img src={png2} alt="png2" />
             苏公网安备32041202001595号
@@ -476,7 +476,7 @@ export default function Footer(props) {
         </div>
         <div className="copyRight">
           <div>江苏竭能信息咨询服务有限公司</div>
-          <div>版权所有©www.jielv.com.cmn苏ICP备17015514号-3</div>
+          <div>版权所有©www.jielv.com.cn苏ICP备17015514号-3</div>
           <div>
             <img src={png2} alt="png2" />
             苏公网安备32041202001595号

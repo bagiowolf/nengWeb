@@ -516,7 +516,7 @@ div.HeadDivBg9 {
     display: none;
   }
   .HeadDivBg1 > img {
-    width: 150px !important;
+    width: 160px !important;
     margin-top: 20px;
   }
   .wentiList {
@@ -540,13 +540,13 @@ div.HeadDivBg9 {
     height: auto !important;
   }
   .wenti .title {
-    font-size: 18px !important;
+    font-size: 16px !important;
   }
   .wenti .msg {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
   .wenti .to {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
   .none {
     display: none;
