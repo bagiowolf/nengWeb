@@ -31,14 +31,51 @@ export default function App(props) {
             height: 122 * scal + 'px'
           }}
         >
-          <div className="left" style={{ width: 237 * scal + 'px' }}>
+          <div
+            className="left"
+            style={{
+              width: 300 * scal + 'px',
+              fontSize: 14 * scal + 'px',
+              cursor: 'pointer'
+            }}
+          >
             <img
               className="HeadDiv"
               src={logo}
               alt="logo"
-              style={{ width: 286 * scal + 'px', height: 57 * scal + 'px' }}
+              style={{
+                width: 286 * scal + 'px',
+                height: 57 * scal + 'px'
+              }}
               onClick={() => props.onSetState(0)}
             />
+            <div>
+              <span onClick={() => props.onSetState(2)}>信用修复</span>
+              <span
+                style={{
+                  height: 12 * scal + 'px',
+                  borderLeft: '1px solid #beb9a2',
+                  margin: `0 ${10 * scal}px`
+                }}
+              ></span>
+              <span onClick={() => props.onSetState(4)}>法律服务</span>
+              <span
+                style={{
+                  height: 12 * scal + 'px',
+                  borderLeft: '1px solid #beb9a2',
+                  margin: `0 ${10 * scal}px`
+                }}
+              ></span>
+              <span onClick={() => props.onSetState(5)}>案源合作</span>
+              <span
+                style={{
+                  height: 12 * scal + 'px',
+                  borderLeft: '1px solid #beb9a2',
+                  margin: `0 ${10 * scal}px`
+                }}
+              ></span>
+              <span onClick={() => props.onSetState(7)}>招商加盟</span>
+            </div>
           </div>
           <div
             className="right"

@@ -88,7 +88,10 @@ export default function App(props) {
           windowWidthValue={props.windowWidthValue}
         />
       </div>
-      <Footer windowWidthValue={props.windowWidthValue} />
+      <Footer
+        windowWidthValue={props.windowWidthValue}
+        onSetState={props.onSetState}
+      />
     </div>
   )
 }

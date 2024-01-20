@@ -33,7 +33,10 @@ export default function App(props) {
           <div className="msg">{returnDom(info.content)}</div>
           <div className="creat">编辑：{info.editor}</div>
         </div>
-        <Footer />
+        <Footer
+          onSetState={props.onSetState}
+          windowWidthValue={props.windowWidthValue}
+        />
       </div>
     </div>
   )

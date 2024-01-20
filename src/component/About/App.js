@@ -95,7 +95,10 @@ export default function MyApp(props) {
             />
           </div>
         </div>
-        <Footer windowWidthValue={props.windowWidthValue} />
+        <Footer
+          windowWidthValue={props.windowWidthValue}
+          onSetState={props.onSetState}
+        />
       </div>
       <div className="mobile">
         <Header

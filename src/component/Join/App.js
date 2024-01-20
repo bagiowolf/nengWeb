@@ -682,7 +682,10 @@ export default function App(props) {
             </Swiper>
           </div>
         </div>
-        <Footer windowWidthValue={props.windowWidthValue} />
+        <Footer
+          windowWidthValue={props.windowWidthValue}
+          onSetState={props.onSetState}
+        />
       </div>
     </div>
   )

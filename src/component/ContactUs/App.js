@@ -203,7 +203,11 @@ export default function App(props) {
           <img src={png3} alt="" />
         </div>
 
-        <Footer isShow={false} windowWidthValue={props.windowWidthValue} />
+        <Footer
+          isShow={false}
+          windowWidthValue={props.windowWidthValue}
+          onSetState={props.onSetState}
+        />
       </div>
     </div>
   )

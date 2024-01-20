@@ -6,6 +6,32 @@
 .lunbo {
   /* position: absolute; */
 }
+.zx {
+  width: 40px;
+  height: 146px;
+  background: linear-gradient(270deg, #5875f7 0%, #7b96f4 100%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: fixed;
+  right: 20px;
+  z-index: 77;
+  top: 50%;
+  border-radius: 6px;
+}
+.zx a {
+  text-decoration: none;
+
+  writing-mode: vertical-rl; /* 从右到左 */
+  text-orientation: upright; /* 保持正常显示 */
+  color: #fff;
+  letter-spacing: 3px;
+}
+.zx img {
+  width: 20px;
+  height: 20px;
+}
 .HeadDivBg {
   width: 100%;
   height: auto;
@@ -93,7 +119,8 @@
 .HeadDiv .form .table .tabletr {
   height: calc(100% - 48px);
   color: #2b68ff;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
+  overflow: hidden;
 }
 .HeadDiv .form .table .tabletr .tr {
   margin-bottom: 10px;

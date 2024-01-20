@@ -335,7 +335,7 @@ export default function Footer(props) {
                   <a href="https://www.moj.gov.cn">中国司法部</a>
                 </div>
                 <div style={{ marginTop: 20 * scal + 'px' }}>
-                  <a href="www.jienenglaw.com">江苏竭能律所</a>
+                  <a href="https://www.jienenglaw.com">江苏竭能律所</a>
                 </div>
               </div>
             </div>
