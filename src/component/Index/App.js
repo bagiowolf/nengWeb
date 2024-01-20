@@ -713,12 +713,12 @@ export default function App(props) {
                     height: 192 * scal + 'px'
                   }}
                 >
-                  <div className="top">
+                  <div className="top" style={{ fontSize: 16 * scal + 'px' }}>
                     每日前十名预约咨询资深律师，一对一电话解答
                   </div>
                   <div
                     className="tabletr"
-                    style={{ fontSize: 18 * scal + 'px' }}
+                    style={{ fontSize: 16 * scal + 'px' }}
                   >
                     <InfiniteScroll data={arr}></InfiniteScroll>
                   </div>
