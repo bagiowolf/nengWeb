@@ -8,18 +8,19 @@
 }
 .about .banner img {
   width: 100%;
-  height: 340px;
 }
 .about .banner .aboutText {
   position: absolute;
+  z-index: 9;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #8f8f8f;
+  /* left: 50%; */
+  /* transform: translate(-50%); */
+  transform: translateY(-50%);
+  text-align: left;
+  color: #fff;
 }
 .about .aboutText .gy {
   font-size: 30px;
-  padding-bottom: 20px;
 }
 .about .aboutText .sj {
   font-size: 18px;
@@ -27,16 +28,24 @@
 .about .content {
   text-align: left;
   padding: 60px 360px 0;
+  position: relative;
 }
 .about .content .title {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 34px;
 }
+.about .msg,
+.about .num,
+.about .img {
+  position: relative;
+}
 .about .content p {
   font-size: 18px;
   letter-spacing: 2px;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
+  margin: 0;
+  color: #2a2a2a;
 }
 .about .content .num {
   text-align: left;
@@ -51,14 +60,22 @@
   height: 63px;
 }
 .about .content .num .box {
-  width: 211px;
+  /* width: 211px; */
   text-align: center;
+}
+.about .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .about .content .num .box .one {
   letter-spacing: 3px;
 
   font-size: 46px;
   font-weight: 600;
+  color: #2c69ff;
 }
 .about .content .num .box .two {
   letter-spacing: 2px;
@@ -68,12 +85,12 @@
 }
 .about .content .num .box .one span {
   display: inline-block;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 600;
+  /* font-size: 14px; */
 }
 .about .content .img {
   margin-top: 76px;
-  margin-bottom: 93px;
+  /* margin-bottom: 93px; */
   display: flex;
   justify-content: space-between;
 }

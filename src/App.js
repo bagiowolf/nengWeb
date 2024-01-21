@@ -12,7 +12,7 @@ import Case from './component/Case/App'
 import ContactUs from './component/ContactUs/App'
 
 export default function App() {
-  const [select, setSelect] = useState(0)
+  const [select, setSelect] = useState(1)
   const [windowWidthValue, setWindowWidthValue] = useState(window.innerWidth)
   window.addEventListener('resize', () => {
     setWindowWidthValue(window.innerWidth)

@@ -14,10 +14,8 @@
 }
 .footer .form {
   width: 418px;
-  height: 192px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .footer .form .name,
 .footer .form .ls {
@@ -28,10 +26,10 @@
 .footer .form .ls div {
   width: 200px;
   height: 48px;
-  line-height: 48px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px solid #fff;
   color: #fff;
+  box-sizing: border-box;
 }
 
 .footer .form .save div {
@@ -48,10 +46,10 @@
   color: #fff;
   font-size: 20px;
   letter-spacing: 2px;
-  height: 192px;
+  /* height: 192px; */
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
 }
 .footer .sub .box1 span {
@@ -66,13 +64,12 @@
   letter-spacing: 1px;
 
   width: 460px;
-  height: 192px;
   border-radius: 5px;
   border: 1px solid #fff;
 }
 .footer .table .top {
-  height: 48px;
-  line-height: 48px;
+  /* height: 48px; */
+  /* line-height: 48px; */
   background-color: #fff;
   color: #2c69ff;
   border-radius: 5px 5px 0 0;
@@ -80,8 +77,8 @@
 .footer .table .tabletr {
   height: 144px;
   color: #fff;
-
-  overflow-y: scroll;
+  overflow: hidden;
+  /* overflow-y: scroll; */
 }
 
 .footer .bottom {
@@ -211,7 +208,7 @@
 .mobile .form .save div {
   height: 48px;
   line-height: 48px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: #fff;
   color: #2c69ff;
 }

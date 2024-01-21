@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import png4 from './img/png4.png'
 import png1 from './img/png1.png'
 import png2 from './img/png2.png'
@@ -9,6 +9,7 @@ import dz from './img/footer/地址.png'
 import yx from './img/footer/邮箱.png'
 import wb from './img/footer/wb.png'
 import wx from './img/footer/wx.png'
+import { get } from '../../utils/api/api'
 
 import logo from '../../assets/logo.svg'
 import './App.css'
@@ -75,10 +76,107 @@ const list = [
   '成功案例丨',
   '联系我们&留言'
 ]
+const NumberAnimation = ({ targetValue, isSplit }) => {
+  const [currentValue, setCurrentValue] = useState(0)
+  useEffect(() => {
+    if (targetValue) {
+      const animationDuration = 500 // 动画持续时间（毫秒）
+      const framesPerSecond = 60 // 每秒渲染帧数
+      const totalFrames = (animationDuration / 1000) * framesPerSecond
+      const frameInterval = 1000 / framesPerSecond
+      const increment = (targetValue - currentValue) / totalFrames
+
+      let currentFrame = 0
+      const intervalId = setInterval(() => {
+        currentFrame++
+
+        if (currentFrame <= totalFrames) {
+          setCurrentValue((prevValue) => prevValue + increment)
+        } else {
+          setCurrentValue(targetValue)
+          clearInterval(intervalId)
+        }
+      }, frameInterval)
+
+      return () => clearInterval(intervalId)
+    }
+  }, [targetValue, currentValue])
+  if (targetValue) {
+    if (isSplit) {
+      return <span>{Math.round(currentValue).toLocaleString()}</span>
+    } else {
+      return <span>{Math.round(currentValue)}</span>
+    }
+  } else {
+    return 0
+  }
+}
+const InfiniteScroll = ({ data }) => {
+  const [scrolling, setScrolling] = useState(true)
+  const scrollContainerRef = useRef(null)
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current
+
+    const handleScroll = () => {
+      if (scrolling) {
+        const { scrollTop, scrollHeight, clientHeight } = scrollContainer
+
+        // 检查是否滚动到底部
+        if (scrollTop + clientHeight >= scrollHeight - 1) {
+          // 滚动到底部时重置到顶部
+          scrollContainer.scrollTop = 0
+        } else {
+          // 没有到达底部，继续滚动
+          scrollContainer.scrollTop += 2 // 滚动速度，根据需要调整
+        }
+      }
+    }
+
+    const scrollInterval = setInterval(handleScroll, 50)
+
+    return () => {
+      clearInterval(scrollInterval)
+    }
+  }, [scrolling])
+
+  const handleMouseEnter = () => {
+    setScrolling(false)
+  }
+
+  const handleMouseLeave = () => {
+    setScrolling(true)
+  }
+
+  return (
+    <div
+      ref={scrollContainerRef}
+      style={{ overflow: 'hidden', height: '200px', border: '1px solid #ccc' }}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {data.map((item, index) => (
+        <div key={index} style={{ padding: '10px' }}>
+          {item}
+        </div>
+      ))}
+    </div>
+  )
+}
 export default function Footer(props) {
   let scal = props.windowWidthValue / 1919
 
   let state = props.isShow ?? true
+  const [num, setNum] = useState({})
+
+  const getNum = () => {
+    get('/get_lawyer_economic/1').then((res) => {
+      setNum(res.data)
+    })
+  }
+  useEffect(() => {
+    getNum()
+  }, [])
 
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
@@ -113,49 +211,97 @@ export default function Footer(props) {
         <div
           className={`sub ${state ? '' : 'dn'}`}
           style={{
-            padding: `0 ${160 * scal}px 0 ${212 * scal}px`
+            padding: `0 ${160 * scal}px 0 ${212 * scal}px`,
+            height: 250 * scal + 'px'
           }}
         >
           <div className="box box1">
             <img
               src={png4}
               alt="png4"
-              style={{ width: 110 * scal + 'px', height: 100 * scal + 'px' }}
+              style={{ width: 110 * scal + 'px', height: 97 * scal + 'px' }}
             />
-            <div>
+            <div style={{ fontSize: 22 * scal + 'px' }}>
               <div>
-                已经为<span>2000</span>余位当事人成功解决问题,
+                已经为
+                <span>
+                  <NumberAnimation
+                    targetValue={num.form_litigant}
+                    isSplit={true}
+                  ></NumberAnimation>
+                </span>
+                余位当事人成功解决问题,
               </div>
               <div>
-                为当事人争取直接经济利益<span>64,658,200</span>元
+                为当事人争取直接经济利益
+                <span>
+                  <NumberAnimation
+                    targetValue={num.form_economic_losses}
+                    isSplit={true}
+                  ></NumberAnimation>
+                </span>
+                元
               </div>
             </div>
           </div>
-          <div className="box">
+          <div className="box" style={{ height: '100%' }}>
             <div className="form" style={{ width: 418 * scal + 'px' }}>
-              <div className="name">
-                <div style={{ width: 200 * scal + 'px' }}>
+              <div className="name" style={{ marginTop: 31 * scal + 'px' }}>
+                <div
+                  style={{
+                    width: 200 * scal + 'px',
+                    height: 48 * scal + 'px'
+                  }}
+                >
                   <input
                     type="text"
                     placeholder="您的名字"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
+                    style={{
+                      width: 200 * scal + 'px',
+                      height: 48 * scal + 'px',
+                      fontSize: 16 * scal + 'px'
+                    }}
                   />
                 </div>
-                <div style={{ width: 200 * scal + 'px' }}>
+                <div
+                  style={{
+                    width: 200 * scal + 'px',
+                    height: 48 * scal + 'px'
+                  }}
+                >
                   <input
                     type="text"
                     placeholder="您的手机"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
+                    style={{
+                      width: 200 * scal + 'px',
+                      height: 48 * scal + 'px',
+                      fontSize: 16 * scal + 'px'
+                    }}
                   />
                 </div>
               </div>
-              <div className="ls">
-                <div style={{ width: 200 * scal + 'px' }}>
+              <div className="ls" style={{ marginTop: 24 * scal + 'px' }}>
+                <div
+                  style={{
+                    width: 200 * scal + 'px',
+                    height: 48 * scal + 'px',
+                    fontSize: 16 * scal + 'px',
+                    lineHeight: 48 * scal + 'px'
+                  }}
+                >
                   <select
                     value={lawyer_name}
                     onChange={(e) => setLawyer_name(e.target.value)}
+                    style={{
+                      width: 150 * scal + 'px',
+                      height: 48 * scal + 'px',
+                      fontSize: 16 * scal + 'px',
+                      transform: 'translateX(13px)'
+                    }}
                   >
                     {chineseProvinces.map((item) => (
                       <option value={item} key={item}>
@@ -164,10 +310,23 @@ export default function Footer(props) {
                     ))}
                   </select>
                 </div>
-                <div style={{ width: 200 * scal + 'px' }}>
+                <div
+                  style={{
+                    width: 200 * scal + 'px',
+                    height: 48 * scal + 'px',
+                    fontSize: 16 * scal + 'px',
+                    lineHeight: 48 * scal + 'px'
+                  }}
+                >
                   <select
                     value={delegation_type}
                     onChange={(e) => setDelegation_type(e.target.value)}
+                    style={{
+                      width: 150 * scal + 'px',
+                      height: 48 * scal + 'px',
+                      fontSize: 16 * scal + 'px',
+                      transform: 'translateX(13px)'
+                    }}
                   >
                     <option value="法律问题">法律问题</option>
                     <option value="信用修复">信用修复</option>
@@ -177,22 +336,45 @@ export default function Footer(props) {
                   </select>
                 </div>
               </div>
-              <div className="save" onClick={save}>
-                <div style={{ width: 418 * scal + 'px' }}>提交委托</div>
+              <div
+                className="save"
+                onClick={save}
+                style={{ marginTop: 24 * scal + 'px' }}
+              >
+                <div
+                  style={{
+                    width: 418 * scal + 'px',
+                    height: 48 * scal + 'px',
+
+                    fontSize: 16 * scal + 'px',
+                    lineHeight: 48 * scal + 'px'
+                  }}
+                >
+                  提交委托
+                </div>
               </div>
             </div>
           </div>
           <div className="box">
             <div className="table" style={{ width: 460 * scal + 'px' }}>
-              <div className="top">
+              <div
+                className="top"
+                style={{
+                  fontSize: 16 * scal + 'px',
+                  height: 48 * scal + 'px',
+                  lineHeight: 48 * scal + 'px'
+                }}
+              >
                 每日前十名预约咨询资深律师，一对一电话解答
               </div>
-              <div className="tabletr">
-                {arr.map((item, index) => (
-                  <div className="tr" key={index}>
-                    {item}
-                  </div>
-                ))}
+              <div
+                className="tabletr"
+                style={{
+                  fontSize: 15 * scal + 'px',
+                  height: 144 * scal + 'px'
+                }}
+              >
+                <InfiniteScroll data={arr}></InfiniteScroll>
               </div>
             </div>
           </div>
