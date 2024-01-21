@@ -9,6 +9,7 @@ import Footer from '../Footer/App'
 import Header from '../Header/App'
 import bg from './img/手绘插画.png'
 import zx from '../Index/img/zx.png'
+import yd from './img/关于我们bg.jpg'
 import { get } from '../../utils/api/api'
 
 const textList = [
@@ -262,11 +263,12 @@ export default function MyApp(props) {
           </a>
         </div>
         <div className="banner" onClick={() => setIsShow(false)}>
-          <img src={banner} alt="banner" />
+          <img src={yd} alt="banner" />
           <div className="aboutText">
-            <div className="gy">关于我们</div>
+            <div className="gy1">关于我们</div>
             <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
+              以专业视角，应对各种复杂需求
+              <div>业务电话：400-651-0001</div>
             </div>
           </div>
         </div>

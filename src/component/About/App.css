@@ -135,21 +135,21 @@
 }
 .mobile .banner img {
   width: 100%;
-  height: 340px;
 }
 .mobile .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #8f8f8f;
+  transform: translateY(-50%);
+  left: 10%;
+  text-align: left;
+  color: #fff;
 }
-.mobile .aboutText .gy {
+.mobile .aboutText .gy1 {
   font-size: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 .mobile .aboutText .sj {
-  font-size: 18px;
+  font-size: 16px;
 }
 .mobile .content {
   text-align: left;
