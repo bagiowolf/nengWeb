@@ -79,6 +79,7 @@
 .credit .box3 .textArte {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .credit .box3 .textArte .left {
   color: #fff;
@@ -90,7 +91,20 @@
 }
 .credit .box3 .textArte .left p .tit {
   text-indent: 0;
-  border-left: 6px solid #f8e496;
+  display: flex;
+  align-items: center;
+  /* border-left: 6px solid #f8e496; */
+}
+.credit .box3 .textArte .left p .tit span {
+  display: inline-block;
+  background-color: #f8e496;
+}
+.mobile .banner {
+  height: 150px;
+  text-align: center;
+}
+.mobile .banner img {
+  height: 100%;
 }
 .credit .box4 {
   /* margin-top: 60px; */
@@ -148,10 +162,13 @@
   box-sizing: border-box;
 }
 .credit .box5 .textArte .title1 {
-  border-left: 5px solid #2b68ff;
-  padding-left: 10px;
-  font-size: 24px;
+  /* border-left: 5px solid #2b68ff; */
+  /* padding-left: 10px; */
+  /* font-size: 24px; */
+  display: flex;
+  align-items: center;
   margin-bottom: 35px;
+  font-weight: 700;
 }
 .credit .box5 .textArte .gf {
   display: flex;
@@ -185,6 +202,22 @@
   z-index: 9;
   font-size: 40px;
   color: #4a4a4a;
+  text-align: center;
+}
+.credit .numText {
+  background: linear-gradient(
+      0deg,
+      rgba(69, 69, 69, 0.2),
+      rgba(69, 69, 69, 0.2)
+    ),
+    linear-gradient(0deg, #f4f4f4, #f4f4f4);
+  border: 1px solid #45454533;
+  font-family: Helvetica Neue;
+  font-size: 150px;
+  font-weight: 700;
+  line-height: 183px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 .credit .box6 .png11 {
   position: absolute;
@@ -246,6 +279,7 @@
 .credit .box7 .png13 {
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
 }
 .credit .box7 .title {
@@ -253,10 +287,8 @@
   z-index: 9;
 }
 .credit .box7 .textArte {
-  margin-top: 125px;
   position: relative;
   z-index: 9;
-  padding-bottom: 110px;
 }
 .credit .box7 .textArte .flowPath {
   display: flex;
@@ -266,13 +298,11 @@
 .credit .box7 .textArte .step {
   font-size: 42px;
   letter-spacing: 5px;
-  color: #838386;
+  color: #848486;
   font-weight: bold;
-  font-style: italic;
   text-align: center;
 }
 .credit .box7 .textArte .flowText {
-  padding: 50px 338px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -461,6 +491,12 @@
 .mobile {
   display: none;
 }
+.mobile .box3 .title {
+  background-color: #2b68ff;
+  margin: 0;
+  padding-bottom: 34px;
+  color: #fff;
+}
 @media (max-width: 768px) {
   .mobile {
     display: block;
@@ -470,6 +506,9 @@
   }
   .credit .header {
     width: 100%;
+  }
+  .gy {
+    padding: 0 !important;
   }
 }
 @media (min-width: 768px) {

@@ -15,10 +15,10 @@ import png10 from './img/png10.png'
 import png11 from './img/png11.png'
 import png12 from './img/png12.png'
 import png13 from './img/png13.png'
-import text1 from './img/01.png'
-import text2 from './img/02.png'
-import text3 from './img/03.png'
-import text4 from './img/04.png'
+import text1 from './img/1.svg'
+import text2 from './img/2.svg'
+import text3 from './img/3.svg'
+import text4 from './img/4.svg'
 import yuan from './img/yuan.png'
 import blueLine from './img/blueLine.png'
 import Footer from '../Footer/App'
@@ -163,7 +163,7 @@ export default function App(props) {
         <div
           className="content"
           style={{
-            padding: `${80 * scal}px ${350 * scal}px ${100 * scal}px`
+            padding: `${80 * scal}px ${330 * scal}px ${100 * scal}px`
           }}
         >
           <div className="box2">
@@ -346,10 +346,18 @@ export default function App(props) {
                   style={{
                     fontSize: 20 * scal + 'px',
 
-                    paddingLeft: 10 * scal + 'px',
+                    // paddingLeft: 10 * scal + 'px',
                     marginBottom: 6 * scal + 'px'
                   }}
                 >
+                  <span
+                    className="line"
+                    style={{
+                      marginRight: 10 * scal + 'px',
+                      width: 6 * scal + 'px',
+                      height: 20 * scal + 'px'
+                    }}
+                  ></span>{' '}
                   作为企业
                 </div>
                 <span style={{ marginLeft: 16 * scal + 'px' }}>
@@ -367,10 +375,18 @@ export default function App(props) {
                   style={{
                     fontSize: 20 * scal + 'px',
 
-                    paddingLeft: 10 * scal + 'px',
+                    // paddingLeft: 10 * scal + 'px',
                     marginBottom: 6 * scal + 'px'
                   }}
                 >
+                  <span
+                    className="line"
+                    style={{
+                      marginRight: 10 * scal + 'px',
+                      width: 6 * scal + 'px',
+                      height: 20 * scal + 'px'
+                    }}
+                  ></span>{' '}
                   作为个人
                 </div>
                 <span style={{ marginLeft: 16 * scal + 'px' }}>
@@ -466,7 +482,7 @@ export default function App(props) {
         </div>
         <div
           className="box5"
-          style={{ padding: `0 ${360 * scal}px ${90 * scal}px` }}
+          style={{ padding: `1px ${360 * scal}px ${90 * scal}px` }}
         >
           <div
             className="title"
@@ -486,7 +502,22 @@ export default function App(props) {
             style={{ padding: `${50 * scal}px ${30 * scal}px` }}
           >
             <div>
-              <div className="title1" style={{ fontSize: 24 * scal + 'px' }}>
+              <div
+                className="title1"
+                style={{
+                  fontSize: 24 * scal + 'px',
+                  marginBottom: 30 * scal + 'px'
+                }}
+              >
+                <span
+                  style={{
+                    width: 5 * scal + 'px',
+                    height: 26 * scal + 'px',
+                    marginRight: 10 * scal + 'px',
+                    background: '#2B68FF',
+                    display: 'inline-block'
+                  }}
+                ></span>{' '}
                 官方平台
               </div>
               <div className="gf">
@@ -518,7 +549,22 @@ export default function App(props) {
               </div>
             </div>
             <div>
-              <div className="title1" style={{ fontSize: 24 * scal + 'px' }}>
+              <div
+                className="title1"
+                style={{
+                  fontSize: 24 * scal + 'px',
+                  marginBottom: 30 * scal + 'px'
+                }}
+              >
+                <span
+                  style={{
+                    width: 5 * scal + 'px',
+                    height: 26 * scal + 'px',
+                    marginRight: 10 * scal + 'px',
+                    background: '#2B68FF',
+                    display: 'inline-block'
+                  }}
+                ></span>{' '}
                 第三方平台
               </div>
               <div className="gf">
@@ -553,7 +599,9 @@ export default function App(props) {
         </div>
         <div
           className="box6"
-          style={{ padding: `${95 * scal}px ${190 * scal}px ${50 * scal}px` }}
+          style={{
+            padding: `${88 * scal}px 0 ${110 * scal}px ${0 * scal}px`
+          }}
         >
           <img
             src={png11}
@@ -567,28 +615,57 @@ export default function App(props) {
             className="png12"
             style={{ width: 894 * scal + 'px', bottom: 100 * scal + 'px' }}
           />
-          <div className="titleLeft" style={{ fontSize: 50 * scal + 'px' }}>
+          <div
+            className="titleLeft"
+            style={{
+              fontSize: 50 * scal + 'px',
+              height: 100 * scal + 'px',
+              lineHeight: 100 * scal + 'px',
+              marginBottom: 25 * scal + 'px'
+            }}
+          >
             可修复内容
           </div>
-          <div className="textArte">
+          <div
+            className="textArte"
+            style={{
+              marginTop: 70 * scal + 'px',
+              paddingLeft: 360 * scal + 'px'
+            }}
+          >
             {song.map((item, index) => (
               <div
                 className="song"
                 key={index}
-                style={{ marginBottom: index !== 3 ? 100 * scal + 'px' : '' }}
+                style={{ marginBottom: index !== 3 ? 90 * scal + 'px' : '' }}
               >
-                <div className="left" style={{ width: 155 * scal + 'px' }}>
+                <div
+                  className="left"
+                  style={{
+                    width: 155 * scal + 'px',
+                    marginRight: 25 * scal + 'px'
+                  }}
+                >
                   <img
                     src={item.url}
                     alt=""
                     style={{ width: 153 * scal + 'px' }}
                   />
                 </div>
-                <div className="right" style={{ width: 570 * scal + 'px' }}>
-                  <div className="name" style={{ fontSize: 32 * scal + 'px' }}>
+                <div className="right" style={{ width: 368 * scal + 'px' }}>
+                  <div
+                    className="name"
+                    style={{ fontSize: 24 * scal + 'px', fontWeight: 500 }}
+                  >
                     {item.name}
                   </div>
-                  <div className="msg" style={{ fontSize: 24 * scal + 'px' }}>
+                  <div
+                    className="msg"
+                    style={{
+                      fontSize: 16 * scal + 'px',
+                      lineHeight: 30 * scal + 'px'
+                    }}
+                  >
                     {item.msg}
                   </div>
                 </div>
@@ -596,15 +673,28 @@ export default function App(props) {
             ))}
           </div>
         </div>
-        <div className="box7" style={{ height: 650 * scal + 'px' }}>
-          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+        <div
+          className="box7"
+          style={{
+            height: 650 * scal + 'px',
+            padding: `${123 * scal}px ${345 * scal}px ${122 * scal}px`
+          }}
+        >
+          <div
+            className="title"
+            style={{
+              fontSize: 50 * scal + 'px',
+              height: 100 * scal + 'px',
+              lineHeight: 100 * scal + 'px',
+              marginBottom: 78 * scal + 'px',
+              fontWeight: 400,
+              color: '#4A4A4A'
+            }}
+          >
             修复流程
           </div>
           <img src={png13} alt="" className="png13" />
-          <div
-            className="textArte"
-            style={{ paddingBottom: 110 * scal + 'px' }}
-          >
+          <div className="textArte">
             <div className="flowPath">
               <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
               <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
@@ -622,10 +712,7 @@ export default function App(props) {
               <img src={blueLine} alt="" style={{ width: 138 * scal + 'px' }} />
               <img src={yuan} alt="" style={{ width: 23 * scal + 'px' }} />
             </div>
-            <div
-              className="flowText"
-              style={{ padding: `${50 * scal}px ${338 * scal}px` }}
-            >
+            <div className="flowText" style={{ marginTop: 50 * scal + 'px' }}>
               <div className="one">
                 <div className="step" style={{ fontSize: 42 * scal + 'px' }}>
                   01
@@ -693,10 +780,12 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <Footer
-          windowWidthValue={props.windowWidthValue}
-          onSetState={props.onSetState}
-        />
+        <div style={{ transform: 'translateY(-10px)' }}>
+          <Footer
+            windowWidthValue={props.windowWidthValue}
+            onSetState={props.onSetState}
+          />
+        </div>
       </div>
       <div className="mobile">
         <Header
@@ -708,9 +797,13 @@ export default function App(props) {
         <div className="banner" onClick={() => setIsShow(false)}>
           <img src={banner} alt="banner" />
           <div className="aboutText">
-            <div className="gy">信用修复</div>
+            <div className="gy" style={{ marginBottom: '10px' }}>
+              信用修复
+            </div>
             <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
+              以专业视角，应对各种复杂需求
+              <div style={{ marginBottom: '10px' }}></div>
+              业务电话：400-651-0001
             </div>
           </div>
         </div>
