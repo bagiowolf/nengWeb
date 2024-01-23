@@ -22,6 +22,9 @@ import text4 from './img/04.png'
 import yuan from './img/yuan.png'
 import blueLine from './img/blueLine.png'
 import Footer from '../Footer/App'
+import logo from '../../assets/logo.svg'
+import left from './img/left.svg'
+import right from './img/right.svg'
 
 let arr = {
   gf: [
@@ -74,7 +77,7 @@ let song = [
 ]
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
 
   const [isShow, setIsShow] = useState(false)
 
@@ -88,26 +91,98 @@ export default function App(props) {
         />
         <div className="banner">
           <img src={banner} alt="banner" />
-          <div className="aboutText">
-            <div className="gy">信用修复</div>
+          <div
+            className="aboutText"
+            style={{ left: 360 * scal + 'px', top: 82 * scal + 'px' }}
+          >
+            <img
+              src={logo}
+              alt=""
+              style={{ height: 32 * scal + 'px', width: 284 * scal + 'px' }}
+            />
+            <div
+              className="gy"
+              style={{
+                fontSize: 48 * scal + 'px',
+                fontWeight: 700 * scal,
+                height: 72 * scal + 'px',
+                lineHeight: 72 * scal + 'px',
+                margin: `${15 * scal}px 0`
+              }}
+            >
+              信用修复
+            </div>
             <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
+              <div
+                style={{
+                  width: 100 * scal + 'px',
+                  height: 40 * scal + 'px',
+                  lineHeight: 40 * scal + 'px',
+                  fontSize: 18 * scal + 'px',
+                  marginRight: 15 * scal + 'px'
+                }}
+              >
+                司法案件
+              </div>
+              <div
+                style={{
+                  width: 100 * scal + 'px',
+                  height: 40 * scal + 'px',
+                  lineHeight: 40 * scal + 'px',
+                  fontSize: 18 * scal + 'px',
+                  marginRight: 15 * scal + 'px'
+                }}
+              >
+                欠税公告
+              </div>
+              <div
+                style={{
+                  width: 100 * scal + 'px',
+                  height: 40 * scal + 'px',
+                  lineHeight: 40 * scal + 'px',
+                  fontSize: 18 * scal + 'px',
+                  marginRight: 15 * scal + 'px'
+                }}
+              >
+                行政处罚
+              </div>
+              <div
+                style={{
+                  width: 100 * scal + 'px',
+                  height: 40 * scal + 'px',
+                  lineHeight: 40 * scal + 'px',
+                  fontSize: 18 * scal + 'px',
+                  marginRight: 15 * scal + 'px'
+                }}
+              >
+                个人征信
+              </div>
             </div>
           </div>
         </div>
         <div
           className="content"
-          style={{ padding: `0 ${240 * scal}px`, marginTop: 60 * scal + 'px' }}
+          style={{
+            padding: `${80 * scal}px ${350 * scal}px ${100 * scal}px`
+          }}
         >
           <div className="box2">
-            <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+            <div
+              className="title"
+              style={{
+                fontSize: 50 * scal + 'px',
+                height: 100 * scal + 'px',
+                lineHeight: 100 * scal + 'px',
+                marginBottom: 40 * scal + 'px'
+              }}
+            >
               您是否正在面临一些问题?
             </div>
             <div className="imgBox">
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px'
                 }}
@@ -117,18 +192,29 @@ export default function App(props) {
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px'
                 }}
               >
-                <div>谈好的生意,</div>
-                <div>却莫名其妙的黄了</div>
+                <img
+                  src={left}
+                  alt=""
+                  style={{
+                    width: 14 * scal + 'px',
+                    height: 14 * scal + 'px',
+                    margin: `0 ${15 * scal}px 0 ${30 * scal + 'px'}`
+                  }}
+                />
+                <div style={{ fontSize: 18 * scal + 'px' }}>
+                  <div>谈好的生意,</div>
+                  <div>却莫名其妙的黄了</div>
+                </div>
               </div>
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px'
                 }}
@@ -138,29 +224,53 @@ export default function App(props) {
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px'
                 }}
               >
-                <div>参加项目投标,</div>
-                <div>还没竞标就被刷掉了......</div>
+                <img
+                  src={left}
+                  alt=""
+                  style={{
+                    width: 14 * scal + 'px',
+                    height: 14 * scal + 'px',
+                    margin: `0 ${15 * scal}px 0 ${30 * scal + 'px'}`
+                  }}
+                />
+                <div style={{ fontSize: 18 * scal + 'px' }}>
+                  <div>参加项目投标,</div>
+                  <div>还没竞标就被刷掉了......</div>
+                </div>
               </div>
               <div
                 className="block "
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
-                  fontSize: 27 * scal + 'px'
+                  fontSize: 27 * scal + 'px',
+                  justifyContent: 'flex-end',
+                  textAlign: 'right'
                 }}
               >
-                <div className="p0">向银行贷款,</div>
-                <div className="p0">也被无情拒绝</div>
+                <div style={{ fontSize: 18 * scal + 'px' }}>
+                  <div className="p0">向银行贷款,</div>
+                  <div className="p0">也被无情拒绝</div>
+                </div>
+                <img
+                  src={right}
+                  alt=""
+                  style={{
+                    width: 14 * scal + 'px',
+                    height: 14 * scal + 'px',
+                    margin: `0 ${30 * scal}px 0 ${15 * scal + 'px'}`
+                  }}
+                />
               </div>
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px'
                 }}
@@ -170,19 +280,32 @@ export default function App(props) {
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
-                  fontSize: 27 * scal + 'px'
+                  fontSize: 27 * scal + 'px',
+                  justifyContent: 'flex-end',
+                  textAlign: 'right'
                 }}
               >
-                <div>突然被告知,</div>
-                <div>自己的银行卡,</div>
-                <div>涉嫌找被冻结......</div>
+                <div style={{ fontSize: 18 * scal + 'px' }}>
+                  <div>突然被告知,</div>
+                  <div>自己的银行卡,</div>
+                  <div>涉嫌找被冻结......</div>
+                </div>
+                <img
+                  src={right}
+                  alt=""
+                  style={{
+                    width: 14 * scal + 'px',
+                    height: 14 * scal + 'px',
+                    margin: `0 ${30 * scal}px 0 ${15 * scal + 'px'}`
+                  }}
+                />
               </div>
               <div
                 className="block"
                 style={{
-                  width: 354 * scal + 'px',
+                  width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px'
                 }}
@@ -192,73 +315,169 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <div className="box3">
-          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+        <div
+          className="box3"
+          style={{ padding: `${60 * scal}px ${350 * scal}px ${80 * scal}px` }}
+        >
+          <div
+            className="title"
+            style={{
+              fontSize: 50 * scal + 'px',
+              height: 100 * scal + 'px',
+              lineHeight: 100 * scal + 'px',
+              marginBottom: 40 * scal + 'px'
+            }}
+          >
             修复信用的重要性
           </div>
-          <div
-            className="textArte"
-            style={{ padding: `${30 * scal}px ${240 * scal}px` }}
-          >
-            <div
-              className="left"
-              style={{ fontSize: 24 * scal + 'px', width: 1097 * scal + 'px' }}
-            >
-              <p>
+          <div className="textArte" style={{ fontSize: 18 * scal + 'px' }}>
+            <div className="left" style={{ width: 833 * scal + 'px' }}>
+              <p style={{ lineHeight: 34 * scal + 'px' }}>
                 信息时代的今天，企业或个人的信息几乎公开透明，随时可以被查阅调取。其中，企业或个人的“信用”更是成为社会的通行证，一旦出现瑕疵，将受到巨大的损失或影响：
               </p>
-              <p>
-                ·作为企业，将在以后的经营中将举步维艰，四处碰壁，如贷款，招投标，上市，业务往来等等都将受限制。
+              <p
+                style={{
+                  marginTop: 20 * scal + 'px',
+                  lineHeight: 34 * scal + 'px'
+                }}
+              >
+                <div
+                  className="tit"
+                  style={{
+                    fontSize: 20 * scal + 'px',
+
+                    paddingLeft: 10 * scal + 'px',
+                    marginBottom: 6 * scal + 'px'
+                  }}
+                >
+                  作为企业
+                </div>
+                <span style={{ marginLeft: 16 * scal + 'px' }}>
+                  将在以后的经营中将举步维艰，四处碰壁，如贷款，招投标，上市，业务往来等等都将受限制。
+                </span>
               </p>
-              <p>
-                ·作为个人，安分守法却突然发现，因被有关部门认定为涉嫌诈骗或存在风险而冻结银行账户，甚至惹上官司。
+              <p
+                style={{
+                  marginTop: 20 * scal + 'px',
+                  lineHeight: 34 * scal + 'px'
+                }}
+              >
+                <div
+                  className="tit"
+                  style={{
+                    fontSize: 20 * scal + 'px',
+
+                    paddingLeft: 10 * scal + 'px',
+                    marginBottom: 6 * scal + 'px'
+                  }}
+                >
+                  作为个人
+                </div>
+                <span style={{ marginLeft: 16 * scal + 'px' }}>
+                  安分守法却突然发现，因被有关部门认定为涉嫌诈骗或存在风险而冻结银行账户，甚至惹上官司。
+                </span>
               </p>
-              <p>
+              <p
+                style={{
+                  marginTop: 20 * scal + 'px',
+                  lineHeight: 34 * scal + 'px'
+                }}
+              >
                 修复信用，可以帮助企业或个人及时发现问题并纠正，消除不良信用记录，让企业或个人重新参与正常的生产经营和社会活动，享有平等的商业竞争，政府福利，社会荣誉以及个人权益。
               </p>
             </div>
-            <div className="right">
-              <img src={png5} alt="" />
+            <div
+              className="right"
+              style={{
+                width: 360 * scal + 'px',
+                height: 360 * scal + 'px',
+                marginLeft: 65 * scal + 'px'
+              }}
+            >
+              <img
+                src={png5}
+                alt=""
+                style={{ width: 196 * scal + 'px', height: 173 * scal + 'px' }}
+              />
             </div>
           </div>
         </div>
-        <div className="box4">
-          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+        <div
+          className="box4"
+          style={{ padding: `${80 * scal}px ${360 * scal}px ${255 * scal}px` }}
+        >
+          <div
+            className="title"
+            style={{
+              fontSize: 50 * scal + 'px',
+              height: 100 * scal + 'px',
+              lineHeight: 100 * scal + 'px',
+              marginBottom: 40 * scal + 'px'
+            }}
+          >
             修复信用的法律依据
           </div>
           <div
             className="textArte"
-            style={{ padding: `${30 * scal}px ${240 * scal}px ${70 * scal}px` }}
+            style={{ width: 1200 * scal + 'px', height: 410 * scal + 'px' }}
           >
             <img
               src={png7}
               alt=""
               className="png7"
-              style={{ width: 1307 * scal + 'px' }}
+              style={{ width: 1200 * scal + 'px', height: 410 * scal + 'px' }}
             />
             <img
               src={png6}
               alt=""
               className="png6"
-              style={{ right: 240 * scal + 'px', width: 710 * scal + 'px' }}
+              style={{
+                right: 0 * scal + 'px',
+                width: 640 * scal + 'px',
+                height: 330 * scal + 'px',
+                top: 155 * scal + 'px'
+              }}
             />
             <div
               className="text1"
               style={{
-                fontSize: 24 * scal + 'px',
-                width: 660 * scal + 'px',
-                height: 230 * scal + 'px'
+                fontSize: 16 * scal + 'px',
+                width: 520 * scal + 'px',
+                lineHeight: 34 * scal + 'px',
+                marginLeft: 32 * scal + 'px'
               }}
             >
-              中华人民共和国行政处罚法、企业信息公示暂行条例（国务院令第654号令）、国家企业信用信息公示系统使用运行管理办法（试行）、国家市场监督管理局行政处罚程序暂行规定、市场监督管理行政处罚信息公示规定（总局45号令2021.9.1实施）、市场监督管理严重违法失信名单管理办法（总局44号令2021.9.1实施）、市场监督管理信用修复管理办法及解读、地方性社会信用条例（如河北省社会信用条例、天津市社会信用条例、山东省社会信用条例......）
+              <div>中华人民共和国行政处罚法、</div>
+              <div>企业信息公示暂行条例（国务院令第654号令）、</div>
+              <div>国家企业信用信息公示系统使用运行管理办法（试行）、</div>
+              <div>国家市场监督管理局行政处罚程序暂行规定、</div>
+              <div>
+                市场监督管理行政处罚信息公示规定（总局45号令2021.9.1实施）、
+              </div>
+              <div>
+                市场监督管理严重违法失信名单管理办法（总局44号令2021.9.1实施）、
+              </div>
+              <div>市场监督管理信用修复管理办法及解读、</div>
+              <div>
+                地方性社会信用条例（如河北省社会信用条例、天津市社会信用条例、山东省社会信用条例......）
+              </div>
             </div>
           </div>
         </div>
         <div
           className="box5"
-          style={{ padding: `${60 * scal}px ${190 * scal}px` }}
+          style={{ padding: `0 ${360 * scal}px ${90 * scal}px` }}
         >
-          <div className="title" style={{ fontSize: 50 * scal + 'px' }}>
+          <div
+            className="title"
+            style={{
+              fontSize: 50 * scal + 'px',
+              height: 100 * scal + 'px',
+              lineHeight: 100 * scal + 'px',
+              marginBottom: 25 * scal + 'px',
+              marginTop: 56 * scal + 'px'
+            }}
+          >
             可修复平台
           </div>
           <img src={png8} alt="" className="png8" />
@@ -283,13 +502,13 @@ export default function App(props) {
                     <div className="right">
                       <div
                         className="name"
-                        style={{ fontSize: 30 * scal + 'px' }}
+                        style={{ fontSize: 20 * scal + 'px' }}
                       >
                         {item.name}
                       </div>
                       <div
                         className="url"
-                        style={{ fontSize: 14 * scal + 'px' }}
+                        style={{ fontSize: 12 * scal + 'px' }}
                       >
                         {item.url}
                       </div>
@@ -315,13 +534,13 @@ export default function App(props) {
                     <div className="right">
                       <div
                         className="name"
-                        style={{ fontSize: 30 * scal + 'px' }}
+                        style={{ fontSize: 20 * scal + 'px' }}
                       >
                         {item.name}
                       </div>
                       <div
                         className="url"
-                        style={{ fontSize: 14 * scal + 'px' }}
+                        style={{ fontSize: 12 * scal + 'px' }}
                       >
                         {item.url}
                       </div>
