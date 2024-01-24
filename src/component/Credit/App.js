@@ -91,10 +91,7 @@ export default function App(props) {
         />
         <div className="banner">
           <img src={banner} alt="banner" />
-          <div
-            className="aboutText"
-            style={{ left: 360 * scal + 'px', top: 82 * scal + 'px' }}
-          >
+          <div className="aboutText" style={{ left: 360 * scal + 'px' }}>
             <img
               src={logo}
               alt=""
@@ -649,7 +646,9 @@ export default function App(props) {
                   <img
                     src={item.url}
                     alt=""
-                    style={{ width: 153 * scal + 'px' }}
+                    style={{
+                      width: index === 0 ? 140 * scal + 'px' : 153 * scal + 'px'
+                    }}
                   />
                 </div>
                 <div className="right" style={{ width: 368 * scal + 'px' }}>
@@ -677,7 +676,8 @@ export default function App(props) {
           className="box7"
           style={{
             height: 650 * scal + 'px',
-            padding: `${123 * scal}px ${345 * scal}px ${122 * scal}px`
+            padding: `${110 * scal}px ${345 * scal}px ${122 * scal}px`,
+            transform: 'translateY(-10px)'
           }}
         >
           <div
@@ -780,7 +780,7 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <div style={{ transform: 'translateY(-10px)' }}>
+        <div style={{ transform: 'translateY(-15px)' }}>
           <Footer
             windowWidthValue={props.windowWidthValue}
             onSetState={props.onSetState}

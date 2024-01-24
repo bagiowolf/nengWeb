@@ -219,7 +219,11 @@ export default function Footer(props) {
             <img
               src={png4}
               alt="png4"
-              style={{ width: 110 * scal + 'px', height: 97 * scal + 'px' }}
+              style={{
+                width: 110 * scal + 'px',
+                height: 97 * scal + 'px',
+                marginBottom: 15 * scal + 'px'
+              }}
             />
             <div style={{ fontSize: 22 * scal + 'px' }}>
               <div>

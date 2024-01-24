@@ -7,9 +7,9 @@
 }
 .credit .banner .aboutText {
   position: absolute;
-  /* top: 50%; */
+  top: 50%;
   /* left: 50%; */
-  /* transform: translate(-50%, -50%); */
+  transform: translateY(-50%);
   color: #fff;
   text-align: left;
 }
@@ -29,9 +29,7 @@
 }
 .credit .content {
   text-align: left;
-  padding: 0 240px;
   box-sizing: border-box;
-  margin-top: 60px;
 }
 .credit .title {
   font-weight: bold;
@@ -152,7 +150,6 @@
   color: #fff;
 }
 .credit .box5 .textArte {
-  height: 610px;
   width: 100%;
   background-color: #fff;
   border-radius: 10px;
@@ -177,7 +174,7 @@
 .credit .box5 .textArte .gf .gf1 {
   width: 33%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 50px;
 }
 .credit .box5 .textArte .name {
