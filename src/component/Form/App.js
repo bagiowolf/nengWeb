@@ -4,7 +4,7 @@ import { post } from '../../utils/api/api'
 import dayjs from 'dayjs'
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
   let name = props.name ?? '律师'
   const [title, setTitle] = useState('')
   const [question, setQuestion] = useState('')

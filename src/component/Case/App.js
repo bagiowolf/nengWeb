@@ -13,7 +13,7 @@ import returnDom from '../../utils/returnDom'
 import formatTime from '../../utils/formatTime/time'
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
 
   const [isShow, setIsShow] = useState(false)
   const [state, setState] = useState(true)

@@ -4,7 +4,7 @@ import gengduo from './img/gengduo.svg'
 import './App.css'
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
   let isBgc = props.bgc ?? true
   const list = [
     '首页',

@@ -161,7 +161,7 @@ const InfiniteScroll = ({ data }) => {
 }
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
   const [activeInfo, setActiveInfo] = useState({})
   const setInfo = (info) => {
     setState(false)

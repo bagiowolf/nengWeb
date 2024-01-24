@@ -21,7 +21,7 @@ import gengduo from './img/gengduo.png'
 import Header from '../Header/App'
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
   const list = [
     '关于我们',
     '信用修复',

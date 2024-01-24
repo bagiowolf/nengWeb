@@ -11,8 +11,8 @@
 .PersonalData .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* left: 50%; */
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .PersonalData .aboutText .gy {
@@ -59,16 +59,17 @@
 .PersonalData .info .left .num span {
   color: #000;
 }
-.PersonalData .info .left .zx {
+.PersonalData .info .left .zx1 {
   width: 120px;
   height: 32px;
   line-height: 32px;
   background-color: #fff;
   border: 1px solid #184add;
-  border-radius: 10px;
+  border-radius: 5px;
   color: #184add;
   text-align: center;
   margin-top: 15px;
+  box-shadow: 0px 3px 7px 0px #00000059;
 }
 .PersonalData .info .right {
   margin-left: 30px;
@@ -77,7 +78,6 @@
 }
 .PersonalData .info .right .title {
   font-size: 38px;
-  margin-bottom: 33px;
   letter-spacing: 3px;
 }
 .PersonalData .info .right .msg {
@@ -87,7 +87,7 @@
   line-height: 20px;
 }
 .PersonalData .info .right .msg span {
-  color: #000;
+  color: #171717;
 }
 .PersonalData .info .right .pj {
   margin-top: 40px;
@@ -115,7 +115,7 @@
     padding: 10px;
     height: 215px !important;
   }
-  .PersonalData .info .left .zx {
+  .PersonalData .info .left .zx1 {
     width: 80px !important;
     height: 28px !important;
     line-height: 28px !important;

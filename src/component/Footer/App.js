@@ -164,7 +164,7 @@ const InfiniteScroll = ({ data }) => {
   )
 }
 export default function Footer(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
 
   let state = props.isShow ?? true
   const [num, setNum] = useState({})

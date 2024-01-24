@@ -11,6 +11,7 @@ import png5 from './img/png5.png'
 import png6 from './img/png6.png'
 import PersonalData from '../PersonalData/App'
 import Form from '../Form/App'
+import zx from '../Index/img/zx.png'
 
 let arr = [
   {
@@ -77,7 +78,7 @@ let arr = [
 ]
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
 
   const [isShow, setIsShow] = useState(false)
   const [state, setState] = useState(true)
@@ -97,6 +98,12 @@ export default function App(props) {
               onSetState={props.onSetState}
               windowWidthValue={props.windowWidthValue}
             />
+            <div className="zx">
+              <img src={zx} alt="" />
+              <a href="https://ada.baidu.com/imlp/?imid=b694179300c687ccf883b0fd6be0f2c4#back1705761185685">
+                在线咨询
+              </a>
+            </div>
             <div className="banner">
               <img src={banner} alt="banner" />
               <div
@@ -107,7 +114,7 @@ export default function App(props) {
                   className="gy"
                   style={{
                     fontSize: 48 * scal + 'px',
-                    fontWeight: 700 * scal,
+                    fontWeight: 700,
                     height: 72 * scal + 'px',
                     lineHeight: 72 * scal + 'px',
                     color: '#fff'
@@ -123,7 +130,7 @@ export default function App(props) {
                     color: '#fff'
                   }}
                 >
-                  <div style={{ margin: `${10 * scal}px 0 ${20 * scal}px` }}>
+                  <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
                     以专业视角，应对各种复杂需求
                   </div>
                   业务电话：400-651-0001

@@ -55,7 +55,7 @@ const NumberAnimation = ({ targetValue, isSplit }) => {
 }
 export default function MyApp(props) {
   const [isShow, setIsShow] = useState(false)
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
   const [num, setNum] = useState({})
   const [wan, setWan] = useState(0)
   const [yi, setYi] = useState(0)

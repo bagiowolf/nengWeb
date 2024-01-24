@@ -10,7 +10,7 @@ import { get } from '../../utils/api/api'
 import returnDom from '../../utils/returnDom'
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
 
   const [isShow, setIsShow] = useState(false)
   const [active, setActive] = useState(0)

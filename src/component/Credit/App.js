@@ -25,6 +25,7 @@ import Footer from '../Footer/App'
 import logo from '../../assets/logo.svg'
 import left from './img/left.svg'
 import right from './img/right.svg'
+import zx from '../Index/img/zx.png'
 
 let arr = {
   gf: [
@@ -89,6 +90,12 @@ export default function App(props) {
           onSetState={props.onSetState}
           windowWidthValue={props.windowWidthValue}
         />
+        <div className="zx">
+          <img src={zx} alt="" />
+          <a href="https://ada.baidu.com/imlp/?imid=b694179300c687ccf883b0fd6be0f2c4#back1705761185685">
+            在线咨询
+          </a>
+        </div>
         <div className="banner">
           <img src={banner} alt="banner" />
           <div className="aboutText" style={{ left: 360 * scal + 'px' }}>

@@ -9,7 +9,7 @@ import png3 from './img/png3.png'
 import returnDom from '../../utils/returnDom'
 
 export default function App(props) {
-  let scal = props.windowWidthValue / 1919
+  let scal = props.windowWidthValue / 1920
 
   const [isShow, setIsShow] = useState(false)
   const { info } = props
