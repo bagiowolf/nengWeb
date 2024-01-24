@@ -99,10 +99,34 @@ export default function App(props) {
             />
             <div className="banner">
               <img src={banner} alt="banner" />
-              <div className="aboutText">
-                <div className="gy">律师团队</div>
-                <div className="sj">
-                  以专业视角，应对各种复杂需求 业务电话：400-651-0001
+              <div
+                className="aboutText"
+                style={{ left: 360 * scal + 'px', textAlign: 'left' }}
+              >
+                <div
+                  className="gy"
+                  style={{
+                    fontSize: 48 * scal + 'px',
+                    fontWeight: 700 * scal,
+                    height: 72 * scal + 'px',
+                    lineHeight: 72 * scal + 'px',
+                    color: '#fff'
+                  }}
+                >
+                  律师团队
+                </div>
+                <div
+                  className="sj"
+                  style={{
+                    fontSize: 24 * scal + 'px',
+                    fontWeight: 400 * scal,
+                    color: '#fff'
+                  }}
+                >
+                  <div style={{ margin: `${10 * scal}px 0 ${20 * scal}px` }}>
+                    以专业视角，应对各种复杂需求
+                  </div>
+                  业务电话：400-651-0001
                 </div>
               </div>
             </div>

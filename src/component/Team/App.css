@@ -8,8 +8,7 @@
 .team .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .team .aboutText .gy {
