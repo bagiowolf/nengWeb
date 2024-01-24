@@ -246,8 +246,7 @@ export default function App(props) {
                   width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px',
-                  justifyContent: 'flex-end',
-                  textAlign: 'right'
+                  justifyContent: 'flex-end'
                 }}
               >
                 <div style={{ fontSize: 18 * scal + 'px' }}>
@@ -280,8 +279,7 @@ export default function App(props) {
                   width: 300 * scal + 'px',
                   height: 235 * scal + 'px',
                   fontSize: 27 * scal + 'px',
-                  justifyContent: 'flex-end',
-                  textAlign: 'right'
+                  justifyContent: 'flex-end'
                 }}
               >
                 <div style={{ fontSize: 18 * scal + 'px' }}>
@@ -460,17 +458,17 @@ export default function App(props) {
                 marginLeft: 32 * scal + 'px'
               }}
             >
-              <div>中华人民共和国行政处罚法、</div>
-              <div>企业信息公示暂行条例（国务院令第654号令）、</div>
-              <div>国家企业信用信息公示系统使用运行管理办法（试行）、</div>
-              <div>国家市场监督管理局行政处罚程序暂行规定、</div>
+              <div>中华人民共和国行政处罚法</div>
+              <div>企业信息公示暂行条例（国务院令第654号令）</div>
+              <div>国家企业信用信息公示系统使用运行管理办法（试行）</div>
+              <div>国家市场监督管理局行政处罚程序暂行规定</div>
               <div>
-                市场监督管理行政处罚信息公示规定（总局45号令2021.9.1实施）、
+                市场监督管理行政处罚信息公示规定（总局45号令2021.9.1实施）
               </div>
               <div>
-                市场监督管理严重违法失信名单管理办法（总局44号令2021.9.1实施）、
+                市场监督管理严重违法失信名单管理办法（总局44号令2021.9.1实施）
               </div>
-              <div>市场监督管理信用修复管理办法及解读、</div>
+              <div>市场监督管理信用修复管理办法及解读</div>
               <div>
                 地方性社会信用条例（如河北省社会信用条例、天津市社会信用条例、山东省社会信用条例......）
               </div>
