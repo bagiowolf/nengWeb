@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
-import banner from '../../assets/banner.png'
+import banner from './img/banner.png'
 
 import png1 from './img/png1.png'
 import png2 from './img/png2.png'
@@ -22,6 +22,28 @@ import douyin from './img/douyin.png'
 import tengxun from './img/tengxun.png'
 import xiaohongshu from './img/xiaohongshu.png'
 import meituan from './img/meituan.png'
+import zx from '../Index/img/zx.png'
+import baike from './img/baike.svg'
+import douyinicon from './img/douyin.svg'
+import meituanIcon from './img/meituan.svg'
+import tx from './img/tx.svg'
+import xhs from './img/xhs.svg'
+import bd from './img/bd.svg'
+import ic360 from './img/360.svg'
+import sg from './img/sg.svg'
+import ks from './img/ks.svg'
+
+const icon = [
+  { text: '百科', img: baike, bgc: '#FFBC41' },
+  { text: '抖音', img: douyinicon },
+  { text: '美团', img: meituanIcon },
+  { text: '腾讯视频号', img: tx, bgc: '#199BFF' },
+  { text: '小红书', img: xhs },
+  { text: '百度', img: bd, bgc: '#306CFF' },
+  { text: '360', img: ic360 },
+  { text: '搜狗', img: sg },
+  { text: '快手', img: ks }
+]
 
 export default function App(props) {
   let scal = props.windowWidthValue / 1920
@@ -37,101 +59,121 @@ export default function App(props) {
           onSetIsShow={setIsShow}
           windowWidthValue={props.windowWidthValue}
         />
+        <div className="zx">
+          <img src={zx} alt="" />
+          <a href="https://ada.baidu.com/imlp/?imid=b694179300c687ccf883b0fd6be0f2c4#back1705761185685">
+            在线咨询
+          </a>
+        </div>
         <div className="banner" onClick={() => setIsShow(false)}>
           <img src={banner} alt="banner" />
-          <div className="aboutText">
-            <div className="gy">律师合作</div>
-            <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
+          <div
+            className="aboutText"
+            style={{ left: 360 * scal + 'px', textAlign: 'left' }}
+          >
+            <div
+              className="gy"
+              style={{
+                fontSize: 48 * scal + 'px',
+                fontWeight: 700,
+                height: 72 * scal + 'px',
+                lineHeight: 72 * scal + 'px',
+                color: '#fff'
+              }}
+            >
+              律师合作
+            </div>
+            <div
+              className="sj"
+              style={{
+                fontSize: 24 * scal + 'px',
+                fontWeight: 400 * scal,
+                color: '#fff'
+              }}
+            >
+              <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
+                以专业视角，应对各种复杂需求
+              </div>
+              业务电话：400-651-0001
             </div>
           </div>
         </div>
         <div className="content" onClick={() => setIsShow(false)}>
-          <div className="box1">
+          <div
+            className="box1"
+            style={{ padding: `${80 * scal}px ${360 * scal}px 0` }}
+          >
             <div
               className="left"
               style={{
-                padding: `${75 * scal}px ${60 * scal}px`,
-                width: 580 * scal + 'px'
+                padding: `${94 * scal}px ${30 * scal}px`,
+                width: 600 * scal + 'px'
               }}
             >
-              <img
-                src={png3}
-                alt=""
-                className="png3"
-                style={{ width: 957 * scal + 'px', height: 426 * scal + 'px' }}
-              />
               <div
                 className="text"
                 style={{
-                  padding: `${50 * scal}px ${28 * scal}px`,
-                  fontSize: 20 * scal + 'px'
+                  fontSize: 16 * scal + 'px',
+                  width: 500 * scal + 'px'
                 }}
               >
-                通过打造律师的全网IP，无论你是创始人律师、合伙人律师或是独立律师我们竭律帮助您打造个人品牌，依靠全网高流量平台快速建立自己的个人品牌知名度，帮您迅速占领法律市场份额，为您在今后的职业生涯中带来更大的自身价值，成就您的法律事业
+                <div
+                  className="text"
+                  style={{
+                    fontSize: 24 * scal + 'px',
+                    color: '#4A4A4A',
+                    fontWeight: 700,
+                    marginBottom: 20 * scal + 'px'
+                  }}
+                >
+                  律师个人品牌
+                </div>
+                <div
+                  style={{
+                    color: '#5A5A5A',
+                    lineHeight: 30 * scal + 'px',
+                    marginBottom: 20 * scal + 'px'
+                  }}
+                >
+                  通过打造律师的全网IP，无论你是创始人律师、合伙人律师或是独立律师我们竭律帮助您打造个人品牌，依靠全网高流量平台快速建立自己的个人品牌知名度，帮您迅速占领法律市场份额，为您在今后的职业生涯中带来更大的自身价值，成就您的法律事业
+                </div>
                 <div className="gs" style={{ fontSize: 16 * scal + 'px' }}>
-                  <div>
-                    <img
-                      src={baidu}
-                      alt=""
-                      style={{ width: 25 * scal + 'px' }}
-                    />
-                    百科（百度、360、搜狗）
-                  </div>
-                  <div>
-                    <img
-                      src={douyin}
-                      alt=""
-                      style={{ width: 25 * scal + 'px' }}
-                    />
-                    抖音
-                  </div>
-                  <div>
-                    <img
-                      src={meituan}
-                      alt=""
-                      style={{ width: 25 * scal + 'px' }}
-                    />
-                    美团
-                  </div>
-                  <div>
-                    <img
-                      src={tengxun}
-                      alt=""
-                      style={{ width: 25 * scal + 'px' }}
-                    />
-                    腾讯视频号
-                  </div>
-                  <div>
-                    <img
-                      src={xiaohongshu}
-                      alt=""
-                      style={{ width: 25 * scal + 'px' }}
-                    />
-                    小红书
-                  </div>
+                  {icon.map((item, index) => (
+                    <div
+                      style={{
+                        marginBottom: index > 5 ? '' : 22 * scal + 'px'
+                      }}
+                      key={index}
+                    >
+                      <div
+                        className="img"
+                        style={{
+                          backgroundColor: item.bgc,
+                          width: 25 * scal + 'px',
+                          height: 25 * scal + 'px',
+                          marginRight: 8 * scal + 'px'
+                        }}
+                      >
+                        <img src={item.img} alt="" />
+                      </div>
+                      {item.text}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
             <div className="right">
-              <div
-                className="text"
-                style={{
-                  fontSize: 50 * scal + 'px',
-                  left: 242 * scal + 'px',
-                  top: 215 * scal + 'px'
-                }}
-              >
-                律师个人品牌
-              </div>
               <img
                 src={png1}
                 alt=""
-                style={{ width: 1339 * scal + 'px', height: 522 * scal + 'px' }}
+                style={{ width: 600 * scal + 'px', height: 525 * scal + 'px' }}
               />
             </div>
           </div>
-          <div className="box2">
+          <div
+            className="box2"
+            style={{ padding: `${80 * scal}px ${360 * scal}px 0` }}
+          >
             <div className="left">
               <img src={png2} alt="" />
               <div

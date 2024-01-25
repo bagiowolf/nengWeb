@@ -8,8 +8,8 @@
 .cooperate .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* left: 50%; */
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .cooperate .aboutText .gy {
@@ -28,6 +28,7 @@
   padding-right: 6px !important;
   width: 580px;
   box-sizing: border-box;
+  background: #f1f8ff;
 }
 .cooperate .content .box1 .left .png3 {
   position: absolute;
@@ -66,11 +67,27 @@
   flex-wrap: wrap;
   margin-top: 20px;
   font-size: 16px;
+  color: #535353;
 }
-.cooperate .content .box1 .gs div {
+.cooperate .content .box1 .gs .img {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-bottom: 0;
+  position: relative;
+  border-radius: 4px;
+}
+.cooperate .content .box1 .gs .img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cooperate .content .box1 .gs > div {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  width: 33%;
 }
 .cooperate .content .box1 .gs img {
   margin-right: 5px;

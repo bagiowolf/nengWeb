@@ -106,7 +106,12 @@ export default function App(props) {
                   lineHeight: 32 * scal + 'px'
                 }}
               >
-                在线咨询
+                <a
+                  href="https://ada.baidu.com/imlp/?imid=b694179300c687ccf883b0fd6be0f2c4#back1705761185685"
+                  style={{ textDecoration: 'none', color: '#184add' }}
+                >
+                  在线咨询
+                </a>
               </div>
             </div>
             <div
