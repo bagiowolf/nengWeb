@@ -98,9 +98,9 @@
   display: flex;
 }
 .cooperate .content .box2 .text {
-  position: absolute;
-  left: 70px;
-  top: 160px;
+  /* position: absolute; */
+  /* left: 70px; */
+  /* top: 160px; */
   font-size: 50px;
   letter-spacing: 3px;
 }
@@ -112,15 +112,16 @@
   background-color: #f1f8ff;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+  /* align-items: center; */
+  /* text-align: center; */
 }
 .cooperate .content .box2 .right .div {
   width: 33%;
   font-size: 30px;
   color: #333;
-  letter-spacing: 3px;
 }
 .cooperate .content .box3,
 .cooperate .content .box4 {
@@ -132,9 +133,30 @@
 .cooperate .content .box5 .title {
   font-size: 50px;
   color: #4a4a4a;
-  margin-bottom: 25px;
   letter-spacing: 3px;
   text-align: center;
+}
+.cooperate .content .box3 {
+  position: relative;
+  padding: 0;
+}
+.cooperate .content .box3 .text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  /* height: 100%; */
+  text-align: center;
+}
+.cooperate .content .box3 img,
+.cooperate .content .box3 .zz {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .cooperate .content .box3 .msg {
   font-size: 20px;
@@ -144,7 +166,14 @@
   padding-top: 0;
 }
 .cooperate .content .box4 .title {
-  margin-bottom: 47px;
+  /* margin-bottom: 47px; */
+}
+.cooperate .box4 .msg {
+  display: flex;
+}
+.cooperate .box4 .msg div {
+  display: flex;
+  flex-direction: column;
 }
 .cooperate .content .box4 .msg .top,
 .cooperate .content .box4 .msg .bottom {
@@ -152,7 +181,6 @@
 }
 .cooperate .content .box4 .msg .div {
   display: flex;
-  width: 33%;
   margin-bottom: 70px;
   font-size: 26px;
   color: #333333;
@@ -163,11 +191,12 @@
   margin-right: 25px;
 }
 .cooperate .content .box5 {
-  padding: 0 140px;
+  /* padding: 0 140px; */
+  background: #f8f8f8;
 }
 .cooperate .content .box5 .boxList {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
 }
 .cooperate .content .box5 .boxList .box {
   position: relative;
@@ -183,7 +212,13 @@
 @media (max-width: 768px) {
   .cooperate .content .box1 .left {
     padding: 20px !important;
-    width: auto !important;
+    width: 100% !important;
+  }
+  .cooperate .content .box1 .left .text {
+    width: 100% !important;
+  }
+  .cooperate .content .box1 .gs {
+    display: none;
   }
   .cooperate .content .box1 .left .png3,
   .cooperate .content .box1 .right,
@@ -242,5 +277,67 @@
   }
   .cooperate .content .box1 .gs img {
     width: auto !important;
+  }
+  .cooperate .banner img {
+    height: 200px !important;
+  }
+  .cooperate .aboutText .gy {
+    font-size: 20px !important;
+    height: 25px !important;
+  }
+  .cooperate .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .cooperate .content .box1 {
+    padding: 20px !important;
+  }
+  .cooperate .content .box2 {
+    padding: 20px !important;
+  }
+  .cooperate .content .box2 .right {
+    width: 100% !important;
+  }
+  .cooperate .content .box2 .text {
+    font-size: 18px !important;
+  }
+  .cooperate .jl {
+    margin-top: 20px !important;
+  }
+  .cooperate .content .box2 .right .div {
+    width: auto !important;
+  }
+  .cooperate .content .box2 .right .div img {
+    margin-right: 15px !important;
+  }
+  .cooperate .content .box3 .title {
+    font-size: 18px !important;
+    margin-bottom: 10px !important;
+  }
+  .cooperate .content .box3 .msg {
+    font-size: 12px !important;
+    line-height: 15px !important;
+  }
+  .cooperate .content .box3 .text {
+    width: 300px !important;
+  }
+  .cooperate .content .box3 {
+    height: 100px !important;
+  }
+  .cooperate .content .box1 .left .text,
+  .cooperate .content .box4 .title,
+  .cooperate .content .box5 .title {
+    font-size: 18px !important;
+  }
+  .cooperate .box5 {
+    display: none;
+  }
+  .cooperate .box5 .boxList > div .left {
+    display: none;
+  }
+  .cooperate .box5 .boxList > div .right {
+    width: 100% !important;
+  }
+  .cooperate .box5 .boxList > div .right > div {
+    width: 100% !important;
   }
 }
