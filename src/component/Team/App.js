@@ -9,6 +9,7 @@ import png3 from './img/png3.png'
 import png4 from './img/png4.png'
 import png5 from './img/png5.png'
 import png6 from './img/png6.png'
+import png7 from './img/png7.png'
 import PersonalData from '../PersonalData/App'
 import Form from '../Form/App'
 import zx from '../Index/img/zx.png'
@@ -73,6 +74,17 @@ let arr = [
     执业理念：“受人之托，忠人之事”！`,
     consultation_num: 8944 * 5,
     accepted_num: 8944
+  },
+  {
+    name: '吴晶',
+    type: '执业律师',
+    img: png7,
+    msg: `擅长：劳动争议、婚姻家事，民商事纠纷，合同纠纷等
+    在办案中工作细致入微、深入浅出，让人如沐春风，其认真负责、精益求精的工作态度得到当事人一致好评。成功处理过多起婚姻家事、交通事故、合同纠纷、侵权类纠纷案件，维护了当事人合法权益，减少当事人经济损失，效果良好。
+ 
+ 执业理念是做有思想的律师，让法治成为信仰。`,
+    consultation_num: 7984 * 5,
+    accepted_num: 7984
   }
 ]
 
