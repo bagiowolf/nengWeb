@@ -8,43 +8,58 @@
 .join .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .join .aboutText .gy {
-  font-size: 30px;
-  padding-bottom: 20px;
-  color: #616161;
 }
 .join .aboutText .sj {
   font-size: 18px;
+  display: flex;
+}
+.join .aboutText .sj div {
+  text-align: center;
+  border: 1px solid #fff;
 }
 .join .content {
   text-align: left;
-  padding: 70px 360px;
 }
 .join .content .box1 {
-  text-align: center;
+  text-align: left;
+  position: relative;
+  box-sizing: border-box;
+}
+.join .content .box1 img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9;
+}
+.join .content .box1 .right {
+  background-color: #f1f8ff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  box-sizing: border-box;
 }
 .join .title {
   font-size: 50px;
-  color: #4a4a4a;
+  color: #666;
   margin-bottom: 15px;
-  text-align: center;
+  /* text-align: center; */
 }
 .join .content .box1 .litte {
   font-size: 26px;
-  color: #4a4a4a;
+  color: #333;
   margin-bottom: 25px;
 }
 .join .content .box1 .msg {
   font-size: 16px;
-  color: #757575;
+  color: #333;
   letter-spacing: 2px;
 }
 .join .content .box2 {
-  margin-top: 100px;
+  background: #f8f8f8;
 }
 .join .content .box2 .title {
   margin-bottom: 50px;
@@ -53,13 +68,21 @@
 .join .content .box2 .msg .bottom {
   display: flex;
 }
+.join .content .box2 .msg .top {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 .join .content .box2 .msg .div {
   display: flex;
-  width: 33%;
-  margin-bottom: 70px;
-  font-size: 26px;
+  /* width: 33%; */
+  /* margin-bottom: 70px; */
+  /* font-size: 26px; */
   color: #333333;
   padding-left: 30px;
+}
+.join .box3 .line {
+  height: 3px;
+  background-color: #2c69ff;
 }
 .join .content .box2 .msg .div img {
   margin-right: 25px;
@@ -91,14 +114,15 @@
   height: 200px;
   padding: 10px;
   box-sizing: border-box;
+  background: rgba(54, 63, 93, 0.8);
 }
 .join .content .box3 .shu .box .text .big {
   font-size: 26px;
-  color: #333;
+  color: #fff;
 }
 .join .content .box3 .shu .box .text .msg {
   font-size: 18px;
-  color: #757575;
+  color: #fff;
 }
 
 .white,
