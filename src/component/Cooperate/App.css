@@ -123,6 +123,9 @@
   font-size: 30px;
   color: #333;
 }
+.cooperate .content .box2 .right .div span {
+  white-space: nowrap;
+}
 .cooperate .content .box3,
 .cooperate .content .box4 {
   text-align: center;
@@ -210,6 +213,9 @@
   padding: 27px 20px;
 }
 @media (max-width: 768px) {
+  .cooperate .box4 .msg div {
+    display: none;
+  }
   .cooperate .content .box1 .left {
     padding: 20px !important;
     width: 100% !important;
@@ -248,10 +254,15 @@
   .cooperate .content .box4 .msg .div img {
     display: none !important;
   }
+  .cooperate .box4 .msg {
+    flex-wrap: wrap;
+  }
   .cooperate .content .box4 .msg .div {
     padding: 0 !important;
     font-size: 14px !important;
     justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 20px;
   }
   .cooperate .content .box5 {
     padding: 20px !important;

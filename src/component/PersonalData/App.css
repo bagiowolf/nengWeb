@@ -138,4 +138,15 @@
     width: 100px !important;
     height: 100px !important;
   }
+  .PersonalData .banner img {
+    height: 150px !important;
+  }
+  .PersonalData .aboutText .gy {
+    font-size: 18px !important;
+    height: auto !important;
+    line-height: 20px !important;
+  }
+  .PersonalData .aboutText .sj {
+    font-size: 12px !important;
+  }
 }
