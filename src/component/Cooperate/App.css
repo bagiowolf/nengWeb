@@ -213,6 +213,9 @@
   padding: 27px 20px;
 }
 @media (max-width: 768px) {
+  .cooperate .banner .aboutText {
+    left: 10% !important;
+  }
   .cooperate .box4 .msg div {
     display: none;
   }
@@ -294,14 +297,20 @@
     width: auto !important;
   }
   .cooperate .banner img {
-    height: 200px !important;
+    height: 150px !important;
   }
   .cooperate .aboutText .gy {
-    font-size: 20px !important;
-    height: 25px !important;
+    font-size: 16px !important;
+    height: 21px !important;
+    font-weight: 400 !important;
+    line-height: normal !important;
   }
   .cooperate .aboutText .sj {
     font-size: 16px !important;
+    font-weight: 400 !important;
+  }
+  .cooperate .aboutText .sj div {
+    margin: 0 !important;
   }
   .cooperate .content .box1 {
     padding: 20px !important;

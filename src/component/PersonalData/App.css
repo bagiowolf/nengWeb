@@ -95,6 +95,9 @@
 }
 
 @media (max-width: 768px) {
+  .PersonalData .banner .aboutText {
+    left: 10% !important;
+  }
   .PersonalData .content {
     padding: 20px !important;
   }
@@ -144,11 +147,12 @@
   .PersonalData .aboutText .gy {
     font-size: 16px !important;
     height: auto !important;
-    line-height: 20px !important;
+    line-height: normal !important;
     font-weight: 400 !important;
   }
   .PersonalData .aboutText .sj {
     font-size: 16px !important;
+    font-weight: 400 !important;
   }
   .PersonalData .aboutText .sj div {
     margin: 0 !important;
