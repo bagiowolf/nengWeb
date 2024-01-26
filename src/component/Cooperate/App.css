@@ -170,6 +170,7 @@
 }
 .cooperate .box4 .msg {
   display: flex;
+  justify-content: space-between;
 }
 .cooperate .box4 .msg div {
   display: flex;
@@ -184,7 +185,6 @@
   margin-bottom: 70px;
   font-size: 26px;
   color: #333333;
-  padding-left: 30px;
   align-items: center;
 }
 .cooperate .content .box4 .msg .div img {

@@ -232,7 +232,6 @@ export default function App(props) {
                 style={{
                   display: 'flex',
                   flexWrap: 'wrap',
-                  paddingRight: 45 * scal + 'px',
                   justifyContent: 'space-between',
                   marginTop: 10 * scal + 'px'
                 }}
@@ -322,9 +321,10 @@ export default function App(props) {
                 <div
                   className="div"
                   style={{
-                    fontSize: 26 * scal + 'px',
                     marginBottom: 70 * scal + 'px',
-                    paddingLeft: 30 * scal + 'px'
+                    color: '#333',
+                    fontSize: 16 * scal + 'px',
+                    lineHeight: 32 * scal + 'px'
                   }}
                   key={index}
                 >
@@ -335,9 +335,7 @@ export default function App(props) {
                       position: 'relative',
                       border: '1px solid #2C69FF',
                       borderRadius: '50%',
-                      color: '#333',
-                      fontSize: 16 * scal + 'px',
-                      lineHeight: 32 * scal + 'px',
+
                       marginBottom: 15 * scal + 'px'
                     }}
                   >
@@ -727,13 +725,15 @@ export default function App(props) {
               <div
                 className="msg"
                 style={{
-                  fontSize: 24 * scal + 'px',
+                  fontSize: 18 * scal + 'px',
                   color: '#333333',
                   lineHeight: 34 * scal + 'px'
                 }}
               >
                 竭律案源平台邀请律师线上合作，免费案源推送，每一个城市
-                <span style={{ color: '#FF8855' }}>3</span>
+                <span style={{ color: '#FF8855', fontSize: 24 * scal + 'px' }}>
+                  3
+                </span>
                 个名额，无需入住费，无需保证金，没成案不收费，无论是刑事案件、民事纠纷、劳务纠纷、债权债务、婚姻家事等案源随时推送，我们还可以根据每一个律师的专业定制案源类型、案源数量、案源地区，实现快捷、高效、稳定的双赢模式，期望您的合作。
               </div>
             </div>

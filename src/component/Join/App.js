@@ -616,74 +616,158 @@ export default function App(props) {
                 </div>
               </div>
               <div className="boxList">
-                <div className="box" style={{ marginBottom: 20 * scal + 'px' }}>
+                <div
+                  className="box"
+                  style={{
+                    marginBottom: 20 * scal + 'px',
+                    width: 387 * scal + 'px',
+                    height: 340 * scal + 'px'
+                  }}
+                >
                   <img
                     src={png13}
                     alt=""
                     style={{
-                      width: 380 * scal + 'px',
-                      height: 380 * scal + 'px'
+                      width: 387 * scal + 'px',
+                      height: 340 * scal + 'px'
                     }}
                   />
                   <div
                     className="text white h180"
                     style={{
-                      height: 180 * scal + 'px',
-                      padding: 10 * scal + 'px'
+                      width: '100%',
+                      height: '100%',
+                      padding: 20 * scal + 'px'
                     }}
                   >
-                    <div className="big" style={{ fontSize: 26 * scal + 'px' }}>
+                    <div
+                      className="big"
+                      style={{
+                        fontSize: 24 * scal + 'px',
+                        fontWeight: 700,
+                        marginTop: 97 * scal + 'px'
+                      }}
+                    >
                       技术支持
                     </div>
-                    <div className="msg" style={{ fontSize: 18 * scal + 'px' }}>
+                    <div
+                      className="line"
+                      style={{
+                        width: 60 * scal + 'px',
+                        margin: `${10 * scal}px 0 ${30 * scal}px`
+                      }}
+                    ></div>
+                    <div
+                      className="msg"
+                      style={{
+                        fontSize: 16 * scal + 'px',
+                        lineHeight: 26 * scal + 'px'
+                      }}
+                    >
                       为分公司提供产品技术支持与服务技术支持，优化平台系统的运营与维护质量，给予专业的售前中后服务，提高用户的使用体验，促进用户留存率的增长
                     </div>
                   </div>
                 </div>
-                <div className="box" style={{ marginBottom: 20 * scal + 'px' }}>
+                <div
+                  className="box"
+                  style={{
+                    marginBottom: 20 * scal + 'px',
+                    width: 387 * scal + 'px',
+                    height: 430 * scal + 'px'
+                  }}
+                >
                   <img
                     src={png14}
                     alt=""
                     style={{
-                      width: 380 * scal + 'px',
-                      height: 617 * scal + 'px'
+                      width: 387 * scal + 'px',
+                      height: 430 * scal + 'px'
                     }}
                   />
                   <div
                     className="text"
                     style={{
-                      height: 200 * scal + 'px',
-                      padding: 10 * scal + 'px'
+                      width: '100%',
+                      height: '100%',
+                      padding: 20 * scal + 'px'
                     }}
                   >
-                    <div className="big" style={{ fontSize: 26 * scal + 'px' }}>
-                      运营支持
+                    <div
+                      className="big"
+                      style={{
+                        fontSize: 24 * scal + 'px',
+                        fontWeight: 700,
+                        marginTop: 187 * scal + 'px'
+                      }}
+                    >
+                      宣发支持
                     </div>
-                    <div className="msg" style={{ fontSize: 18 * scal + 'px' }}>
-                      开展运营中数据分析与管理工作，及时提供市场分析的反馈，整理销售数据及市场趋势，指导分公司销售任务的执行，协助制定当地销售策略并组织执行
+                    <div
+                      className="line"
+                      style={{
+                        width: 60 * scal + 'px',
+                        margin: `${10 * scal}px 0 ${30 * scal}px`
+                      }}
+                    ></div>
+                    <div
+                      className="msg"
+                      style={{
+                        fontSize: 16 * scal + 'px',
+                        lineHeight: 26 * scal + 'px'
+                      }}
+                    >
+                      为分公司提供全媒体平台的宣发策划，搭建新媒体与自媒体矩阵并进行品牌宣传和营销，优化品牌产品的总价值与竞争力，提高客单量与用户转化率
                     </div>
                   </div>
                 </div>
-                <div className="box" style={{ marginBottom: 20 * scal + 'px' }}>
+                <div
+                  className="box"
+                  style={{
+                    marginBottom: 20 * scal + 'px',
+                    width: 387 * scal + 'px',
+                    height: 340 * scal + 'px'
+                  }}
+                >
                   <img
                     src={png15}
                     alt=""
                     style={{
-                      width: 380 * scal + 'px',
-                      height: 380 * scal + 'px'
+                      width: 387 * scal + 'px',
+                      height: 340 * scal + 'px'
                     }}
                   />
                   <div
                     className="text white"
                     style={{
-                      height: 200 * scal + 'px',
-                      padding: 10 * scal + 'px'
+                      width: '100%',
+                      height: '100%',
+                      padding: 20 * scal + 'px'
                     }}
                   >
-                    <div className="big" style={{ fontSize: 26 * scal + 'px' }}>
+                    <div
+                      className="big"
+                      style={{
+                        fontSize: 24 * scal + 'px',
+                        fontWeight: 700,
+                        marginTop: 97 * scal + 'px'
+                      }}
+                    >
                       物料支持
                     </div>
-                    <div className="msg" style={{ fontSize: 18 * scal + 'px' }}>
+                    <div
+                      className="line"
+                      style={{
+                        width: 60 * scal + 'px',
+                        margin: `${10 * scal}px 0 ${30 * scal}px`
+                      }}
+                    ></div>
+                    <div
+                      className="msg"
+                      style={{
+                        fontSize: 16 * scal + 'px',
+                        lineHeight: 26 * scal + 'px'
+                      }}
+                    >
                       企业画册、产品宣传折页、服务杯子、合同、服务牌匾、名片、工牌、文件夹、笔记本等
                     </div>
                   </div>
