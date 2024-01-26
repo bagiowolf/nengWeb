@@ -33,6 +33,11 @@ import pp from './img/pp.svg'
 import zy from './img/zy.svg'
 import px from './img/px.svg'
 import fw from './img/fw.svg'
+import nl from './img/nl.svg'
+import zj from './img/zj.svg'
+import ln from './img/ln.svg'
+import jl from './img/jl.svg'
+import jy from './img/jy.svg'
 let arr = [
   {
     title: '价格优势',
@@ -65,7 +70,48 @@ let arr = [
     img: fw
   }
 ]
+let tj = [
+  { img: nl, text: '具有承担民事责任能力的公司或者个人', lit: '01.' },
+  { img: zj, text: '具有一定的社会资源关系和启动资金', lit: '02.' },
+  { img: ln, text: '认同法千家的经营模式以及经营理念', lit: '03.' },
+  { img: jl, text: '征信状况良好，近五年内无失信记录', lit: '04.' },
+  { img: jy, text: '有销售团队管理经验', lit: '05.' }
+]
 
+const lc = [
+  {
+    title: '加盟咨询',
+    msg: '投资者以电话、传真、网上留言等方式向总部专业的招商顾问咨询相关合作事项，索取有关资料。'
+  },
+  {
+    title: '项目考察',
+    msg: '投资者到总部所在地进行项目考察，并与总部工作人员进行业务交流。'
+  },
+  {
+    title: '资质审核',
+    msg: '总部对投资者进行审核，确认投资者的合作资格。'
+  },
+  {
+    title: '签订加盟',
+    msg: '双方确认考察结果无争议，正式签订合同。'
+  },
+  {
+    title: '缴纳费用',
+    msg: '投资者按所选择的投资类型向总部交纳相关的费用。'
+  },
+  {
+    title: '总部培训',
+    msg: '总部安排投资者进行相关培训，培训合格后颁发授权书。'
+  },
+  {
+    title: '店面装修',
+    msg: '总部为加盟者提供装修指导，与设计指导。'
+  },
+  {
+    title: '开业',
+    msg: '总部持续关注加盟者的经营情况，并给予经营指导与帮助。'
+  }
+]
 export default function App(props) {
   let scal = props.windowWidthValue / 1920
 
@@ -100,63 +146,74 @@ export default function App(props) {
               textAlign: 'left'
             }}
           >
-            <div style={{ fontSize: 48 * scal + 'px', fontWeight: 700 * scal }}>
-              竭律法务全国招商加盟
+            <div className="pc">
+              <div
+                style={{ fontSize: 48 * scal + 'px', fontWeight: 700 * scal }}
+              >
+                竭律法务全国招商加盟
+              </div>
+              <div
+                className="gy"
+                style={{
+                  fontSize: 24 * scal + 'px',
+                  margin: `${10 * scal}px 0 ${20 * scal}px`,
+                  color: '#fff'
+                }}
+              >
+                人人参与法治建设 引领法律服务行业
+              </div>
+              <div className="sj">
+                <div
+                  style={{
+                    padding: `0 ${15 * scal}px`,
+                    height: 40 * scal + 'px',
+                    lineHeight: 40 * scal + 'px',
+                    fontSize: 18 * scal + 'px',
+                    marginRight: 15 * scal + 'px'
+                  }}
+                >
+                  0门槛
+                </div>
+                <div
+                  style={{
+                    padding: `0 ${15 * scal}px`,
+                    height: 40 * scal + 'px',
+                    lineHeight: 40 * scal + 'px',
+                    fontSize: 18 * scal + 'px',
+                    marginRight: 15 * scal + 'px'
+                  }}
+                >
+                  轻投资
+                </div>
+                <div
+                  style={{
+                    padding: `0 ${15 * scal}px`,
+                    height: 40 * scal + 'px',
+                    lineHeight: 40 * scal + 'px',
+                    fontSize: 18 * scal + 'px',
+                    marginRight: 15 * scal + 'px'
+                  }}
+                >
+                  高回报
+                </div>
+                <div
+                  style={{
+                    padding: `0 ${15 * scal}px`,
+                    height: 40 * scal + 'px',
+                    lineHeight: 40 * scal + 'px',
+                    fontSize: 18 * scal + 'px',
+                    marginRight: 15 * scal + 'px'
+                  }}
+                >
+                  50平
+                </div>
+              </div>
             </div>
-            <div
-              className="gy"
-              style={{
-                fontSize: 24 * scal + 'px',
-                margin: `${10 * scal}px 0 ${20 * scal}px`,
-                color: '#fff'
-              }}
-            >
-              人人参与法治建设 引领法律服务行业
-            </div>
-            <div className="sj">
-              <div
-                style={{
-                  padding: `0 ${15 * scal}px`,
-                  height: 40 * scal + 'px',
-                  lineHeight: 40 * scal + 'px',
-                  fontSize: 18 * scal + 'px',
-                  marginRight: 15 * scal + 'px'
-                }}
-              >
-                0门槛
-              </div>
-              <div
-                style={{
-                  padding: `0 ${15 * scal}px`,
-                  height: 40 * scal + 'px',
-                  lineHeight: 40 * scal + 'px',
-                  fontSize: 18 * scal + 'px',
-                  marginRight: 15 * scal + 'px'
-                }}
-              >
-                轻投资
-              </div>
-              <div
-                style={{
-                  padding: `0 ${15 * scal}px`,
-                  height: 40 * scal + 'px',
-                  lineHeight: 40 * scal + 'px',
-                  fontSize: 18 * scal + 'px',
-                  marginRight: 15 * scal + 'px'
-                }}
-              >
-                高回报
-              </div>
-              <div
-                style={{
-                  padding: `0 ${15 * scal}px`,
-                  height: 40 * scal + 'px',
-                  lineHeight: 40 * scal + 'px',
-                  fontSize: 18 * scal + 'px',
-                  marginRight: 15 * scal + 'px'
-                }}
-              >
-                50平
+            <div className="ph">
+              <div className="gy">加盟招商</div>
+              <div className="sj">
+                <div>以专业视角，应对各种复杂需求 </div>
+                业务电话：400-651-0001
               </div>
             </div>
           </div>
@@ -775,204 +832,137 @@ export default function App(props) {
               </div>
             </div>
           </div>
-          <div className="box4" style={{ marginBottom: 100 * scal + 'px' }}>
-            <div className="left">
-              <div className="tj" style={{ fontSize: 40 * scal + 'px' }}>
-                竭律法务加盟条件
-              </div>
-              <div className="line"></div>
-              <div className="zy" style={{ fontSize: 18 * scal + 'px' }}>
-                注意事项
-              </div>
+          <div
+            className="box4"
+            style={{
+              padding: `${60 * scal}px ${160 * scal}px ${100 * scal}px`
+            }}
+          >
+            <div
+              className="tj"
+              style={{
+                fontSize: 50 * scal + 'px',
+                lineHeight: 100 * scal + 'px',
+                textAlign: 'center',
+                marginBottom: 30 * scal + 'px'
+              }}
+            >
+              竭律法务加盟条件
             </div>
             <div className="right" style={{ fontSize: 24 * scal + 'px' }}>
-              <div>01、具有承担民事责任能力的公司或者个人  </div>
-              <div>02、具有一定的社会资源关系和启动资金  </div>
-              <div>03、认同法千家的经营模式以及经营理念  </div>
-              <div>04、征信状况良好，近五年内无失信记录  </div>
-              <div>05、有销售团队管理经验</div>
+              {tj.map((item, index) => (
+                <div
+                  className="boxx"
+                  key={index}
+                  style={{
+                    width: 296 * scal + 'px',
+                    height: 249 * scal + 'px',
+                    padding: `${30 * scal}px ${30 * scal}px ${20 * scal}px`
+                  }}
+                >
+                  <img
+                    src={item.img}
+                    alt=""
+                    style={{
+                      width: 50 * scal + 'px',
+                      height: 50 * scal + 'px',
+                      marginBottom: 15 * scal + 'px'
+                    }}
+                  />
+                  <div
+                    className="textt"
+                    style={{
+                      fontSize: 16 * scal + 'px',
+                      color: '#333',
+                      marginBottom: 30 * scal + 'px'
+                    }}
+                  >
+                    {item.text}
+                  </div>
+                  <div
+                    style={{
+                      textAlign: 'right',
+                      fontSize: 64 * scal + 'px',
+                      color: '#f2f2f2',
+                      fontWeight: 700,
+                      bottom: 20 * scal + 'px',
+                      right: 30 * scal + 'px'
+                    }}
+                    className="lit"
+                  >
+                    {item.lit}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        <div className="box5" style={{ height: 644 * scal + 'px' }}>
-          <div
-            className="title"
-            style={{
-              fontSize: 50 * scal + 'px',
-              marginBottom: 50 * scal + 'px',
-              marginTop: 100 * scal + 'px'
-            }}
-          >
-            竭能法务加盟流程
-          </div>
+        <div className="box5" style={{ height: 1100 * scal + 'px' }}>
           <img
             src={png16}
             alt=""
             className="png16"
-            style={{ height: 650 * scal + 'px' }}
+            style={{ height: 1100 * scal + 'px' }}
           />
-          <div className="lb" style={{ width: 1250 * scal + 'px' }}>
-            <Swiper
-              spaceBetween={50}
-              slidesPerView={3}
-              onSlideChange={() => console.log('slide change')}
-              modules={[Pagination]}
-              pagination={{ clickable: true }}
-              onSwiper={(swiper) => console.log(swiper)}
+          <div className="bo16" style={{ width: 1110 * scal + 'px' }}>
+            <div
+              className="title"
+              style={{
+                fontSize: 50 * scal + 'px',
+                marginBottom: 16 * scal + 'px',
+                marginTop: 60 * scal + 'px',
+                marginLeft: 60 * scal + 'px',
+                lineHeight: 100 * scal + 'px'
+              }}
             >
-              <SwiperSlide>
+              竭能法务加盟流程
+            </div>
+
+            <div className="lb" style={{}}>
+              {lc.map((item, index) => (
                 <div
-                  className="lbbox"
+                  key={index}
+                  className="lc"
                   style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
+                    marginBottom: 35 * scal + 'px',
+                    left: -35 * scal + 'px'
                   }}
                 >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    01
+                  <div
+                    className="num"
+                    style={{
+                      width: 60 * scal + 'px',
+                      height: 60 * scal + 'px',
+                      fontSize: 28 * scal + 'px',
+                      marginRight: 40 * scal + 'px'
+                    }}
+                  >
+                    <span>{index + 1}</span>
                   </div>
-                  <div className="lib">加盟咨询</div>
-                  <div className="msg">
-                    投资者以电话、传真、网上留言等方式向总部专业的招商顾问咨询相关合作事项，索取有关资料。
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    02
-                  </div>
-                  <div className="lib">项目考察</div>
-                  <div className="msg">
-                    投资者到总部所在地进行项目考察，并与总部工作人员进行业务交流。
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    03
-                  </div>
-                  <div className="lib">资质审核</div>
-                  <div className="msg">
-                    总部对投资者进行审核，确认投资者的合作资格。
+                  <div className="rig" style={{ width: 682 * scal + 'px' }}>
+                    <div
+                      className="tit"
+                      style={{
+                        fontSize: 28 * scal + 'px',
+                        lineHeight: 42 * scal + 'px',
+                        marginBottom: 4 * scal + 'px'
+                      }}
+                    >
+                      {item.title}
+                    </div>
+                    <div
+                      className="msgg"
+                      style={{
+                        fontSize: 18 * scal + 'px',
+                        lineHeight: 26 * scal + 'px'
+                      }}
+                    >
+                      {item.msg}
+                    </div>
                   </div>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    04
-                  </div>
-                  <div className="lib">签订加盟</div>
-                  <div className="msg">
-                    双方确认考察结果无争议，正式签订合同。
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    05
-                  </div>
-                  <div className="lib">缴纳费用</div>
-                  <div className="msg">
-                    投资者按所选择的投资类型向总部交纳相关的费用。
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    06
-                  </div>
-                  <div className="lib">总部培训</div>
-                  <div className="msg">
-                    总部安排投资者进行相关培训，培训合格后颁发授权书。
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    07
-                  </div>
-                  <div className="lib">店面装修</div>
-                  <div className="msg">
-                    总部为加盟者提供装修指导，与设计指导。
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className="lbbox"
-                  style={{
-                    width: 310 * scal + 'px',
-                    height: 310 * scal + 'px',
-                    padding: `${50 * scal}px ${20 * scal}px 0 ${50 * scal}px`,
-                    marginRight: 20 * scal + 'px'
-                  }}
-                >
-                  <div className="num" style={{ fontSize: 50 * scal + 'px' }}>
-                    08
-                  </div>
-                  <div className="lib">开业</div>
-                  <div className="msg">
-                    总部持续关注加盟者的经营情况，并给予经营指导与帮助。
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+              ))}
+            </div>
           </div>
         </div>
         <Footer

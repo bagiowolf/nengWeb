@@ -131,61 +131,98 @@
   color: #fff !important;
 }
 .join .content .box4 {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* margin-top: 100px; */
+  background: #f1f8ff;
 }
 .join .content .box4 > div {
-  width: 45%;
 }
-.join .content .box4 .left {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.join .content .box4 .left .line {
-  width: 55px;
-  border: 1px solid #2b68ff;
-  margin: 12px 0;
-}
-.join .content .box4 .left .tj {
-  font-size: 40px;
-}
-.join .content .box4 .left .zy {
-  font-size: 18px;
-}
+
 .join .content .box4 .right {
-  font-size: 24px;
-  color: #656565;
+  /* font-size: 24px;
+  color: #656565; */
+  display: flex;
+  justify-content: space-between;
+}
+.join .content .box4 .right .boxx {
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+}
+.join .content .box4 .right .boxx .lit {
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
 }
 .join .content .box4 .right div {
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 .join .box5 {
   position: relative;
   padding-top: 1px;
-  height: 644px;
 }
+.join .box5 .bo16 {
+  position: absolute;
+  z-index: 9;
+  background: #234691e5;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+/* .join .box5 .bo16  */
 .join .box5 .png16 {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
 }
-.join .box5 .title {
+.join .box5 .lb .num {
+  background: #fff;
+  border: 6px solid #7ba7fb80;
+  border-radius: 50%;
+  color: #2c69ff;
+  font-weight: 700;
+  text-align: center;
+  box-sizing: border-box;
   position: relative;
-  z-index: 9;
-  margin-top: 100px;
-  margin-bottom: 50px;
+}
+.join .box5 .lb .num span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.join .box5 .lb .lc {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: -50px;
+}
+.join .box5 .lb .lc .rig .tit {
+  font-weight: 700;
+}
+.join .box5 .lb .lc .rig {
+  color: #fff;
+}
+.join .box5 .title {
+  /* position: relative; */
+  /* z-index: 9; */
+  color: #fff;
+  text-align: left;
+  /* margin-top: 100px; */
+  /* margin-bottom: 50px; */
 }
 .join .box5 .lb {
   position: relative;
   z-index: 9;
   display: flex;
-  justify-content: center;
-  width: 1250px;
-  left: 50%;
-  transform: translateX(-50%);
+  flex-direction: column;
+  text-align: left;
+  /* justify-content: center; */
+  /* width: 1250px; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
 }
 .join .box5 .lbbox {
   width: 310px;
@@ -211,13 +248,22 @@
   font-size: 16px;
   color: #757575;
 }
+.join .pc {
+  display: block;
+}
+.join .ph {
+  display: none;
+}
 @media (max-width: 768px) {
+  .join .banner img {
+    height: 150px !important;
+  }
   .join .content {
     padding: 20px !important;
   }
   .join .title {
     font-size: 30px !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 20px !important;
   }
   .join .content .box1 .litte,
   .join .content .box3 .shu .box .text .big {
@@ -235,6 +281,7 @@
   }
   .join .content .box2 .msg .div > div:last-child {
     font-size: 12px !important;
+    width: 100%;
   }
   .join .content .box2 .msg .div .nn {
     font-size: 18px !important;
@@ -254,26 +301,114 @@
     padding: 10px !important;
   }
   .join .content .box4 {
-    margin-top: 50px !important;
+    margin-top: 20px !important;
+    padding: 20px !important;
     flex-direction: column !important;
   }
   .join .content .box4 > div {
     width: auto !important;
   }
-  .join .content .box4 .left {
+  .join .content .box4 {
     align-items: flex-start !important;
   }
-  .join .content .box4 .left .zy,
+  .join .content .box4 .zy,
   .join .content .box4 .right {
     font-size: 16px !important;
+  }
+  .join .content .box4 .right {
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .join .content .box4 .right .boxx {
+    width: 45% !important;
+    height: 100px !important;
+    margin-bottom: 10px;
+  }
+  .join .content .box4 .right .boxx .lit {
+    font-size: 16px !important;
+  }
+  .join .content .box4 .right div {
+    font-size: 12px !important;
+  }
+  .join .content .box4 .right .boxx img {
+    width: 25px !important;
+    height: 25px !important;
   }
   .join .box5 {
     display: none !important;
   }
-  .join .content .box4 .left .tj {
+  .join .content .box4 .tj {
     font-size: 20px !important;
+    margin-bottom: 20px !important;
+  }
+  .join .box2 {
+    padding: 20px !important;
+    margin-bottom: 20px;
+  }
+  .join .content .box2 .msg .div {
+    width: 45% !important;
+    padding: 0 !important;
+  }
+  .join .content .box2 .msg .div > div:last-child > div:last-child {
+    font-size: 12px !important;
+    line-height: normal !important;
+    width: 100% !important;
   }
   .join .banner .aboutText {
-    width: 100%;
+    /* width: 100%; */
+    left: 10% !important;
+  }
+  .join .pc {
+    display: none;
+  }
+  .join .ph {
+    display: block;
+  }
+  .join .aboutText .sj {
+    display: block;
+  }
+  .join .aboutText .sj div {
+    border: none !important;
+  }
+  .join .content .box1 img {
+    display: none;
+  }
+  .join .content .box1 {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 300px !important;
+  }
+  .join .content .box1 .right {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 20px !important;
+  }
+  .join .title {
+    font-size: 20px !important;
+  }
+  .join .content .box1 .litte {
+    font-size: 16px !important;
+  }
+  .join .content .box1 .msg {
+    font-size: 12px !important;
+    line-height: normal !important;
+  }
+  .join .box3 {
+    padding: 0 !important;
+  }
+  .join .content .box3 .shu .box {
+    width: auto !important;
+    margin-bottom: 10px !important;
+    height: auto !important;
+  }
+  .join .content .box3 .shu .box .text {
+    height: 100% !important;
+  }
+  .join .content .box3 .shu .box .text .big {
+    margin-top: 20px !important;
+  }
+  .join .content .box3 .shu .box .text .msg {
+    line-height: normal !important;
   }
 }
