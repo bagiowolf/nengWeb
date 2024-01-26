@@ -256,13 +256,17 @@
   }
   .cooperate .box4 .msg {
     flex-wrap: wrap;
+    justify-content: normal !important;
   }
   .cooperate .content .box4 .msg .div {
     padding: 0 !important;
     font-size: 14px !important;
     justify-content: center;
     flex-wrap: wrap;
-    margin-right: 20px;
+    margin-right: 10px;
+    width: 100px;
+    align-items: flex-start;
+    margin-bottom: 20px !important;
   }
   .cooperate .content .box5 {
     padding: 20px !important;
@@ -327,6 +331,9 @@
   .cooperate .content .box3 .msg {
     font-size: 12px !important;
     line-height: 15px !important;
+  }
+  .cooperate .content .box3 .msg span {
+    font-size: 16px !important;
   }
   .cooperate .content .box3 .text {
     width: 300px !important;

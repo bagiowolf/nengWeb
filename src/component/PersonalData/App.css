@@ -142,11 +142,15 @@
     height: 150px !important;
   }
   .PersonalData .aboutText .gy {
-    font-size: 18px !important;
+    font-size: 16px !important;
     height: auto !important;
     line-height: 20px !important;
+    font-weight: 400 !important;
   }
   .PersonalData .aboutText .sj {
-    font-size: 12px !important;
+    font-size: 16px !important;
+  }
+  .PersonalData .aboutText .sj div {
+    margin: 0 !important;
   }
 }
