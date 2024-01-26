@@ -13,18 +13,17 @@ import PersonalData from '../PersonalData/App'
 import Form from '../Form/App'
 import zx from '../Index/img/zx.png'
 
-let arr = [
-  {
-    name: '王玉',
-    type: '执业律师',
-    img: png1,
-    msg: `擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
+let big = {
+  name: '王玉',
+  type: '执业律师',
+  img: png1,
+  msg: `擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
 介绍：有多年的律师执业经验及法学理论功底，能够娴熟运用法律规定和法理精神处理复杂、疑难的法律实务问题，由于办事作风沉稳干练，对客户永远保持认真的态度，曾获得当事人和顾问单位的好评，将继续竭尽所能为当事人争取合法利益！
 执业理念：坚守“专业专注，勤勉尽责”！`,
-    consultation_num: 12355 * 5,
-    accepted_num: 12355
-  },
-
+  consultation_num: 12355 * 5,
+  accepted_num: 12355
+}
+let arr = [
   {
     name: '王飞',
     type: '执业律师',
@@ -72,8 +71,8 @@ let arr = [
     msg: `擅长：合同纠纷、婚姻家事，民商事纠纷，交通事故纠纷等
     南京大学法学本科，真诚待人，用心做事，牢固的法律知识和丰富的工作经验为基础，运用法律武器维护当事人的合法权利，给当事人和企业客户提供最佳法律解决方案。
     执业理念：“受人之托，忠人之事”！`,
-    consultation_num: 8000 * 5,
-    accepted_num: 8000
+    consultation_num: 8944 * 5,
+    accepted_num: 8944
   }
 ]
 
@@ -162,12 +161,12 @@ export default function App(props) {
                   </div>
                   <div
                     className="btn"
-                    onClick={() => setActiveFun(arr[0])}
+                    onClick={() => setActiveFun(big)}
                     style={{ width: 120 * scal + 'px' }}
                   >
                     立即预约
                   </div>
-                  <div className="info" onClick={() => setActiveFun(arr[0])}>
+                  <div className="info" onClick={() => setActiveFun(big)}>
                     查看详情
                   </div>
                 </div>
@@ -179,24 +178,20 @@ export default function App(props) {
                   }}
                 >
                   <div className="name" style={{ fontSize: 24 * scal + 'px' }}>
-                    王玉 【执业律师】
+                    {big.name}【{big.type}】
                   </div>
                   <div className="line"></div>
                   <div
                     className="msg"
                     style={{ fontSize: 18 * scal + 'px' }}
-                    title="擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
-                      介绍：有多年的律师执业经验及法学理论功底，能够娴熟运用法律规定和法理精神处理复杂、疑难的法律实务问题，由于办事作风沉稳干练，对客户永远保持认真的态度，曾获得当事人和顾问单位的好评，将继续竭尽所能为当事人争取合法利益！
-                      执业理念：坚守“专业专注，勤勉尽责”！"
+                    title={big.msg}
                   >
-                    <span>
-                      擅长：婚姻家事，民商事纠纷，交通事故纠纷，刑事辩护等
-                      介绍：有多年的律师执业经验及法学理论功底，能够娴熟运用法律规定和法理精神处理复杂、疑难的法律实务问题，由于办事作风沉稳干练，对客户永远保持认真的态度，曾获得当事人和顾问单位的好评，将继续竭尽所能为当事人争取合法利益！
-                      执业理念：坚守“专业专注，勤勉尽责”！
-                    </span>
+                    <span>擅长：{big.msg}</span>
                     <div className="num">
-                      咨询人数:<span className="bool">61775人</span>
-                      帮助人数:<span className="bool">12355人</span>
+                      咨询人数:
+                      <span className="bool">{big.consultation_num}人</span>
+                      帮助人数:
+                      <span className="bool">{big.accepted_num}人</span>
                     </div>
                   </div>
                 </div>
