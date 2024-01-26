@@ -338,6 +338,9 @@
   .team .header {
     width: 100%;
   }
+  .mobile .banner img {
+    height: 150px !important;
+  }
 }
 @media (min-width: 768px) {
   .mobile {

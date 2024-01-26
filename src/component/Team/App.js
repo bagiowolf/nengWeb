@@ -312,6 +312,40 @@ export default function App(props) {
             </div>
             <div className="content" onClick={() => setIsShow(false)}>
               <div className="sm">
+                <div className="boxList">
+                  <div className="left">
+                    <div className="img">
+                      <img src={png1} alt="" />
+                    </div>
+                    <div className="btnBox">
+                      <div className="btn" onClick={() => setActiveFun(big)}>
+                        立即预约
+                      </div>
+                      <div className="info" onClick={() => setActiveFun(big)}>
+                        查看详情
+                      </div>
+                    </div>
+                  </div>
+                  <div className="right">
+                    <div className="name">
+                      {big.name} 【{big.type}】
+                    </div>
+                    <div className="line"></div>
+                    <div className="msg">
+                      <span>{big.msg}</span>
+                      <div className="num">
+                        <div>
+                          帮助人数:
+                          <span className="bool">{big.consultation_num}人</span>
+                        </div>
+                        <div>
+                          咨询人数:
+                          <span className="bool">{big.accepted_num}人</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 {arr.map((item, index) => (
                   <div className="boxList" key={index}>
                     <div className="left">
