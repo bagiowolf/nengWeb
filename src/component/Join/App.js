@@ -350,7 +350,8 @@ export default function App(props) {
                 marginBottom: 15 * scal + 'px',
                 height: 100 * scal + 'px',
                 lineHeight: 100 * scal + 'px',
-                textAlign: 'center'
+                textAlign: 'center',
+                color: '#4a4a4a'
               }}
             >
               竭律法务加盟支持
@@ -965,10 +966,12 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <Footer
-          windowWidthValue={props.windowWidthValue}
-          onSetState={props.onSetState}
-        />
+        <div style={{ transform: 'translateY(-5px)' }}>
+          <Footer
+            windowWidthValue={props.windowWidthValue}
+            onSetState={props.onSetState}
+          />
+        </div>
       </div>
     </div>
   )
