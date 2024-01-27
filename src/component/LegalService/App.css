@@ -139,6 +139,31 @@
     width: 120px !important;
   }
   .legalService .content .boxList .box11 .btn {
-    width: 120px !important;
+    width: 100px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    font-size: 18px !important;
+    margin-top: 10px !important;
+  }
+  .legalService .banner img {
+    height: 150px !important;
+  }
+  .legalService .aboutText {
+    left: 10% !important;
+  }
+  .legalService .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .legalService .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .legalService .aboutText .sj div {
+    margin: 0 !important;
+  }
+  .legalService .content .boxList .box11 .line {
+    width: 80% !important;
   }
 }

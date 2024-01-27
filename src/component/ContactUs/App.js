@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
-import banner from '../../assets/banner.png'
+import banner from './img/Group 19.png'
 import png1 from './img/png1.png'
 import png2 from './img/png2.png'
 import png3 from './img/png3.png'
@@ -48,11 +48,39 @@ export default function App(props) {
           windowWidthValue={props.windowWidthValue}
         />
         <div className="banner" onClick={() => setIsShow(false)}>
-          <img src={banner} alt="banner" />
-          <div className="aboutText">
-            <div className="gy">联系我们</div>
-            <div className="sj">
-              以专业视角，应对各种复杂需求 业务电话：400-651-0001
+          <img
+            src={banner}
+            alt="banner"
+            style={{ height: 340 * scal + 'px' }}
+          />
+          <div
+            className="aboutText"
+            style={{ left: 360 * scal + 'px', textAlign: 'left' }}
+          >
+            <div
+              className="gy"
+              style={{
+                fontSize: 48 * scal + 'px',
+                fontWeight: 700,
+                height: 72 * scal + 'px',
+                lineHeight: 72 * scal + 'px',
+                color: '#fff'
+              }}
+            >
+              联系我们
+            </div>
+            <div
+              className="sj"
+              style={{
+                fontSize: 24 * scal + 'px',
+                fontWeight: 400 * scal,
+                color: '#fff'
+              }}
+            >
+              <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
+                以专业视角，应对各种复杂需求
+              </div>
+              业务电话：400-651-0001
             </div>
           </div>
         </div>
@@ -60,7 +88,7 @@ export default function App(props) {
         <div
           className="content"
           onClick={() => setIsShow(false)}
-          style={{ padding: `${60 * scal}px ${360 * scal}px` }}
+          style={{ padding: `${80 * scal}px ${360 * scal}px` }}
         >
           <div className="formBox" style={{ width: 1200 * scal + 'px' }}>
             <div
@@ -68,7 +96,11 @@ export default function App(props) {
               style={{ padding: `${25 * scal}px ${30 * scal}px` }}
             >
               <div className="top">
-                <img src={png1} alt="" />
+                <img
+                  src={png1}
+                  alt=""
+                  style={{ width: 30 * scal + 'px', height: 30 * scal + 'px' }}
+                />
                 <span
                   style={{
                     fontSize: 22 * scal + 'px',

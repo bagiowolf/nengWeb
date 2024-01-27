@@ -64,6 +64,24 @@
   font-size: 20px;
 }
 @media (max-width: 768px) {
+  .legalServiceInfo .banner img {
+    height: 150px !important;
+  }
+  .legalServiceInfo .aboutText {
+    left: 10% !important;
+  }
+  .legalServiceInfo .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .legalServiceInfo .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .legalServiceInfo .aboutText .sj div {
+    margin: 0 !important;
+  }
   .legalServiceInfo .content {
     padding: 20px !important;
   }

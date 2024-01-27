@@ -8,9 +8,9 @@
 .ContactUs .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
+  text-align: left;
 }
 .ContactUs .aboutText .gy {
   font-size: 30px;
