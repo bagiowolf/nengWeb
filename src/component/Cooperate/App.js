@@ -88,7 +88,11 @@ export default function App(props) {
           </a>
         </div>
         <div className="banner" onClick={() => setIsShow(false)}>
-          <img src={banner} alt="banner" />
+          <img
+            src={banner}
+            alt="banner"
+            style={{ height: 340 * scal + 'px' }}
+          />
           <div
             className="aboutText"
             style={{ left: 360 * scal + 'px', textAlign: 'left' }}

@@ -2,7 +2,7 @@ import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
 import React, { useEffect, useState } from 'react'
-import banner from '../../assets/banner.png'
+import banner from './img/Group 16.png'
 import png1 from './img/png1.png'
 import LegalServiceInfo from '../LegalServiceInfo/App'
 import Form from '../Form/App'
@@ -47,18 +47,46 @@ export default function App(props) {
               windowWidthValue={props.windowWidthValue}
             />
             <div className="banner" onClick={() => setIsShow(false)}>
-              <img src={banner} alt="banner" />
-              <div className="aboutText">
-                <div className="gy">法律服务</div>
-                <div className="sj">
-                  以专业视角，应对各种复杂需求 业务电话：400-651-0001
+              <img
+                src={banner}
+                alt="banner"
+                style={{ height: 340 * scal + 'px' }}
+              />
+              <div
+                className="aboutText"
+                style={{ left: 360 * scal + 'px', textAlign: 'left' }}
+              >
+                <div
+                  className="gy"
+                  style={{
+                    fontSize: 48 * scal + 'px',
+                    fontWeight: 700,
+                    height: 72 * scal + 'px',
+                    lineHeight: 72 * scal + 'px',
+                    color: '#fff'
+                  }}
+                >
+                  法律服务
+                </div>
+                <div
+                  className="sj"
+                  style={{
+                    fontSize: 24 * scal + 'px',
+                    fontWeight: 400 * scal,
+                    color: '#fff'
+                  }}
+                >
+                  <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
+                    以专业视角，应对各种复杂需求
+                  </div>
+                  业务电话：400-651-0001
                 </div>
               </div>
             </div>
             <div
               className="content"
               onClick={() => setIsShow(false)}
-              style={{ padding: `${60 * scal}px ${360 * scal}px` }}
+              style={{ padding: `${80 * scal}px ${360 * scal}px` }}
             >
               <div className="boxList">
                 {arr.map((item, index) => (
@@ -74,13 +102,14 @@ export default function App(props) {
                       marginBottom: 40 * scal + 'px'
                     }}
                   >
-                    <img src={png1} alt="" />
+                    {active.id !== item.id && <img src={png1} alt="" />}
                     <div
                       className="title"
                       style={{
                         fontSize: 28 * scal + 'px',
-                        padding: `${24 * scal}px 0 ${20 * scal}px 0`,
-                        height: 66 * scal + 'px'
+                        lineHeight: 66 * scal + 'px',
+                        height: 66 * scal + 'px',
+                        boxSizing: 'border-box'
                       }}
                     >
                       {item.title}
@@ -89,9 +118,10 @@ export default function App(props) {
                       className="msg"
                       style={{
                         fontSize: 20 * scal + 'px',
-                        padding: 20 * scal + 'px',
-                        paddingTop: 10 * scal + 'px',
-                        lineHeight: 34 * scal + 'px'
+                        padding: `${15 * scal}px ${35 * scal}px ${5 * scal}px ${
+                          25 * scal
+                        }px`,
+                        lineHeight: 36 * scal + 'px'
                       }}
                     >
                       <div
@@ -104,9 +134,19 @@ export default function App(props) {
                       咨询人数：{item.consultation_num}次
                     </div>
                     <div
+                      className="line"
+                      style={{ width: 310 * scal + 'px' }}
+                    ></div>
+                    <div
                       className="btn"
                       onClick={() => setActiveInfo(item)}
-                      style={{ width: 120 * scal + 'px' }}
+                      style={{
+                        width: 120 * scal + 'px',
+                        height: 32 * scal + 'px',
+                        lineHeight: 32 * scal + 'px',
+                        fontSize: 16 * scal + 'px',
+                        marginTop: 25 * scal + 'px'
+                      }}
                     >
                       立即咨询
                     </div>

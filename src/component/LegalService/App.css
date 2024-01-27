@@ -8,8 +8,7 @@
 .legalService .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .legalService .aboutText .gy {
@@ -38,6 +37,11 @@
   margin-bottom: 40px;
   /* padding: 26px 24px; */
 }
+.legalService .content .boxList .box11.active {
+  border: 1px solid #2b68ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
 .legalService .content .boxList .box11 > img {
   position: absolute;
   left: 0;
@@ -53,7 +57,6 @@
 }
 .legalService .content .boxList .box11 .title {
   font-size: 28px;
-  padding: 26px 0 20px 0;
   text-align: center;
   box-sizing: border-box;
 }
@@ -62,7 +65,6 @@
   padding: 24px;
   padding-top: 10px;
   text-align: left;
-  line-height: 34px;
 }
 
 .legalService .content .boxList .box11 .div {
@@ -72,10 +74,18 @@
   -webkit-line-clamp: 3; /* 指定显示的行数 */
   -webkit-box-orient: vertical;
 }
+.legalService .content .boxList .box11 .div p {
+  margin: 0;
+  padding: 0;
+}
+.legalService .content .boxList .box11 .line {
+  height: 1px;
+  background: #dcdcdc;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .legalService .content .boxList .box11 .btn {
-  width: 120px;
-  height: 32px;
-  line-height: 32px;
   text-align: center;
   background-color: #fff;
   border: 1px solid #1f4ac4;
@@ -83,14 +93,13 @@
   left: 50%;
   transform: translateX(-50%);
   color: #1f4ac4;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 10px;
   cursor: pointer;
 }
 .legalService .content .boxList .active .title {
   background-color: #2b68ff;
   color: #fff;
-  border-radius: 5px 5px 0 0;
 }
 .legalService .content .boxList .active .btn {
   background-color: #2b68ff;
