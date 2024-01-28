@@ -130,7 +130,12 @@ export default function App(props) {
                       >
                         {returnDom(item.service_content)}
                       </div>
-                      <div>受理数量：{item.accepted_num}个</div>
+                      <div
+                        className="sli"
+                        style={{ marginTop: 5 * scal + 'px' }}
+                      >
+                        受理数量：{item.accepted_num}个
+                      </div>
                       咨询人数：{item.consultation_num}次
                     </div>
                     <div

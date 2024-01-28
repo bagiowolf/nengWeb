@@ -5,8 +5,6 @@
   box-shadow: 12px 12px 27px 0 rgba(0, 0, 0, 0.3);
 }
 .formBo .title {
-  font-size: 22px !important;
-  font-weight: bold;
   margin-bottom: 16px;
   text-align: left !important;
 }
@@ -15,14 +13,13 @@
   flex-direction: column;
 }
 .formBo .from .item {
-  width: 790px;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .formBo .from .item .left {
   width: 330px;
   text-align: right;
-  color: #666;
+  color: #333;
   font-size: 16px;
   margin-right: 16px;
 }
@@ -40,6 +37,7 @@
   width: 100%;
   border-radius: 5px;
   border: 1px solid #d9d9d9;
+  height: 100%;
 }
 .formBo .from .item .textarea {
   height: auto;
@@ -113,6 +111,7 @@
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 10px;
+    margin-top: 15px !important;
+    font-size: 18px !important;
   }
 }

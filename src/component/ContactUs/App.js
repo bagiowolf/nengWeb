@@ -88,14 +88,19 @@ export default function App(props) {
         <div
           className="content"
           onClick={() => setIsShow(false)}
-          style={{ padding: `${80 * scal}px ${360 * scal}px` }}
+          style={{ padding: `${80 * scal}px ${360 * scal}px ${100 * scal}px` }}
         >
           <div className="formBox" style={{ width: 1200 * scal + 'px' }}>
             <div
               className="left"
-              style={{ padding: `${25 * scal}px ${30 * scal}px` }}
+              style={{
+                padding: `${25 * scal}px ${30 * scal}px ${30 * scal}px ${
+                  12 * scal
+                }px`,
+                width: '50%'
+              }}
             >
-              <div className="top">
+              <div className="top" style={{ fontSize: 22 * scal + 'px' }}>
                 <img
                   src={png1}
                   alt=""
@@ -112,7 +117,9 @@ export default function App(props) {
               </div>
               <div className="form" style={{ marginTop: 20 * scal + 'px' }}>
                 <div className="item">
-                  <div className="left">问题类型:</div>
+                  <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
+                    问题类型:
+                  </div>
                   <div className="right">
                     <select
                       value={message_type}
@@ -132,7 +139,9 @@ export default function App(props) {
                   </div>
                 </div>
                 <div className="item" style={{ alignItems: 'flex-start' }}>
-                  <div className="left">求助描述:</div>
+                  <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
+                    求助描述:
+                  </div>
                   <div className="right">
                     <textarea
                       name=""
@@ -149,7 +158,9 @@ export default function App(props) {
                   </div>
                 </div>
                 <div className="item">
-                  <div className="left">联系方式:</div>
+                  <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
+                    联系方式:
+                  </div>
                   <div className="right">
                     <input
                       type="text"
@@ -180,26 +191,33 @@ export default function App(props) {
             <div
               className="right"
               style={{
-                width: 600 * scal + 'px',
+                width: '50%',
                 padding: `${45 * scal}px ${30 * scal}px`
               }}
             >
               <div
                 className="one"
                 style={{
-                  fontSize: 30 * scal + 'px'
+                  fontSize: 30 * scal + 'px',
+                  lineHeight: 60 * scal + 'px'
                 }}
               >
                 手机扫码，直接求助律师
               </div>
-              <div className="two">
-                超过
+              <div
+                className="two"
+                style={{
+                  fontSize: 16 * scal + 'px',
+                  margin: `${10 * scal}px 0 ${50 * scal}px 0`
+                }}
+              >
+                超过&nbsp;
                 <span
                   style={{
                     fontSize: 24 * scal + 'px'
                   }}
                 >
-                  100+
+                  100+&nbsp;
                 </span>
                 律师,
                 <span
@@ -207,24 +225,41 @@ export default function App(props) {
                     fontSize: 24 * scal + 'px'
                   }}
                 >
-                  24小时
+                  &nbsp;24小时&nbsp;
                 </span>
                 在线,评价
-                <span>25分钟</span>回复速度
+                <span
+                  style={{
+                    fontSize: 24 * scal + 'px'
+                  }}
+                >
+                  &nbsp;25分钟&nbsp;
+                </span>
+                回复速度
               </div>
               <div className="three">
                 <div className="left">
-                  <img src={png2} alt="" />
+                  <img
+                    src={png2}
+                    alt=""
+                    style={{
+                      width: 150 * scal + 'px',
+                      height: 150 * scal + 'px',
+                      marginRight: 27.5 * scal + 'px'
+                    }}
+                  />
                 </div>
                 <div
                   className="right"
                   style={{
-                    marginLeft: 30 * scal + 'px',
-                    fontSize: 16 * scal + 'px'
+                    fontSize: 16 * scal + 'px',
+                    lineHeight: 32 * scal + 'px'
                   }}
                 >
                   <div>1.添加我司官方微信公众号</div>
-                  <div>2.简诉您的请求问题</div>
+                  <div style={{ margin: `${20 * scal}px 0` }}>
+                    2.简诉您的请求问题
+                  </div>
                   <div>3.与在线律师一对一解答</div>
                 </div>
               </div>

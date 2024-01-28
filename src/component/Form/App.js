@@ -44,11 +44,17 @@ export default function App(props) {
           marginTop: 70 * scal + 'px'
         }}
       >
-        <div className="title" style={{ marginBottom: 16 * scal + 'px' }}>
+        <div
+          className="title"
+          style={{ fontSize: 22 * scal + 'px', marginBottom: 16 * scal + 'px' }}
+        >
           向{name}提问
         </div>
         <div className="from">
-          <div className="item" style={{ width: 790 * scal + 'px' }}>
+          <div
+            className="item"
+            style={{ width: 790 * scal + 'px', alignItems: 'center' }}
+          >
             <div
               className="left"
               style={{
@@ -62,8 +68,8 @@ export default function App(props) {
             <div
               className="right"
               style={{
-                width: 540 * scal + 'px',
-                height: 38 * scal + 'px'
+                width: 536 * scal + 'px',
+                height: 36 * scal + 'px'
               }}
             >
               <input
@@ -87,7 +93,8 @@ export default function App(props) {
             <div
               className="right textarea"
               style={{
-                width: 540 * scal + 'px'
+                width: 536 * scal + 'px',
+                height: 114 * scal + 'px'
               }}
             >
               <textarea
@@ -99,7 +106,14 @@ export default function App(props) {
               ></textarea>
             </div>
           </div>
-          <div className="item" style={{ width: 790 * scal + 'px' }}>
+          <div
+            className="item"
+            style={{
+              width: 790 * scal + 'px',
+              marginBottom: 0,
+              alignItems: 'center'
+            }}
+          >
             <div
               className="left"
               style={{
@@ -113,8 +127,8 @@ export default function App(props) {
             <div
               className="right"
               style={{
-                width: 540 * scal + 'px',
-                height: 38 * scal + 'px'
+                width: 536 * scal + 'px',
+                height: 36 * scal + 'px'
               }}
             >
               <input
@@ -131,7 +145,9 @@ export default function App(props) {
           style={{
             width: 217 * scal + 'px',
             height: 48 * scal + 'px',
-            lineHeight: 48 * scal + 'px'
+            lineHeight: 48 * scal + 'px',
+            marginTop: 23 * scal + 'px',
+            fontSize: 16 * scal + 'px'
           }}
         >
           提交问题

@@ -29,6 +29,8 @@
 .legalService .content .boxList .dn {
   opacity: 0;
 }
+.legalService .sli {
+}
 .legalService .content .boxList .box11 {
   width: 380px;
   height: 337px;

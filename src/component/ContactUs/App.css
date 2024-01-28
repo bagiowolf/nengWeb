@@ -29,7 +29,10 @@
   box-shadow: 12px 12px 27px 0px rgba(0, 0, 0, 0.27);
   display: flex;
 }
-
+.ContactUs .content .left .top {
+  display: flex;
+  align-items: center;
+}
 .ContactUs .content .formBox > .left {
   padding: 25px 30px;
   box-sizing: border-box;
@@ -53,22 +56,23 @@
   height: 38px;
   margin-left: 10px;
   border: 1px solid #d9d9d9;
+  border-radius: 5px;
 }
 .ContactUs .content .formBox .form .item select {
   width: 454px;
   border: 1px solid #d9d9d9;
   height: 38px;
   margin-left: 10px;
+  border-radius: 5px;
 }
 .ContactUs .content .formBox .form .item textarea {
   width: 454px;
   height: 116px;
   margin-left: 10px;
   border: 1px solid #d9d9d9;
+  border-radius: 5px;
 }
 .ContactUs .content .formBox .form .item .left {
-  font-size: 16px;
-  color: #999;
 }
 .ContactUs .content .formBox .form .save {
   width: 217px;
@@ -96,7 +100,6 @@
 }
 .ContactUs .content .formBox > .right .two {
   font-size: 16px;
-  margin: 26px 0 64px 0;
 }
 .ContactUs .content .formBox > .right .two span {
   font-size: 24px;
@@ -106,11 +109,9 @@
 }
 
 .ContactUs .content .formBox > .right .three .right {
-  margin-left: 30px;
   font-size: 16px;
 }
 .ContactUs .content .formBox > .right .three .right div {
-  margin-top: 20px;
 }
 .ContactUs .box22 img {
   width: 100%;
