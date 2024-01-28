@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
@@ -23,6 +23,20 @@ let arr = [
 export default function App(props) {
   let scal = props.windowWidthValue / 1920
 
+  useEffect(() => {
+    var map = new window.AMap.Map('container', {
+      viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D'
+      zoom: 22, // 初始化地图层级
+      center: [119.942123, 31.72684] // 初始化地图中心点
+    })
+    let marker = new window.AMap.Marker({
+      icon: '//a.amap.com/jsapi_demos/static/demo-center/icons/poi-marker-default.png',
+      position: [119.942123, 31.72684],
+      offset: new window.AMap.Pixel(-13, -30)
+    })
+    marker.setMap(map)
+    console.log(map)
+  }, [])
   const [isShow, setIsShow] = useState(false)
   const [message_type, setMessage_type] = useState('法律咨询')
   const [content, setContent] = useState('')
@@ -116,7 +130,10 @@ export default function App(props) {
                 </span>
               </div>
               <div className="form" style={{ marginTop: 20 * scal + 'px' }}>
-                <div className="item">
+                <div
+                  className="item"
+                  style={{ marginBottom: 10 * scal + 'px' }}
+                >
                   <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
                     问题类型:
                   </div>
@@ -138,26 +155,35 @@ export default function App(props) {
                     </select>
                   </div>
                 </div>
-                <div className="item" style={{ alignItems: 'flex-start' }}>
+                <div
+                  className="item"
+                  style={{
+                    alignItems: 'flex-start',
+                    marginBottom: 10 * scal + 'px'
+                  }}
+                >
                   <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
                     求助描述:
                   </div>
-                  <div className="right">
+                  <div className="right" style={{}}>
                     <textarea
                       name=""
                       id=""
-                      rows={3}
                       value={content}
                       onChange={(e) => setContent(e.target.value)}
                       style={{
                         width: 454 * scal + 'px',
                         height: 116 * scal + 'px',
-                        marginLeft: 10 * scal + 'px'
+                        marginLeft: 10 * scal + 'px',
+                        padding: 0
                       }}
                     ></textarea>
                   </div>
                 </div>
-                <div className="item">
+                <div
+                  className="item"
+                  style={{ marginBottom: 18 * scal + 'px' }}
+                >
                   <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
                     联系方式:
                   </div>
@@ -169,7 +195,8 @@ export default function App(props) {
                       style={{
                         width: 454 * scal + 'px',
                         height: 38 * scal + 'px',
-                        marginLeft: 10 * scal + 'px'
+                        marginLeft: 10 * scal + 'px',
+                        padding: 0
                       }}
                     />
                   </div>
@@ -192,7 +219,7 @@ export default function App(props) {
               className="right"
               style={{
                 width: '50%',
-                padding: `${45 * scal}px ${30 * scal}px`
+                padding: `${40 * scal}px ${30 * scal}px ${30 * scal}px`
               }}
             >
               <div
@@ -266,9 +293,7 @@ export default function App(props) {
             </div>
           </div>
         </div>
-        <div className="box22">
-          <img src={png3} alt="" />
-        </div>
+        <div id="container" style={{ height: 320 * scal + 'px' }}></div>
 
         <Footer
           isShow={false}

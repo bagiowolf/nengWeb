@@ -53,7 +53,7 @@
 }
 .legalService .content .boxList .box11 .title,
 .legalService .content .boxList .box11 .msg,
-.legalService .content .boxList .box11 .btn {
+.legalService .content .boxList .box11 .btn111 {
   position: relative;
   z-index: 9;
 }
@@ -87,7 +87,7 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.legalService .content .boxList .box11 .btn {
+.legalService .content .boxList .box11 .btn111 {
   text-align: center;
   background-color: #fff;
   border: 1px solid #1f4ac4;
@@ -103,7 +103,7 @@
   background-color: #2b68ff;
   color: #fff;
 }
-.legalService .content .boxList .active .btn {
+.legalService .content .boxList .active .btn111 {
   background-color: #2b68ff;
   color: #fff;
 }
@@ -137,10 +137,10 @@
   .legalService .content .boxList .box11 .div {
     height: 100px !important;
   }
-  .legalService .content .boxList .active .btn {
+  .legalService .content .boxList .active .btn111 {
     width: 120px !important;
   }
-  .legalService .content .boxList .box11 .btn {
+  .legalService .content .boxList .box11 .btn111 {
     width: 100px !important;
     height: 32px !important;
     line-height: 32px !important;

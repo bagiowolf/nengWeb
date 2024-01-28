@@ -56,7 +56,7 @@
   height: 38px;
   margin-left: 10px;
   border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .ContactUs .content .formBox .form .item select {
   width: 454px;
@@ -70,7 +70,7 @@
   height: 116px;
   margin-left: 10px;
   border: 1px solid #d9d9d9;
-  border-radius: 5px;
+  border-radius: 3px;
 }
 .ContactUs .content .formBox .form .item .left {
 }
@@ -85,7 +85,7 @@
   background-color: #7caaff;
   color: #fff;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .ContactUs .content .formBox > .right {
@@ -113,9 +113,7 @@
 }
 .ContactUs .content .formBox > .right .three .right div {
 }
-.ContactUs .box22 img {
-  width: 100%;
-}
+
 @media (max-width: 768px) {
   .ContactUs .content {
     padding: 20px !important;
@@ -136,23 +134,37 @@
   }
   .ContactUs .content .formBox > .right {
     width: auto !important;
+    padding: 20px !important;
   }
   .ContactUs .content .formBox > .right .three .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     font-size: 12px !important;
     margin-left: 20px !important;
   }
+  .ContactUs #container {
+    height: 200px !important;
+  }
   .ContactUs .content .formBox > .right .three .right div {
-    margin-top: 17px !important;
   }
   .ContactUs .content .formBox .form .item .right {
     flex: 1 !important;
   }
   .ContactUs .content .formBox .form .item select {
-    width: 102% !important;
+    width: 100% !important;
     height: 38px !important;
   }
   .ContactUs .content .formBox > .left {
     padding: 20px !important;
+    width: 100% !important;
+  }
+  .ContactUs .content .formBox .form .item {
+    margin-bottom: 15px !important;
+  }
+  .ContactUs .content .formBox > .right .three img {
+    width: 70px !important;
+    height: 70px !important;
   }
   .ContactUs .content .formBox .form .item input {
     height: 38px !important;
@@ -166,10 +178,31 @@
     line-height: 48px !important;
     font-size: 16px !important;
   }
+  .ContactUs .content .formBox > .right .two {
+    font-size: 12px !important;
+  }
   .ContactUs .content .formBox > .right .two span {
-    font-size: 22px !important;
+    font-size: 14px !important;
   }
   .ContactUs .content .formBox > .right .one {
-    font-size: 28px !important;
+    font-size: 18px !important;
+  }
+  .ContactUs .banner img {
+    height: 150px !important;
+  }
+  .ContactUs .aboutText {
+    left: 10% !important;
+  }
+  .ContactUs .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .ContactUs .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .ContactUs .aboutText .sj div {
+    margin: 0 !important;
   }
 }

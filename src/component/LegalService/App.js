@@ -143,7 +143,7 @@ export default function App(props) {
                       style={{ width: 310 * scal + 'px' }}
                     ></div>
                     <div
-                      className="btn"
+                      className="btn111"
                       onClick={() => setActiveInfo(item)}
                       style={{
                         width: 120 * scal + 'px',
