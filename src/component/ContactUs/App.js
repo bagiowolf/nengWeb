@@ -123,7 +123,8 @@ export default function App(props) {
                 <span
                   style={{
                     fontSize: 22 * scal + 'px',
-                    marginLeft: 10 * scal + 'px'
+                    marginLeft: 10 * scal + 'px',
+                    fontWeight: 400
                   }}
                 >
                   请简单描述您的法律问题，以便我们了解情况
@@ -134,7 +135,10 @@ export default function App(props) {
                   className="item"
                   style={{ marginBottom: 10 * scal + 'px' }}
                 >
-                  <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
+                  <div
+                    className="left"
+                    style={{ fontSize: 16 * scal + 'px', fontWeight: 400 }}
+                  >
                     问题类型:
                   </div>
                   <div className="right">
@@ -162,7 +166,10 @@ export default function App(props) {
                     marginBottom: 10 * scal + 'px'
                   }}
                 >
-                  <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
+                  <div
+                    className="left"
+                    style={{ fontSize: 16 * scal + 'px', fontWeight: 400 }}
+                  >
                     求助描述:
                   </div>
                   <div className="right" style={{}}>
@@ -184,7 +191,10 @@ export default function App(props) {
                   className="item"
                   style={{ marginBottom: 18 * scal + 'px' }}
                 >
-                  <div className="left" style={{ fontSize: 16 * scal + 'px' }}>
+                  <div
+                    className="left"
+                    style={{ fontSize: 16 * scal + 'px', fontWeight: 400 }}
+                  >
                     联系方式:
                   </div>
                   <div className="right">
