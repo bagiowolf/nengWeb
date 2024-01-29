@@ -79,11 +79,39 @@ export default function App(props) {
             windowWidthValue={props.windowWidthValue}
           />
           <div className="banner" onClick={() => setIsShow(false)}>
-            <img src={banner} alt="banner" />
-            <div className="aboutText">
-              <div className="gy">新闻中心</div>
-              <div className="sj">
-                以专业视角，应对各种复杂需求 业务电话：400-651-0001
+            <img
+              src={banner}
+              alt="banner"
+              style={{ height: 340 * scal + 'px' }}
+            />
+            <div
+              className="aboutText"
+              style={{ left: 360 * scal + 'px', textAlign: 'left' }}
+            >
+              <div
+                className="gy"
+                style={{
+                  fontSize: 48 * scal + 'px',
+                  fontWeight: 700,
+                  height: 72 * scal + 'px',
+                  lineHeight: 72 * scal + 'px',
+                  color: '#fff'
+                }}
+              >
+                新闻中心
+              </div>
+              <div
+                className="sj"
+                style={{
+                  fontSize: 24 * scal + 'px',
+                  fontWeight: 400 * scal,
+                  color: '#fff'
+                }}
+              >
+                <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
+                  以专业视角，应对各种复杂需求
+                </div>
+                业务电话：400-652-0001
               </div>
             </div>
           </div>
@@ -93,7 +121,7 @@ export default function App(props) {
             onClick={() => setIsShow(false)}
             style={{
               width: 1360 * scal + 'px',
-              top: -50 * scal + 'px',
+              top: -60 * scal + 'px',
               padding: `${50 * scal}px ${80 * scal}px`
             }}
           >
@@ -103,25 +131,37 @@ export default function App(props) {
                 onClick={() => setInfo(first)}
                 style={{
                   width: 780 * scal + 'px',
-                  height: 337 * scal + 'px',
+                  height: 340 * scal + 'px',
                   marginRight: 50 * scal + 'px'
                 }}
               >
-                <img src={first.image_path} alt="" />
+                <img
+                  src={first.image_path}
+                  alt=""
+                  style={{ width: '100%', height: '100%' }}
+                />
                 <div
                   className="text"
-                  style={{ bottom: 50 * scal + 'px', left: 60 * scal + 'px' }}
+                  style={{ bottom: 20 * scal + 'px', left: 30 * scal + 'px' }}
                 >
                   <div
                     className="bigText"
                     style={{
                       fontSize: 24 * scal + 'px',
-                      marginBottom: 10 * scal + 'px'
+                      lineHeight: 48 * scal + 'px'
                     }}
                   >
-                    {first.title}
+                    {/* {first.title} */}
+                    行政公益诉讼典型案例
                   </div>
-                  <div>/阅读全文</div>
+                  <div
+                    style={{
+                      fontSize: 14 * scal + 'px',
+                      lineHeight: 28 * scal + 'px'
+                    }}
+                  >
+                    /阅读全文
+                  </div>
                 </div>
               </div>
               <div className="right">
@@ -131,7 +171,14 @@ export default function App(props) {
                     key={item.id}
                     onClick={() => setInfo(item)}
                   >
-                    <div className="time" onClick={() => setInfo(item)}>
+                    <div
+                      className="time"
+                      style={{
+                        fontSize: 14 * scal + 'px',
+                        lineHeight: 28 * scal + 'px'
+                      }}
+                      onClick={() => setInfo(item)}
+                    >
                       {item.published_at}
                     </div>
                     <div
@@ -139,8 +186,8 @@ export default function App(props) {
                       onClick={() => setInfo(item)}
                       style={{
                         fontSize: 24 * scal + 'px',
-                        marginBottom: 12 * scal + 'px',
-                        height: 56 * scal + 'px'
+                        height: 78 * scal + 'px',
+                        fontWeight: 400
                       }}
                     >
                       {item.title}
@@ -156,17 +203,27 @@ export default function App(props) {
                   key={item.id}
                   onClick={() => setInfo(item)}
                   style={{
-                    marginBottom: 12 * scal + 'px',
-                    paddingBottom: 28 * scal + 'px'
+                    marginBottom: 17 * scal + 'px',
+                    paddingBottom: 17 * scal + 'px'
                   }}
                 >
-                  <div className="time">{item.published_at}</div>
+                  <div
+                    className="time"
+                    style={{
+                      fontSize: 14 * scal + 'px',
+                      lineHeight: 28 * scal + 'px',
+                      fontWeight: 400
+                    }}
+                  >
+                    {item.published_at}
+                  </div>
                   <div
                     className="title"
                     style={{
                       fontSize: 24 * scal + 'px',
-                      marginBottom: 12 * scal + 'px',
-                      height: 56 * scal + 'px'
+                      lineHeight: 48 * scal + 'px',
+                      height: 48 * scal + 'px',
+                      fontWeight: 400
                     }}
                   >
                     {item.title}

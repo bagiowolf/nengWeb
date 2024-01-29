@@ -11,8 +11,7 @@
 .NewsCenter .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #000;
 }
 .NewsCenter .aboutText .gy {
@@ -64,15 +63,12 @@
 .NewsCenter .content .time {
   font-size: 14px;
   color: #2b68ff;
-  margin-bottom: 12px;
 }
 .NewsCenter .content .newsList {
-  margin-top: 10px;
 }
 .NewsCenter .content .title {
   font-size: 24px;
-  color: #010101;
-  margin-bottom: 12px;
+  color: #000;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* 指定显示的行数 */
@@ -179,8 +175,34 @@
     margin-bottom: 12px !important;
 
     height: 30px !important;
+    line-height: normal !important;
   }
   .NewsCenter .content .msg {
     font-size: 18px !important;
+  }
+  .NewsCenter .content .time {
+    font-size: 12px !important;
+    line-height: normal !important;
+  }
+  .NewsCenter .content .news {
+    margin-bottom: 15px !important;
+  }
+  .NewsCenter .banner img {
+    height: 150px !important;
+  }
+  .NewsCenter .aboutText {
+    left: 10% !important;
+  }
+  .NewsCenter .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .NewsCenter .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .NewsCenter .aboutText .sj div {
+    margin: 0 !important;
   }
 }

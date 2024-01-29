@@ -93,7 +93,7 @@ export default function App(props) {
             <div className="aboutText">
               <div className="gy">成功案例</div>
               <div className="sj">
-                以专业视角，应对各种复杂需求 业务电话：400-651-0001
+                以专业视角，应对各种复杂需求 业务电话：400-652-0001
               </div>
             </div>
           </div>

@@ -8,8 +8,7 @@
 .newsInfo .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .newsInfo .aboutText .gy {
@@ -54,5 +53,23 @@
   .newsInfo .content .creat {
     font-size: 16px;
     margin-bottom: 10px;
+  }
+  .newsInfo .banner img {
+    height: 150px !important;
+  }
+  .newsInfo .aboutText {
+    left: 10% !important;
+  }
+  .newsInfo .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .newsInfo .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .newsInfo .aboutText .sj div {
+    margin: 0 !important;
   }
 }

@@ -107,7 +107,7 @@ export default function App(props) {
               <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
                 以专业视角，应对各种复杂需求
               </div>
-              业务电话：400-651-0001
+              业务电话：400-652-0001
             </div>
           </div>
         </div>

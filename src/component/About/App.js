@@ -108,7 +108,7 @@ export default function MyApp(props) {
             >
               以专业视角，应对各种复杂需求
               <div style={{ marginTop: 20 * scal + 'px' }}>
-                业务电话：400-651-0001
+                业务电话：400-652-0001
               </div>
             </div>
           </div>
@@ -270,7 +270,7 @@ export default function MyApp(props) {
             <div className="gy1">关于我们</div>
             <div className="sj">
               以专业视角，应对各种复杂需求
-              <div>业务电话：400-651-0001</div>
+              <div>业务电话：400-652-0001</div>
             </div>
           </div>
         </div>
