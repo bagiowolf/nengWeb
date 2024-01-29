@@ -37,16 +37,16 @@
   align-items: center;
   letter-spacing: 3px;
 }
-.team .content .big .left .btn {
+.team .content .big .left .btn1 {
   width: 120px;
   height: 38px;
   line-height: 38px;
   color: #fff;
   background-color: #2b68ff;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
-.team .content .big .left .info {
+.team .content .big .left .info1 {
   color: #2b68ff;
   cursor: pointer;
 }
@@ -118,16 +118,16 @@
   align-items: center;
   letter-spacing: 3px;
 }
-.team .content .boxList .left .btn {
+.team .content .boxList .left .btn1 {
   width: 120px;
   height: 38px;
   line-height: 38px;
   color: #fff;
   background-color: #2b68ff;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
 }
-.team .content .boxList .left .info {
+.team .content .boxList .left .info1 {
   color: #2b68ff;
   cursor: pointer;
 }
@@ -213,7 +213,7 @@
   flex-direction: column;
   align-items: center;
 }
-.mobile .content .boxList .left .btn {
+.mobile .content .boxList .left .btn1 {
   text-align: center;
   margin-bottom: 10px;
   width: 120px;
@@ -221,9 +221,9 @@
   line-height: 30px;
   color: #fff;
   background-color: #2b68ff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
-.mobile .content .boxList .left .info {
+.mobile .content .boxList .left .info1 {
   color: #2b68ff;
 }
 .mobile .content .boxList .left .img {

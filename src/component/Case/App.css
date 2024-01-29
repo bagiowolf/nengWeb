@@ -8,8 +8,7 @@
 .case .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .case .aboutText .gy {
@@ -35,11 +34,16 @@
   font-size: 18px;
   padding-left: 10px;
   margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  color: #000;
 }
 .case .content .type select {
   font-size: 18px;
   border: none;
   margin-left: 15px;
+  width: 100px;
+  padding: 0;
 }
 .case .content .type select option {
   font-size: 16px;
@@ -55,6 +59,7 @@
   border-radius: 5px;
   box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.25);
   margin-bottom: 30px;
+  position: relative;
 }
 .case .content .box > img {
   height: 214px;
@@ -63,20 +68,18 @@
 }
 .case .content .box .title {
   font-size: 22px;
-  padding: 20px;
   box-sizing: border-box;
   padding-bottom: 0 !important;
   text-align: left;
 }
 .case .content .box .msg {
-  padding: 20px;
   box-sizing: border-box;
   font-size: 18px;
   color: #666;
   padding-bottom: 0;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 4; /* 指定显示的行数 */
+  -webkit-line-clamp: 3; /* 指定显示的行数 */
   -webkit-box-orient: vertical;
   height: 114px;
 }
@@ -84,8 +87,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
   padding-top: 0 !important;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
 }
 .case .content .box .bottm .category {
   padding: 0 5px;
@@ -182,10 +187,17 @@
   }
   .case .content .box .title {
     padding-top: 10px !important;
+    line-height: normal !important;
+    max-height: 65px !important;
+    padding: 10px !important;
   }
   .case .content .dn,
   .case .xz {
     display: none !important;
+  }
+  .case .content .box .bottm {
+    height: 40px;
+    padding: 10px !important;
   }
   .case .content .lookMore {
     width: 215px !important;
@@ -199,6 +211,9 @@
   .case .content .box .msg {
     font-size: 16px !important;
     height: auto !important;
+    margin-bottom: 40px;
+    padding: 10px !important;
+    padding-bottom: 0 !important;
   }
   .case .content .box .bottm .category {
     height: auto !important;
@@ -206,5 +221,23 @@
   }
   .case .content .box {
     margin-bottom: 10px !important;
+  }
+  .case .banner img {
+    height: 150px !important;
+  }
+  .case .aboutText {
+    left: 10% !important;
+  }
+  .case .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .case .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .case .aboutText .sj div {
+    margin: 0 !important;
   }
 }

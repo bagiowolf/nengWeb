@@ -10,6 +10,7 @@ export default function App(props) {
 
   const [isShow, setIsShow] = useState(false)
   const { info } = props
+  console.log(info)
   return (
     <div>
       <div className="newsInfo">
@@ -18,6 +19,7 @@ export default function App(props) {
           onSetState={props.onSetState}
           isShow={isShow}
           onSetIsShow={setIsShow}
+          windowWidthValue={props.windowWidthValue}
         />
         <div className="banner" onClick={() => setIsShow(false)}>
           <img
@@ -58,10 +60,24 @@ export default function App(props) {
         </div>
 
         <div className="content" onClick={() => setIsShow(false)}>
-          <div className="title">{info.title}</div>
-          <div className="time">{info.published_at}</div>
-          <div className="msg">{returnDom(info.content)}</div>
-          <div className="creat">编辑：{info.editor}</div>
+          <div
+            className="title1"
+            style={{ fontSize: 34 * scal + 'px', fontWeight: 400 }}
+          >
+            {info.title}
+          </div>
+          <div className="time" style={{ fontSize: 20 * scal + 'px' }}>
+            {info.published_at}{' '}
+            <span style={{ marginLeft: '10px' }}>
+              观看次数: {info.view_count}
+            </span>
+          </div>
+          <div className="msg" style={{ fontSize: 24 * scal + 'px' }}>
+            {returnDom(info.content)}
+          </div>
+          <div className="creat" style={{ fontSize: 24 * scal + 'px' }}>
+            编辑：{info.editor}
+          </div>
         </div>
         <Footer
           onSetState={props.onSetState}

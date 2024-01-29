@@ -8,8 +8,7 @@
 .caseInfo .banner .aboutText {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
   color: #8f8f8f;
 }
 .caseInfo .aboutText .gy {
@@ -56,15 +55,33 @@
     padding: 20px !important;
   }
   .caseInfo .content .title {
-    font-size: 30px !important;
+    font-size: 16px !important;
   }
   .caseInfo .content .msg {
-    font-size: 20px !important;
+    font-size: 12px !important;
   }
   .caseInfo .content .png3 {
     width: 100% !important;
   }
   .caseInfo .content .num div img {
     width: auto !important;
+  }
+  .caseInfo .banner img {
+    height: 150px !important;
+  }
+  .caseInfo .aboutText {
+    left: 10% !important;
+  }
+  .caseInfo .aboutText .gy {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    height: 21px !important;
+    line-height: normal !important;
+  }
+  .caseInfo .aboutText .sj {
+    font-size: 16px !important;
+  }
+  .caseInfo .aboutText .sj div {
+    margin: 0 !important;
   }
 }

@@ -22,10 +22,10 @@
 .PersonalData .aboutText .sj {
   font-size: 18px;
 }
-.PersonalData .info {
+.PersonalData .info1 {
   display: flex;
 }
-.PersonalData .info .left {
+.PersonalData .info1 .left {
   width: 191px;
   height: 333px;
   border-radius: 10px;
@@ -34,32 +34,32 @@
   flex-direction: column;
   align-items: center;
 }
-.PersonalData .info .left .img {
+.PersonalData .info1 .left .img {
   width: 125px;
   height: 125px;
   border-radius: 50%;
   overflow: hidden;
   margin: 30px 0 10px 0;
 }
-.PersonalData .info .left .img img {
+.PersonalData .info1 .left .img img {
   width: 100%;
   height: 100%;
 }
-.PersonalData .info .left .name {
+.PersonalData .info1 .left .name {
   color: #333;
 }
-.PersonalData .info .left .line {
+.PersonalData .info1 .left .line {
   width: 60px;
   border: 3px solid #184add;
   margin: 15px 0;
 }
-.PersonalData .info .left .num {
+.PersonalData .info1 .left .num {
   color: #999;
 }
-.PersonalData .info .left .num span {
+.PersonalData .info1 .left .num span {
   color: #000;
 }
-.PersonalData .info .left .zx1 {
+.PersonalData .info1 .left .zx1 {
   width: 120px;
   height: 32px;
   line-height: 32px;
@@ -71,26 +71,26 @@
   margin-top: 15px;
   box-shadow: 0px 3px 7px 0px #00000059;
 }
-.PersonalData .info .right {
+.PersonalData .info1 .right {
   margin-left: 30px;
   text-align: left;
   width: 976px;
 }
-.PersonalData .info .right .title {
+.PersonalData .info1 .right .title {
   font-size: 38px;
   letter-spacing: 3px;
 }
-.PersonalData .info .right .msg {
+.PersonalData .info1 .right .msg {
   font-size: 16px;
   color: #787878;
   letter-spacing: 3px;
   line-height: 20px;
   font-weight: 700;
 }
-.PersonalData .info .right .msg span {
+.PersonalData .info1 .right .msg span {
   color: #171717;
 }
-.PersonalData .info .right .pj {
+.PersonalData .info1 .right .pj {
   margin-top: 40px;
 }
 
@@ -101,43 +101,43 @@
   .PersonalData .content {
     padding: 20px !important;
   }
-  .PersonalData .info .left .line {
+  .PersonalData .info1 .left .line {
     border-width: 1px !important;
   }
-  .PersonalData .info .left .name {
+  .PersonalData .info1 .left .name {
     font-size: 12px !important;
   }
-  .PersonalData .info .left .num {
+  .PersonalData .info1 .left .num {
     font-size: 11px !important;
   }
-  .PersonalData .info .right {
+  .PersonalData .info1 .right {
     margin-left: 20px !important;
     width: auto !important;
   }
-  .PersonalData .info .left {
+  .PersonalData .info1 .left {
     width: 110px !important;
     padding: 10px;
     height: 215px !important;
   }
-  .PersonalData .info .left .zx1 {
+  .PersonalData .info1 .left .zx1 {
     width: 80px !important;
     height: 28px !important;
     line-height: 28px !important;
     font-size: 14px !important;
   }
-  .PersonalData .info .right .title {
+  .PersonalData .info1 .right .title {
     font-size: 16px !important;
     letter-spacing: 1px !important;
     margin-bottom: 15px !important;
   }
-  .PersonalData .info .right .msg {
+  .PersonalData .info1 .right .msg {
     font-size: 12px !important;
     line-height: 16px !important;
   }
-  .PersonalData .info .right .pj {
+  .PersonalData .info1 .right .pj {
     margin-top: 20px !important;
   }
-  .PersonalData .info .left .img {
+  .PersonalData .info1 .left .img {
     width: 100px !important;
     height: 100px !important;
   }

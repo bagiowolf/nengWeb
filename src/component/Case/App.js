@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
-import banner from '../../assets/banner.png'
+import banner from './img/Group 18.png'
 import png1 from './img/png1.png'
 import png3 from './img/png3.png'
 import png4 from './img/png4.png'
@@ -89,11 +89,39 @@ export default function App(props) {
             windowWidthValue={props.windowWidthValue}
           />
           <div className="banner" onClick={() => setIsShow(false)}>
-            <img src={banner} alt="banner" />
-            <div className="aboutText">
-              <div className="gy">成功案例</div>
-              <div className="sj">
-                以专业视角，应对各种复杂需求 业务电话：400-652-0001
+            <img
+              src={banner}
+              alt="banner"
+              style={{ height: 340 * scal + 'px' }}
+            />
+            <div
+              className="aboutText"
+              style={{ left: 360 * scal + 'px', textAlign: 'left' }}
+            >
+              <div
+                className="gy"
+                style={{
+                  fontSize: 48 * scal + 'px',
+                  fontWeight: 700,
+                  height: 72 * scal + 'px',
+                  lineHeight: 72 * scal + 'px',
+                  color: '#fff'
+                }}
+              >
+                成功案例
+              </div>
+              <div
+                className="sj"
+                style={{
+                  fontSize: 24 * scal + 'px',
+                  fontWeight: 400 * scal,
+                  color: '#fff'
+                }}
+              >
+                <div style={{ margin: `${5 * scal}px 0 ${20 * scal}px` }}>
+                  以专业视角，应对各种复杂需求
+                </div>
+                业务电话：400-652-0001
               </div>
             </div>
           </div>
@@ -103,18 +131,26 @@ export default function App(props) {
             onClick={() => setIsShow(false)}
             style={{ padding: `${60 * scal}px ${360 * scal}px` }}
           >
-            <div className="title" style={{ fontSize: 38 * scal + 'px' }}>
-              已帮助<span>30,000+</span>当事人成功解决问题
+            <div
+              className="title"
+              style={{
+                fontSize: 50 * scal + 'px',
+                lineHeight: 100 * scal + 'px',
+                fontWeight: 400
+              }}
+            >
+              已帮助<span>30,000+当事人成功解决问题</span>
             </div>
             <div
               className="type"
               style={{
                 fontSize: 18 * scal + 'px',
                 marginBottom: 15 * scal + 'px',
-                paddingLeft: 10 * scal + 'px'
+                paddingLeft: 10 * scal + 'px',
+                fontWeight: 400
               }}
             >
-              案例分类:
+              <span>案例分类:</span>
               <select
                 onChange={(e) => setData(e.target.value)}
                 value={type}
@@ -145,19 +181,27 @@ export default function App(props) {
                   style={{
                     width: 380 * scal + 'px',
                     height: 435 * scal + 'px',
-                    marginBottom: 30 * scal + 'px'
+                    marginBottom: 30 * scal + 'px',
+                    boxSizing: 'border-box'
                   }}
                 >
                   <img
                     src={item.case_image_path}
                     alt=""
-                    style={{ height: 214 * scal + 'px' }}
+                    style={{
+                      height: 210 * scal + 'px',
+                      marginBottom: 10 * scal + 'px'
+                    }}
                   />
                   <div
                     className="title"
                     style={{
                       fontSize: 22 * scal + 'px',
-                      padding: 15 * scal + 'px'
+                      lineHeight: 30 * scal + 'px',
+                      fontWeight: 400,
+                      paddingLeft: 16 * scal + 'px',
+                      maxHeight: 74 * scal + 'px',
+                      marginBottom: 10 * scal + 'px'
                     }}
                   >
                     {item.title}
@@ -165,10 +209,10 @@ export default function App(props) {
                   <div
                     className="msg"
                     style={{
-                      padding: 15 * scal + 'px',
+                      paddingLeft: 16 * scal + 'px',
+                      paddingRight: 16 * scal + 'px',
                       fontSize: 18 * scal + 'px',
-                      height: 114 * scal + 'px',
-                      paddingTop: 0
+                      height: 80 * scal + 'px'
                     }}
                   >
                     {returnDom(item.content)}
@@ -198,7 +242,8 @@ export default function App(props) {
                   lineHeight: 48 * scal + 'px',
                   fontSize: 20 * scal + 'px',
                   marginTop: 20 * scal + 'px',
-                  marginBottom: 87 * scal + 'px'
+                  marginBottom: 87 * scal + 'px',
+                  fontWeight: 400
                 }}
                 onClick={loadMore}
               >

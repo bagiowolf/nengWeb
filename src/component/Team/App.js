@@ -13,6 +13,7 @@ import png7 from './img/png7.png'
 import PersonalData from '../PersonalData/App'
 import Form from '../Form/App'
 import zx from '../Index/img/zx.png'
+import toRight from './img/toRight.png'
 
 let big = {
   name: '王玉',
@@ -175,15 +176,31 @@ export default function App(props) {
                   >
                     <img src={png1} alt="" />
                   </div>
-                  <div
-                    className="btn"
-                    onClick={() => setActiveFun(big)}
-                    style={{ width: 120 * scal + 'px' }}
-                  >
-                    立即预约
-                  </div>
-                  <div className="info" onClick={() => setActiveFun(big)}>
-                    查看详情
+                  <div>
+                    <div
+                      className="btn1"
+                      onClick={() => setActiveFun(big)}
+                      style={{
+                        width: 120 * scal + 'px',
+                        height: 32 * scal + 'px',
+                        lineHeight: 32 * scal + 'px',
+                        fontSize: 16 * scal + 'px',
+                        marginBottom: 15 * scal + 'px'
+                      }}
+                    >
+                      立即预约
+                    </div>
+                    <div className="info1" onClick={() => setActiveFun(big)}>
+                      查看详情
+                      <img
+                        src={toRight}
+                        style={{
+                          width: 16 * scal + 'px',
+                          height: 10 * scal + 'px',
+                          marginLeft: 5 * scal + 'px'
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div
@@ -231,15 +248,34 @@ export default function App(props) {
                       >
                         <img src={item.img} alt="" />
                       </div>
-                      <div
-                        className="btn"
-                        onClick={() => setActiveFun(item)}
-                        style={{ width: 120 * scal + 'px' }}
-                      >
-                        立即预约
-                      </div>
-                      <div className="info" onClick={() => setActiveFun(item)}>
-                        查看详情
+                      <div>
+                        <div
+                          className="btn1"
+                          onClick={() => setActiveFun(item)}
+                          style={{
+                            width: 120 * scal + 'px',
+                            height: 32 * scal + 'px',
+                            lineHeight: 32 * scal + 'px',
+                            fontSize: 16 * scal + 'px',
+                            marginBottom: 15 * scal + 'px'
+                          }}
+                        >
+                          立即预约
+                        </div>
+                        <div
+                          className="info1"
+                          onClick={() => setActiveFun(item)}
+                        >
+                          查看详情
+                          <img
+                            src={toRight}
+                            style={{
+                              width: 16 * scal + 'px',
+                              height: 10 * scal + 'px',
+                              marginLeft: 5 * scal + 'px'
+                            }}
+                          />
+                        </div>
                       </div>
                     </div>
                     <div
@@ -323,10 +359,14 @@ export default function App(props) {
                       <img src={png1} alt="" />
                     </div>
                     <div className="btnBox">
-                      <div className="btn" onClick={() => setActiveFun(big)}>
+                      <div
+                        className="btn"
+                        onClick={() => setActiveFun(big)}
+                        style={{ marginBottom: '10px' }}
+                      >
                         立即预约
                       </div>
-                      <div className="info" onClick={() => setActiveFun(big)}>
+                      <div className="info1" onClick={() => setActiveFun(big)}>
                         查看详情
                       </div>
                     </div>
@@ -355,14 +395,22 @@ export default function App(props) {
                   <div className="boxList" key={index}>
                     <div className="left">
                       <div className="img">
-                        <img src={item.img} alt="" />
+                        <img
+                          src={item.img}
+                          alt=""
+                          style={{ paddingBottom: 0 }}
+                        />
                       </div>
                       <div className="btnBox">
-                        <div className="btn" onClick={() => setActiveFun(item)}>
+                        <div
+                          className="btn"
+                          onClick={() => setActiveFun(item)}
+                          style={{ marginBottom: '10px' }}
+                        >
                           立即预约
                         </div>
                         <div
-                          className="info"
+                          className="info1"
                           onClick={() => setActiveFun(item)}
                         >
                           查看详情

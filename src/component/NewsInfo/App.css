@@ -22,7 +22,7 @@
   padding: 70px 360px;
   text-align: left;
 }
-.newsInfo .content .title {
+.newsInfo .content .title1 {
   font-size: 40px;
   color: #333333;
   margin-bottom: 30px;
@@ -44,14 +44,14 @@
     padding: 20px;
     letter-spacing: 2px;
   }
-  .newsInfo .content .title {
-    font-size: 24px;
+  .newsInfo .content .title1 {
+    font-size: 16px !important;
     margin-bottom: 10px;
   }
   .newsInfo .content .time,
   .newsInfo .content .msg,
   .newsInfo .content .creat {
-    font-size: 16px;
+    font-size: 12px !important;
     margin-bottom: 10px;
   }
   .newsInfo .banner img {

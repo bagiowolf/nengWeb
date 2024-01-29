@@ -116,7 +116,7 @@ export default function App(props) {
           onClick={() => setIsShow(false)}
           style={{ padding: `${80 * scal}px ${360 * scal}px` }}
         >
-          <div className="info">
+          <div className="info1">
             <div
               className="left"
               style={{ width: 190 * scal + 'px', height: 333 * scal + 'px' }}
