@@ -360,7 +360,7 @@ export default function App(props) {
                     </div>
                     <div className="btnBox">
                       <div
-                        className="btn"
+                        className="btn1"
                         onClick={() => setActiveFun(big)}
                         style={{ marginBottom: '10px' }}
                       >
@@ -403,7 +403,7 @@ export default function App(props) {
                       </div>
                       <div className="btnBox">
                         <div
-                          className="btn"
+                          className="btn1"
                           onClick={() => setActiveFun(item)}
                           style={{ marginBottom: '10px' }}
                         >

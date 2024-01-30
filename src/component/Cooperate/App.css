@@ -268,8 +268,9 @@
     flex-wrap: wrap;
     margin-right: 10px;
     width: 100px;
-    align-items: flex-start;
+    text-align: center;
     margin-bottom: 20px !important;
+    line-height: normal !important;
   }
   .cooperate .content .box5 {
     padding: 20px !important;

@@ -509,6 +509,7 @@ div.HeadDivBg9 {
   }
   .gy .left {
     width: 100% !important;
+    padding: 20px;
   }
   .gy .left .title {
     font-size: 18px !important;
