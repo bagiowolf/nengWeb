@@ -158,11 +158,12 @@ export default function App(props) {
                   style={{
                     color: '#5A5A5A',
                     lineHeight: 30 + 'px',
-                    marginBottom: 20 * scal + 'px'
+                    marginBottom: 20 * scal + 'px',
+                    textIndent: '2em'
                   }}
                   className=""
                 >
-                  通过打造律师的全网IP，无论你是创始人律师、合伙人律师或是独立律师我们竭律帮助您打造个人品牌，依靠全网高流量平台快速建立自己的个人品牌知名度，帮您迅速占领法律市场份额，为您在今后的职业生涯中带来更大的自身价值，成就您的法律事业
+                  通过打造律师的全网IP，无论你是创始人律师、合伙人律师或是独立律师我们竭律帮助您打造个人品牌，依靠全网高流量平台快速建立自己的个人品牌知名度，帮您迅速占领法律市场份额，为您在今后的职业生涯中带来更大的自身价值，成就您的法律事业。
                 </div>
                 <div className="gs" style={{ fontSize: 16 * scal + 'px' }}>
                   {icon.map((item, index) => (

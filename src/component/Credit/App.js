@@ -186,7 +186,7 @@ export default function App(props) {
             >
               您是否正在面临一些问题?
             </div>
-            <div className="imgBox">
+            <div className="imgBox" style={{ fontWeight: 400 }}>
               <div
                 className="block"
                 style={{
@@ -366,7 +366,7 @@ export default function App(props) {
                   ></span>{' '}
                   作为企业
                 </div>
-                <span style={{ marginLeft: 16 * scal + 'px' }}>
+                <span style={{ marginLeft: 16 * scal + 'px' }} className="sj">
                   将在以后的经营中将举步维艰，四处碰壁，如贷款，招投标，上市，业务往来等等都将受限制。
                 </span>
               </p>
@@ -395,7 +395,7 @@ export default function App(props) {
                   ></span>{' '}
                   作为个人
                 </div>
-                <span style={{ marginLeft: 16 * scal + 'px' }}>
+                <span style={{ marginLeft: 16 * scal + 'px' }} className="sj">
                   安分守法却突然发现，因被有关部门认定为涉嫌诈骗或存在风险而冻结银行账户，甚至惹上官司。
                 </span>
               </p>
@@ -463,10 +463,11 @@ export default function App(props) {
             <div
               className="text1"
               style={{
-                fontSize: 16 * scal + 'px',
+                fontSize: 18 * scal + 'px',
                 width: 520 * scal + 'px',
                 lineHeight: 34 * scal + 'px',
-                marginLeft: 32 * scal + 'px'
+                marginLeft: 32 * scal + 'px',
+                fontWeight: 400
               }}
             >
               <div>中华人民共和国行政处罚法</div>

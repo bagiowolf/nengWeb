@@ -87,6 +87,10 @@
   margin: 0;
   text-indent: 2em;
 }
+.credit .box3 .textArte .left .sj {
+  text-indent: 2em;
+  display: inline-block;
+}
 .credit .box3 .textArte .left p .tit {
   text-indent: 0;
   display: flex;

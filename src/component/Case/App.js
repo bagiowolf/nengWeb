@@ -207,7 +207,7 @@ export default function App(props) {
                   onClick={() => setActive(item)}
                   style={{
                     width: 380 * scal + 'px',
-                    height: 435 * scal + 'px',
+                    height: 400 * scal + 'px',
                     marginBottom: 30 * scal + 'px',
                     boxSizing: 'border-box'
                   }}
@@ -244,7 +244,7 @@ export default function App(props) {
                   >
                     {returnDom(item.content)}
                   </div>
-                  <div className="bottm" style={{ padding: 15 * scal + 'px' }}>
+                  {/* <div className="bottm" style={{ padding: 15 * scal + 'px' }}>
                     <div
                       className="category"
                       style={{
@@ -256,7 +256,7 @@ export default function App(props) {
                       {item.category}
                     </div>
                     <img src={png1} alt="" />
-                  </div>
+                  </div> */}
                 </div>
               ))}
             </div>

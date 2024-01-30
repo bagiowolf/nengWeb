@@ -135,7 +135,8 @@ export default function MyApp(props) {
                 key={index}
                 style={{
                   fontSize: 16 * scal + 'px',
-                  marginBottom: 27 * scal + 'px'
+                  marginBottom: 27 * scal + 'px',
+                  textIndent: '2em'
                 }}
               >
                 {item}

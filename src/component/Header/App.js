@@ -36,7 +36,8 @@ export default function App(props) {
             style={{
               width: 300 * scal + 'px',
               fontSize: 14 * scal + 'px',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              fontWeight: 400
             }}
           >
             <img
@@ -45,7 +46,8 @@ export default function App(props) {
               alt="logo"
               style={{
                 width: 286 * scal + 'px',
-                marginBottom: 5 * scal + 'px'
+                marginBottom: 5 * scal + 'px',
+                height: 32 * scal + 'px'
               }}
               onClick={() => props.onSetState(0)}
             />
@@ -79,7 +81,11 @@ export default function App(props) {
           </div>
           <div
             className="right"
-            style={{ width: 868 * scal + 'px', fontSize: 16 * scal + 'px' }}
+            style={{
+              width: 868 * scal + 'px',
+              fontSize: 16 * scal + 'px',
+              fontWeight: 400
+            }}
           >
             {list.map((item, index) => (
               <span
