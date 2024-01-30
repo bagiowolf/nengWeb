@@ -1782,7 +1782,7 @@ export default function App(props) {
                     <div
                       className="HeadDivBg12"
                       style={{
-                        height: 48 * scal + 'px',
+                        height: 60 * scal + 'px',
                         fontSize: 15 * scal + 'px',
                         color: '#999'
                       }}
@@ -1862,7 +1862,7 @@ export default function App(props) {
                       <div
                         className="HeadDivBg12"
                         style={{
-                          height: 48 * scal + 'px',
+                          height: 60 * scal + 'px',
                           fontSize: 15 * scal + 'px',
                           color: '#999'
                         }}
@@ -2083,8 +2083,8 @@ export default function App(props) {
                   <div
                     className="msg1"
                     style={{
-                      fontSize: 16 * scal + 'px',
-                      height: 95 * scal + 'px',
+                      fontSize: 16 + 'px',
+                      height: 90 + 'px',
                       overflow: 'hidden'
                     }}
                   >

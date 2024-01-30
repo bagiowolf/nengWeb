@@ -11,7 +11,7 @@ export default function App(props) {
 
   const [isShow, setIsShow] = useState(false)
   const { info } = props
-  console.log(info)
+  console.log(props)
   useEffect(() => {
     get(`/update_view_news/${info.id}/increment_view`)
   }, [])

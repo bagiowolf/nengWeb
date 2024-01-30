@@ -109,7 +109,10 @@ export default function App(props) {
           {/* <img src={info.case_image_path} alt="" className="png3" /> */}
         </div>
 
-        <Footer windowWidthValue={props.windowWidthValue} />
+        <Footer
+          windowWidthValue={props.windowWidthValue}
+          onSetState={props.onSetState}
+        />
       </div>
     </div>
   )

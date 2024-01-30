@@ -239,7 +239,7 @@ export default function App(props) {
                       paddingLeft: 16 * scal + 'px',
                       paddingRight: 16 * scal + 'px',
                       fontSize: 18 * scal + 'px',
-                      height: 80 * scal + 'px'
+                      height: 100 * scal + 'px'
                     }}
                   >
                     {returnDom(item.content)}

@@ -71,6 +71,10 @@
   box-sizing: border-box;
   padding-bottom: 0 !important;
   text-align: left;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* 指定显示的行数 */
+  -webkit-box-orient: vertical;
 }
 .case .content .box .msg {
   box-sizing: border-box;
@@ -79,7 +83,7 @@
   padding-bottom: 0;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* 指定显示的行数 */
+  -webkit-line-clamp: 4; /* 指定显示的行数 */
   -webkit-box-orient: vertical;
   height: 114px;
 }
@@ -191,6 +195,7 @@
     line-height: normal !important;
     max-height: 65px !important;
     padding: 10px !important;
+    height: 40px !important;
   }
   .case .content .dn,
   .case .xz {
