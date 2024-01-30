@@ -230,7 +230,9 @@ export default function Footer(props) {
             <div style={{ fontSize: 22 * scal + 'px' }}>
               <div>
                 已经为
-                <span style={{ width: '57px', display: 'inline-block' }}>
+                <span
+                  style={{ width: 70 * scal + 'px', display: 'inline-block' }}
+                >
                   <NumberAnimation
                     targetValue={num.form_litigant}
                     isSplit={true}
@@ -240,7 +242,9 @@ export default function Footer(props) {
               </div>
               <div>
                 为当事人争取直接经济利益
-                <span style={{ width: '120px', display: 'inline-block' }}>
+                <span
+                  style={{ width: 140 * scal + 'px', display: 'inline-block' }}
+                >
                   <NumberAnimation
                     targetValue={num.form_economic_losses}
                     isSplit={true}

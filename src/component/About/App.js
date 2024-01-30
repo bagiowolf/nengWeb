@@ -149,7 +149,7 @@ export default function MyApp(props) {
                 style={{
                   fontSize: 56 * scal + 'px',
                   fontWeight: 'bold',
-                  width: 179 * scal + 'px'
+                  width: 184 * scal + 'px'
                 }}
               >
                 {/* 30,000 */}
@@ -185,7 +185,7 @@ export default function MyApp(props) {
                   亿
                 </span>
                 <span
-                  style={{ width: 136 * scal + 'px', display: 'inline-block' }}
+                  style={{ width: 141 * scal + 'px', display: 'inline-block' }}
                 >
                   <NumberAnimation
                     targetValue={wan}

@@ -541,7 +541,7 @@ export default function App(props) {
                 ></NumberAnimation>
                 <span style={{ fontSize: 34 * scal + 'px' }}>亿</span>
                 <span
-                  style={{ width: 117 * scal + 'px', display: 'inline-block' }}
+                  style={{ width: 122 * scal + 'px', display: 'inline-block' }}
                 >
                   <NumberAnimation
                     targetValue={wan}
@@ -613,7 +613,7 @@ export default function App(props) {
                     已经为
                     <span
                       style={{
-                        width: 27 * scal + 'px',
+                        width: 45 * scal + 'px',
                         display: 'inline-block'
                       }}
                     >
@@ -628,7 +628,7 @@ export default function App(props) {
                     为当事人争取直接经济利益{' '}
                     <span
                       style={{
-                        width: 55 * scal + 'px',
+                        width: 80 * scal + 'px',
                         display: 'inline-block'
                       }}
                     >
