@@ -138,12 +138,9 @@
   position: relative;
   z-index: 9;
   text-align: center;
-  margin-top: 80px;
-  font-size: 38px;
   color: #fff;
-  margin-bottom: 30px;
 }
-.case .xz .box {
+.case .xz .box111 {
   position: relative;
   z-index: 9;
   width: 1684px;
@@ -154,6 +151,10 @@
   border-radius: 10px;
   left: 50%;
   transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
 .case .xz .box img {
   width: 100%;

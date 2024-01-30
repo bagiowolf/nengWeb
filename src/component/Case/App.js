@@ -11,6 +11,33 @@ import Form from '../Form/App'
 import { get } from '../../utils/api/api'
 import returnDom from '../../utils/returnDom'
 import formatTime from '../../utils/formatTime/time'
+import al from './img/logo/Frame 186.png'
+import wr from './img/logo/Frame 187.png'
+import hw from './img/logo/Frame 188.png'
+import zj from './img/logo/Frame 189.png'
+import ymx from './img/logo/Frame 190.png'
+import dr from './img/logo/Frame.png'
+import sf from './img/logo/Frame-1.png'
+import yd from './img/logo/Frame 191.png'
+import nh from './img/logo/Frame 192.png'
+import zs from './img/logo/Frame 193.png'
+import jd from './img/logo/Frame 194.png'
+import bs from './img/logo/Frame 195.png'
+
+const arr11 = [
+  { img: al },
+  { img: wr },
+  { img: hw },
+  { img: zj },
+  { img: ymx },
+  { img: dr },
+  { img: sf },
+  { img: yd },
+  { img: nh },
+  { img: zs },
+  { img: jd },
+  { img: bs }
+]
 
 export default function App(props) {
   let scal = props.windowWidthValue / 1920
@@ -256,33 +283,54 @@ export default function App(props) {
               windowWidthValue={props.windowWidthValue}
             />
           </div>
-          <div className="xz" style={{ height: 650 * scal + 'px' }}>
+          <div
+            className="xz"
+            style={{
+              height: 700 * scal + 'px',
+              padding: `${42 * scal}px ${118 * scal}px`
+            }}
+          >
             <img src={png3} alt="" />
             <div
               className="title"
               style={{
-                fontSize: 38 * scal + 'px',
-                marginTop: 80 * scal + 'px',
-                marginBottom: 30 * scal + 'px'
+                fontSize: 50 * scal + 'px',
+                // marginTop: 80 * scal + 'px',
+                marginBottom: 18 * scal + 'px',
+                lineHeight: 100 * scal + 'px',
+                fontWeight: 400
               }}
             >
               他们也选择了竭律
             </div>
             <div
-              className="box"
+              className="box111"
               style={{
                 width: 1684 * scal + 'px',
                 height: 471 * scal + 'px',
-                padding: `${60 * scal}px ${97 * scal}px`
+                padding: `${55 * scal}px ${200 * scal}px`
               }}
             >
-              <img src={png4} alt="" />
+              {arr11.map((item, index) => (
+                <img
+                  src={item.img}
+                  key={index}
+                  alt=""
+                  style={{
+                    width: 200 * scal + 'px',
+                    height: 100 * scal + 'px',
+                    marginRight: (index + 1) % 4 === 0 ? 0 : 160 * scal + 'px'
+                  }}
+                />
+              ))}
             </div>
           </div>
-          <Footer
-            windowWidthValue={props.windowWidthValue}
-            onSetState={props.onSetState}
-          />
+          <div style={{ transform: 'translateY(-10px)' }}>
+            <Footer
+              windowWidthValue={props.windowWidthValue}
+              onSetState={props.onSetState}
+            />
+          </div>
         </div>
       )}
       {!state && (

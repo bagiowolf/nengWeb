@@ -63,8 +63,14 @@
   .caseInfo .content .png3 {
     width: 100% !important;
   }
+  .caseInfo .content .num {
+    display: flex !important;
+  }
   .caseInfo .content .num div img {
-    width: auto !important;
+    width: 12px !important;
+  }
+  .caseInfo .content .num div {
+    font-size: 12px !important;
   }
   .caseInfo .banner img {
     height: 150px !important;
