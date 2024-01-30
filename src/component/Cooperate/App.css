@@ -259,16 +259,18 @@
   }
   .cooperate .box4 .msg {
     flex-wrap: wrap;
-    justify-content: normal !important;
+    justify-content: center !important;
+    margin-left: 30px;
   }
   .cooperate .content .box4 .msg .div {
     padding: 0 !important;
     font-size: 14px !important;
-    justify-content: center;
+    /* justify-content: n; */
+    justify-content: unset;
+    flex-direction: inherit;
     flex-wrap: wrap;
-    margin-right: 10px;
+    margin-right: 28px;
     width: 100px;
-    text-align: center;
     margin-bottom: 20px !important;
     line-height: normal !important;
   }
@@ -324,9 +326,12 @@
   }
   .cooperate .content .box2 .text {
     font-size: 18px !important;
+    text-align: center;
   }
   .cooperate .jl {
     margin-top: 20px !important;
+    flex-direction: column;
+    align-items: center;
   }
   .cooperate .content .box2 .right .div {
     width: auto !important;
@@ -355,6 +360,9 @@
   .cooperate .content .box4 .title,
   .cooperate .content .box5 .title {
     font-size: 18px !important;
+  }
+  .cooperate .content .box4 {
+    padding-bottom: 0 !important;
   }
   .cooperate .box5 {
     display: none;
