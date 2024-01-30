@@ -512,16 +512,17 @@ export default function App(props) {
               <div
                 className="num"
                 style={{
-                  fontSize: 56 * scal + 'px',
-                  marginBottom: 20 * scal + 'px'
+                  fontSize: 56 * scal + 'px'
                 }}
               >
                 {/* 30,000 */}
                 {/* {NumberAnimation(30000)} */}
-                <NumberAnimation
-                  targetValue={num.index_litigant}
-                  isSplit={true}
-                ></NumberAnimation>
+                <span style={{ fontWeight: 400 }}>
+                  <NumberAnimation
+                    targetValue={num.index_litigant}
+                    isSplit={true}
+                  ></NumberAnimation>
+                </span>
               </div>
               <div className="text" style={{ fontSize: 14 * scal + 'px' }}>
                 当事人
@@ -531,17 +532,22 @@ export default function App(props) {
               <div
                 className="num"
                 style={{
-                  fontSize: 56 * scal + 'px',
-                  marginBottom: 20 * scal + 'px'
+                  fontSize: 56 * scal + 'px'
                 }}
               >
-                <NumberAnimation
-                  targetValue={yi}
-                  isSplit={false}
-                ></NumberAnimation>
+                <span style={{ fontWeight: 400 }}>
+                  <NumberAnimation
+                    targetValue={yi}
+                    isSplit={false}
+                  ></NumberAnimation>
+                </span>
                 <span style={{ fontSize: 34 * scal + 'px' }}>亿</span>
                 <span
-                  style={{ width: 122 * scal + 'px', display: 'inline-block' }}
+                  style={{
+                    width: 130 * scal + 'px',
+                    display: 'inline-block',
+                    fontWeight: 400
+                  }}
                 >
                   <NumberAnimation
                     targetValue={wan}
@@ -559,7 +565,7 @@ export default function App(props) {
                 className="num"
                 style={{
                   fontSize: 56 * scal + 'px',
-                  marginBottom: 20 * scal + 'px'
+                  fontWeight: 400
                 }}
               >
                 <NumberAnimation
@@ -575,8 +581,7 @@ export default function App(props) {
               <div
                 className="num"
                 style={{
-                  fontSize: 56 * scal + 'px',
-                  marginBottom: 20 * scal + 'px'
+                  fontSize: 56 * scal + 'px'
                 }}
               >
                 全国
@@ -592,7 +597,7 @@ export default function App(props) {
             style={{
               height: 265 * scal + 'px',
               width: 1642 * scal + 'px',
-              top: (-50 - 127) * scal + 'px',
+              top: (-50 - 120) * scal + 'px',
               boxShadow: '12px 12px 20px 6px rgba(158, 213, 255, 0.35)'
             }}
           >
@@ -1029,7 +1034,7 @@ export default function App(props) {
           </div>
           <div
             onClick={() => setIsShow(false)}
-            style={{ marginTop: 100 * scal + 'px', position: 'relative' }}
+            style={{ marginTop: 70 * scal + 'px', position: 'relative' }}
             className="ls"
           >
             <img
@@ -1189,7 +1194,7 @@ export default function App(props) {
                     width: 565 * scal + 'px',
                     height: 100 * scal + 'px',
                     position: 'relative',
-                    marginTop: 100 * scal + 'px'
+                    marginTop: 70 * scal + 'px'
                   }}
                 >
                   <img
@@ -1246,7 +1251,7 @@ export default function App(props) {
                     width: 565 * scal + 'px',
                     height: 100 * scal + 'px',
                     position: 'relative',
-                    marginTop: 100 * scal + 'px'
+                    marginTop: 70 * scal + 'px'
                   }}
                 >
                   <img
@@ -1303,7 +1308,7 @@ export default function App(props) {
                     width: 565 * scal + 'px',
                     height: 100 * scal + 'px',
                     position: 'relative',
-                    marginTop: 100 * scal + 'px'
+                    marginTop: 70 * scal + 'px'
                   }}
                 >
                   <img
@@ -1367,7 +1372,7 @@ export default function App(props) {
                     width: 565 * scal + 'px',
                     height: 100 * scal + 'px',
                     position: 'relative',
-                    marginTop: 100 * scal + 'px'
+                    marginTop: 70 * scal + 'px'
                   }}
                 >
                   <img
@@ -1424,7 +1429,7 @@ export default function App(props) {
                     width: 565 * scal + 'px',
                     height: 100 * scal + 'px',
                     position: 'relative',
-                    marginTop: 100 * scal + 'px'
+                    marginTop: 70 * scal + 'px'
                   }}
                 >
                   <img
@@ -1481,7 +1486,7 @@ export default function App(props) {
                     width: 565 * scal + 'px',
                     height: 100 * scal + 'px',
                     position: 'relative',
-                    marginTop: 100 * scal + 'px'
+                    marginTop: 70 * scal + 'px'
                   }}
                 >
                   <img

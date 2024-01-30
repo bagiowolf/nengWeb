@@ -185,7 +185,7 @@ export default function MyApp(props) {
                   亿
                 </span>
                 <span
-                  style={{ width: 141 * scal + 'px', display: 'inline-block' }}
+                  style={{ width: 150 * scal + 'px', display: 'inline-block' }}
                 >
                   <NumberAnimation
                     targetValue={wan}
