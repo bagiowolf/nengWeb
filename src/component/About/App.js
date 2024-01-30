@@ -146,7 +146,11 @@ export default function MyApp(props) {
             <div className="box" style={{ width: 210 * scal + 'px' }}>
               <div
                 className="one"
-                style={{ fontSize: 56 * scal + 'px', fontWeight: 'bold' }}
+                style={{
+                  fontSize: 56 * scal + 'px',
+                  fontWeight: 'bold',
+                  width: 179 * scal + 'px'
+                }}
               >
                 {/* 30,000 */}
                 <NumberAnimation
@@ -169,19 +173,25 @@ export default function MyApp(props) {
                 className="one"
                 style={{ fontSize: 56 * scal + 'px', fontWeight: 'bold' }}
               >
-                <NumberAnimation
-                  targetValue={yi}
-                  isSplit={false}
-                ></NumberAnimation>
+                <span>
+                  <NumberAnimation
+                    targetValue={yi}
+                    isSplit={false}
+                  ></NumberAnimation>
+                </span>
                 <span
                   style={{ fontSize: 18 * scal + 'px', fontWeight: 'initial' }}
                 >
                   亿
                 </span>
-                <NumberAnimation
-                  targetValue={wan}
-                  isSplit={false}
-                ></NumberAnimation>
+                <span
+                  style={{ width: 136 * scal + 'px', display: 'inline-block' }}
+                >
+                  <NumberAnimation
+                    targetValue={wan}
+                    isSplit={false}
+                  ></NumberAnimation>
+                </span>
                 <span
                   style={{ fontSize: 18 * scal + 'px', fontWeight: 'initial' }}
                 >

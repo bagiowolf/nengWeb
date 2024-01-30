@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
@@ -7,12 +7,16 @@ import png1 from './img/png1.png'
 import png2 from './img/png2.png'
 import png3 from './img/png3.png'
 import returnDom from '../../utils/returnDom'
+import { get } from '../../utils/api/api'
 
 export default function App(props) {
   let scal = props.windowWidthValue / 1920
 
   const [isShow, setIsShow] = useState(false)
   const { info } = props
+  useEffect(() => {
+    get(`/update_view_case_studies/${info.id}/increment_view`)
+  }, [])
   return (
     <div>
       <div className="caseInfo">

@@ -540,10 +540,14 @@ export default function App(props) {
                   isSplit={false}
                 ></NumberAnimation>
                 <span style={{ fontSize: 34 * scal + 'px' }}>亿</span>
-                <NumberAnimation
-                  targetValue={wan}
-                  isSplit={false}
-                ></NumberAnimation>
+                <span
+                  style={{ width: 117 * scal + 'px', display: 'inline-block' }}
+                >
+                  <NumberAnimation
+                    targetValue={wan}
+                    isSplit={false}
+                  ></NumberAnimation>
+                </span>
                 <span style={{ fontSize: 34 * scal + 'px' }}>余万</span>
               </div>
               <div className="text" style={{ fontSize: 14 * scal + 'px' }}>
@@ -607,18 +611,32 @@ export default function App(props) {
                 <div style={{ color: '#2b68ff' }}>
                   <div>
                     已经为
-                    <NumberAnimation
-                      targetValue={num.form_litigant}
-                      isSplit={true}
-                    ></NumberAnimation>
+                    <span
+                      style={{
+                        width: 27 * scal + 'px',
+                        display: 'inline-block'
+                      }}
+                    >
+                      <NumberAnimation
+                        targetValue={num.form_litigant}
+                        isSplit={true}
+                      ></NumberAnimation>
+                    </span>
                     余位当事人成功解决问题,
                   </div>
                   <div>
                     为当事人争取直接经济利益{' '}
-                    <NumberAnimation
-                      targetValue={num.form_economic_losses}
-                      isSplit={true}
-                    ></NumberAnimation>
+                    <span
+                      style={{
+                        width: 55 * scal + 'px',
+                        display: 'inline-block'
+                      }}
+                    >
+                      <NumberAnimation
+                        targetValue={num.form_economic_losses}
+                        isSplit={true}
+                      ></NumberAnimation>
+                    </span>
                     元
                   </div>
                 </div>

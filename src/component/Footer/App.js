@@ -202,6 +202,8 @@ export default function Footer(props) {
       lawyer_name,
       delegation_type,
       delegation_time: dayjs().format('YYYY-MM-DDTHH:mm:ss.SSS[Z]')
+    }).then((res) => {
+      alert('提交成功')
     })
   }
 
@@ -228,7 +230,7 @@ export default function Footer(props) {
             <div style={{ fontSize: 22 * scal + 'px' }}>
               <div>
                 已经为
-                <span>
+                <span style={{ width: '57px', display: 'inline-block' }}>
                   <NumberAnimation
                     targetValue={num.form_litigant}
                     isSplit={true}
@@ -238,7 +240,7 @@ export default function Footer(props) {
               </div>
               <div>
                 为当事人争取直接经济利益
-                <span>
+                <span style={{ width: '120px', display: 'inline-block' }}>
                   <NumberAnimation
                     targetValue={num.form_economic_losses}
                     isSplit={true}

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './App.css'
 import Header from '../Header/App'
 import Footer from '../Footer/App'
 import banner from '../NewsCenter/img/banner.png'
 import returnDom from '../../utils/returnDom'
+import { get } from '../../utils/api/api'
 
 export default function App(props) {
   let scal = props.windowWidthValue / 1920
@@ -11,6 +12,9 @@ export default function App(props) {
   const [isShow, setIsShow] = useState(false)
   const { info } = props
   console.log(info)
+  useEffect(() => {
+    get(`/update_view_news/${info.id}/increment_view`)
+  }, [])
   return (
     <div>
       <div className="newsInfo">

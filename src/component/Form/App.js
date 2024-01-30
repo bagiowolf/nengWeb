@@ -32,6 +32,8 @@ export default function App(props) {
       asker_phone,
       source_page: props.sourcePage,
       inquiry_time: dayjs().format('YYYY-MM-DDTHH:mm:ss.SSS[Z]')
+    }).then((res) => {
+      alert('提交成功')
     })
   }
 
