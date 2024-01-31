@@ -102,7 +102,7 @@ const NumberAnimation = ({ targetValue, isSplit }) => {
     }
   }, [targetValue, currentValue])
   const isMobile = window.matchMedia('(max-width: 768px)').matches
-  if (isMobile) return targetValue
+  if (isMobile) return Math.round(targetValue).toLocaleString()
   if (targetValue) {
     if (isSplit) {
       return <span>{Math.round(currentValue).toLocaleString()}</span>
@@ -609,10 +609,28 @@ export default function Footer(props) {
             <img src={png4} alt="png4" />
             <div>
               <div>
-                已经为<span>2000</span>余位当事人成功解决问题,
+                已经为
+                <span>
+                  {
+                    <NumberAnimation
+                      targetValue={num.form_litigant}
+                      isSplit={true}
+                    ></NumberAnimation>
+                  }
+                </span>
+                余位当事人成功解决问题,
               </div>
               <div>
-                为当事人争取直接经济利益<span>64,658,200</span>元
+                为当事人争取直接经济利益
+                <span>
+                  {
+                    <NumberAnimation
+                      targetValue={num.form_economic_losses}
+                      isSplit={true}
+                    ></NumberAnimation>
+                  }
+                </span>
+                元
               </div>
             </div>
           </div>
