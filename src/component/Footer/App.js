@@ -101,6 +101,8 @@ const NumberAnimation = ({ targetValue, isSplit }) => {
       return () => clearInterval(intervalId)
     }
   }, [targetValue, currentValue])
+  const isMobile = window.matchMedia('(max-width: 768px)').matches
+  if (isMobile) return targetValue
   if (targetValue) {
     if (isSplit) {
       return <span>{Math.round(currentValue).toLocaleString()}</span>
