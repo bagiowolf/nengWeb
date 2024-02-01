@@ -455,7 +455,7 @@ export default function App(props) {
               className="png6"
               style={{
                 right: 0 * scal + 'px',
-                width: 640 * scal + 'px',
+                width: 600 * scal + 'px',
                 height: 330 * scal + 'px',
                 top: 155 * scal + 'px'
               }}
@@ -464,7 +464,7 @@ export default function App(props) {
               className="text1"
               style={{
                 fontSize: 18 * scal + 'px',
-                width: 520 * scal + 'px',
+                width: 560 * scal + 'px',
                 lineHeight: 34 * scal + 'px',
                 marginLeft: 32 * scal + 'px',
                 fontWeight: 400
